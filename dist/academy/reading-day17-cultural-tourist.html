@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Reading – An early cultural tourist</title>
+<link rel="stylesheet" href="reading-test-common.css">
+<style>
+  :root {
+    --bg: #ffffff; --bg-alt: #f4f5f7; --bg-panel: #ffffff;
+    --text: #111111; --text-muted: #555; --border: #d4d4d4;
+    --border-strong: #333; --accent: #e51e2a;
+    --select-bg: #cfe3ff; --select-active: #1e6cd8;
+    --footer-bg: #f4f5f7; --btn-bg: #ededed;
+    --arrow-bg: #1f1f1f; --arrow-fg: #ffffff;
+    --correct: #1a8a3c; --wrong: #cc2222;
+  }
+  body.dark {
+    --bg: #1a1a1d; --bg-alt: #232327; --bg-panel: #1f1f22;
+    --text: #ececec; --text-muted: #b5b5b5; --border: #3a3a3f;
+    --border-strong: #cfcfcf; --accent: #ff5c66;
+    --select-bg: #2c4d7a; --select-active: #4a8be0;
+    --footer-bg: #232327; --btn-bg: #2e2e33;
+    --arrow-bg: #ececec; --arrow-fg: #1a1a1d;
+    --correct: #4ed684; --wrong: #ff6b6b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
+
+  .topbar { height: 50px; border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 16px; background: var(--bg); position: relative; z-index: 5; }
+  .logo { font-weight: 800; font-size: 22px; letter-spacing: 1px; color: var(--accent); margin-right: 20px; user-select: none; }
+  .test-taker { font-size: 14px; font-weight: 700; }
+  .top-controls { margin-left: auto; display: flex; gap: 2px; align-items: center; }
+  .top-controls .icon-btn, .top-controls .text-btn { background: transparent; border: none; color: var(--text); padding: 6px 10px; cursor: pointer; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; transition: background 0.15s; }
+  .top-controls .icon-btn:hover, .top-controls .text-btn:hover { background: var(--bg-alt); }
+  .top-controls .icon-btn svg { width: 20px; height: 20px; display: block; }
+  .top-controls .text-btn { font-weight: 700; font-size: 16px; font-family: inherit; }
+  .top-controls .divider { width: 1px; height: 26px; background: var(--border); margin: 0 6px; }
+
+  .part-header { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 10px 20px; }
+  .part-header h2 { margin: 0 0 3px 0; font-size: 14px; font-weight: 700; }
+  .part-header p { margin: 0; font-size: 12px; color: var(--text-muted); }
+
+  .main { position: absolute; top: 50px; left: 0; right: 0; bottom: 50px; display: flex; flex-direction: column; }
+  .panes { flex: 1; display: flex; overflow: hidden; position: relative; }
+  .pane { overflow-y: auto; padding: 18px 28px; background: var(--bg-panel); line-height: 1.55; font-size: calc(14.5px * var(--font-scale, 1)); }
+  .pane.left { width: 50%; }
+  .pane.right { flex: 1; }
+  .splitter { width: 10px; background: var(--bg-alt); border-left: 1px solid var(--border); border-right: 1px solid var(--border); cursor: col-resize; position: relative; user-select: none; flex-shrink: 0; }
+  .splitter::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 18px; height: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; background-image: linear-gradient(to right, transparent 6px, var(--text) 6px, var(--text) 7px, transparent 7px, transparent 11px, var(--text) 11px, var(--text) 12px, transparent 12px); }
+
+  .passage h1 { font-size: 16px; font-weight: 700; margin: 0 0 14px 0; text-align: center; }
+  .passage p { margin: 0 0 11px 0; text-align: justify; }
+
+  .qblock { margin-bottom: 28px; }
+  .qblock h3 { margin: 0 0 6px 0; font-size: 14.5px; font-weight: 700; }
+  .qblock .instructions { font-size: 13px; margin-bottom: 12px; line-height: 1.6; }
+  .qblock .instructions strong { font-weight: 700; }
+
+  /* Row styles */
+  .yn-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; padding: 6px 8px; border-radius: 4px; border: 1px solid transparent; }
+  .yn-row:focus-within { border-color: var(--select-active); }
+  .qnum-yn { display: inline-block; min-width: 22px; font-weight: 700; border: 1px solid var(--border-strong); padding: 0 4px; text-align: center; font-size: 12px; flex-shrink: 0; margin-top: 3px; }
+  .yn-stem { flex: 1; font-size: 14px; line-height: 1.5; }
+  .yn-select { background: var(--bg); color: var(--text); border: 1px solid var(--border-strong); padding: 4px 6px; font-size: 13px; font-family: inherit; border-radius: 3px; min-width: 110px; flex-shrink: 0; }
+  .gap-input { background: var(--bg); color: var(--text); border: 1px solid var(--border-strong); padding: 3px 6px; font-size: 13px; border-radius: 3px; width: 180px; font-family: inherit; }
+
+  /* Radio Options */
+  .mc-option { display: block; margin: 5px 0; font-size: 13.5px; cursor: pointer; }
+  .mc-option input { margin-right: 8px; }
+
+  /* Footer */
+  .footer { position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: var(--footer-bg); border-top: 1px solid var(--border); display: flex; align-items: center; padding: 0 12px; gap: 8px; z-index: 4; }
+  .part-tab { display: flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 3px; border: 1px solid var(--border); background: var(--bg); user-select: none; }
+  .part-tab .label { font-weight: 700; font-size: 13px; }
+  .part-tab .progress { font-size: 11.5px; color: var(--text-muted); }
+  .qnav { display: flex; gap: 3px; margin-left: 2px; flex-wrap: wrap; }
+  .qbtn { width: 22px; height: 22px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 2px; font-family: inherit; }
+  .qbtn:hover { background: var(--bg-alt); }
+  .qbtn.current { border: 2px solid var(--text); font-weight: 700; }
+  .qbtn.answered { background: var(--bg-alt); }
+  .nav-arrows { display: flex; gap: 4px; margin-left: auto; }
+  .arrow-btn { width: 32px; height: 32px; background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .arrow-btn.dark { background: var(--arrow-bg); color: var(--arrow-fg); border-color: var(--arrow-bg); }
+  .check-btn { width: 36px; height: 32px; background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-left: 4px; }
+
+  .user-highlight { background: #f4ff55; padding: 1px 0; }
+  body.dark .user-highlight { background: #8a9100; color: #fff; }
+
+  .highlight-popup { position: absolute; display: none; background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.18); padding: 4px; z-index: 200; align-items: center; gap: 2px; font-size: 13.5px; user-select: none; }
+  .highlight-popup.visible { display: inline-flex; }
+  .highlight-popup button { background: transparent; border: none; padding: 8px 12px; cursor: pointer; color: var(--text); border-radius: 5px; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; font-size: 13.5px; font-weight: 500; }
+  .highlight-popup button:hover { background: var(--bg-alt); }
+  .highlight-popup .hp-swatch { display: inline-block; width: 16px; height: 16px; background: #f4ff55; border-radius: 3px; flex-shrink: 0; }
+  .highlight-popup .hp-close { padding: 6px 10px; font-size: 18px; color: var(--text-muted); line-height: 1; }
+
+  .pane::-webkit-scrollbar { width: 10px; }
+  .pane::-webkit-scrollbar-track { background: var(--bg-alt); }
+  .pane::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
+
+  /* Results overlay */
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: flex-start; justify-content: center; z-index: 100; padding: 20px; overflow-y: auto; }
+  .overlay.visible { display: flex; }
+  .modal { background: var(--bg-panel); color: var(--text); border: 1px solid var(--border); border-radius: 8px; max-width: 600px; width: 100%; padding: 28px 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); margin: auto; }
+  .modal h2 { margin: 0 0 10px 0; color: var(--accent); font-size: 22px; text-align: center; }
+  .score-row { text-align: center; font-size: 28px; font-weight: 800; margin: 6px 0 4px; }
+  .score-row span { font-size: 16px; font-weight: 400; color: var(--text-muted); }
+  .band-row { text-align: center; font-size: 18px; font-weight: 700; margin-bottom: 18px; color: var(--accent); }
+  .results-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 18px; }
+  .results-table th { background: var(--bg-alt); padding: 6px 10px; text-align: left; font-weight: 700; border-bottom: 2px solid var(--border); }
+  .results-table td { padding: 5px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .results-table tr:last-child td { border-bottom: none; }
+  .mark-ok  { color: var(--correct); font-weight: 700; font-size: 15px; }
+  .mark-bad { color: var(--wrong);   font-weight: 700; font-size: 15px; }
+  .modal .actions { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
+  .modal button { background: var(--accent); color: #fff; border: none; padding: 9px 22px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
+  .modal button.secondary { background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); }
+  .modal button:hover { opacity: 0.9; }
+</style>
+<link rel="stylesheet" href="max-bridge.css?v=1"><script src="max-bridge.js?v=1" defer></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">IELTS</div>
+  <div class="test-taker">VIVID IELTS</div>
+  <div class="top-controls">
+    <button id="btn-light" class="icon-btn" title="Light mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
+        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
+        <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/>
+      </svg>
+    </button>
+    <button id="btn-dark" class="icon-btn" title="Dark mode">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <div class="divider"></div>
+    <button id="btn-font-down" class="text-btn" title="Decrease font size">A-</button>
+    <button id="btn-font-up" class="text-btn" title="Increase font size">A+</button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="part-header">
+    <h2>Reading Passage 1</h2>
+    <p>Answer Questions 1–16, which are based on Reading Passage 1.</p>
+  </div>
+  <div class="panes">
+
+    <div class="pane left" id="passagePane">
+      <div class="passage">
+        <div style="font-weight:700;font-size:14px;margin-bottom:4px;">READING PASSAGE 1</div>
+        <div style="font-size:13px;margin-bottom:14px;color:var(--text-muted);">Answer Questions 1–16, which are based on Reading Passage 1.</div>
+        <h1>An early cultural tourist</h1>
+        <p style="font-style:italic;">In the 15th century, the Italian merchant Cyriacus of Ancona journeyed in search of the Mediterranean's classical past. In doing so, he laid the groundwork for today's cultural holidays.</p>
+
+        <p>Today we take it for granted that we travel around the world to admire the monuments of the past. We prepare for such trips by reading about what we are going to see, set out on the journey with a good idea of how we will get there and where we will stay and have a sense of what we will encounter on location. Cyriacus of Ancona (1391-1452), the first cultural tourist since antiquity, lacked these advantages when, in the first half of the 15th century, he sailed around the Mediterranean in search of the remains of Greek and Roman civilisations.</p>
+
+        <p>Cyriacus first became fascinated by ancient monuments while walking in his home city Ancona and looking at the marble arch, erected in AD 115, to the Roman Emperor Trajan. He suddenly saw the structure in a new light. He no longer saw it as just a familiar and generally overlooked landmark, but as a doorway to the wonders of ancient imperial Rome. Not many people of Cyriacus's time were interested in historical travel, they generally ignored old buildings and structures, or worse, dismantled them for their building materials.</p>
+
+        <p>Cyriacus decided to see the world for himself and to record details of whatever other antiquities remained to be discovered. His training as a merchant did not prepare him for this vocation; he did not know ancient languages, history or art. However, he set out to solve these failings, first by learning Latin at the age of 30 and then adding ancient Greek. Having done this, he then set off on voyages around the Mediterranean to find, investigate and understand ancient cultures from their buildings, sculptures and inscriptions. Thus he became the first archaelogist and cultural tourist, predating other antiquarians by some 200 years.</p>
+
+        <p>Travel in the 15th century, however, was anything but simple or enjoyable. Overland journeys by foot or mule along bad roads, under constant threat from bandits, were bad; voyages by seas were even worse. When the weather cooperated, sailing went relatively smoothly, ships proceeded along coasts from one recognizable landmark to another. However, when there was no wind the ship did not move. Strong winds were no friends either, they drenched the ship with lashing waves and blew it off course. Water swamped the desk, splashed into the cabins and soaked mattresses, clothes and food. Remarkably, Cyriacus never complained about the miseries of travel. Optimistic by nature, he endured such hardships unafraid and saw opportunities where other people saw setbacks.</p>
+
+        <p>Among many of the important records made by Cyriacus was his crucial documenting, in 1431, of the remains of Cyzicus, an ancient Roman city that had relied on commerce for its financial success. He hired a local person to take him to site and then had to work out for himself the significance of the ruins he was looking at because there was no guidebook on ancient architecture to help him. Indeed, his contemporary knowledge about the ruins. Cyzicus had been a splendid city in its prime. Unfortunately, the area was highly seismic and in AD 123 the city was so devastated by a major earthquake that, when the Roman Emperor Hadrian visited it the following year, he was so saddened that he decided to subsidise a campaign to reconstruct Cyzicus. He made a substantial donation for a new temple to the Roman go Jupiter. Cyriacus thought the ruined city was awe-inspiring. He found the remains of the temple and examined it in great detail, looking for clues in ancient texts to help him understand what he was seeing. He sketched the great doorway adorned with carved foliage and mythological characters. Cyriacu's account of this temple is the only record of this building as in the following centuries it was entirely stripped of all its stonework and all that remains is its base.</p>
+
+        <p>Cyriacus also visited mainland Greece, in 1436, when no one went to Greece in order to see the country's ancient ruins. One of his destinations was the sanctuary of Delphi. The ancient Greeks considered Delphi as being situated in the most beautiful spot in Greece. When Cyriacus arrived at the site of Delphi, however, he found war, earthquakes and avalanches had all but obliterated its ruins. Determined to find any ancient traces, Cyriacus spent six days walking all over the areas, peering at odd stone blocks sticking out of the ground, running his hands over inscriptions to trace fragments of words, and trying to puzzle out the few surviving structural remains. Climbing uphill towards the rocks that tower over the site, he came upon a theatre built into the slope. Soon after his visit, the site was buried by a rockslide and was not seen again until archaelogists began to excavate the area systematically in the late 19th century.</p>
+
+        <p>Cyriacus had hoped to visit Egypt and Ethipoia but he never got there. However, in his life he did record for posterity countless ancient monuments around the Mediterranean, paving the way for future archaelogists and cultural tourists.</p>
+      </div>
+    </div>
+
+    <div class="splitter" id="splitter"></div>
+
+    <div class="pane right" id="questionsPane">
+
+      <div class="qblock">
+        <h3>Questions 1–8</h3>
+        <div class="instructions">
+          Do the following statements agree with the information given in Reading Passage 1?<br>
+          In boxes 1–8 on your answer sheet, write:<br>
+          <strong>TRUE</strong> if the statement agrees with the information<br>
+          <strong>FALSE</strong> if the statement contradicts the information<br>
+          <strong>NOT GIVEN</strong> if there is no information on this
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">1</span>
+          <span class="yn-stem">Cyriacus was unable to research his journeys before he left.</span>
+          <select class="yn-select question" data-q="1">
+            <option value=""></option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">2</span>
+          <span class="yn-stem">Cyriacus was inspired to begin travelling by a Roman ruin in his city.</span>
+          <select class="yn-select question" data-q="2">
+            <option value=""></option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">3</span>
+          <span class="yn-stem">The Roman Emperor Trajan built the city of Ancona.</span>
+          <select class="yn-select question" data-q="3">
+            <option value=""></option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">4</span>
+          <span class="yn-stem">Respect for ancient architecture was widespread in the 15th century.</span>
+          <select class="yn-select question" data-q="4">
+            <option value=""></option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">5</span>
+          <span class="yn-stem">Cyriacus's experience as a merchant gave him skills he needed to investigate the ancient world.</span>
+          <select class="yn-select question" data-q="5">
+            <option value=""></option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">6</span>
+          <span class="yn-stem">Before leaving on his journey, Cyriacus studied ancient languages.</span>
+          <select class="yn-select question" data-q="6">
+            <option value=""></option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">7</span>
+          <span class="yn-stem">Travelling by sea in the 15th century was easier than travelling on land.</span>
+          <select class="yn-select question" data-q="7">
+            <option value=""></option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">8</span>
+          <span class="yn-stem">Cyriacus tried to make his fellow sea travelers more comfortable.</span>
+          <select class="yn-select question" data-q="8">
+            <option value=""></option><option value="TRUE">TRUE</option><option value="FALSE">FALSE</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="qblock">
+        <h3>Questions 9–16</h3>
+        <div class="instructions">
+          Complete the notes below.<br>
+          Choose <strong>ONE WORD ONLY</strong> from the passage for each answer.<br>
+          Write your answers in boxes 9–16 on your answer sheet.
+        </div>
+
+        <div style="background:var(--bg-alt); padding:12px; border-radius:5px; margin-bottom:15px; font-size:13px; border:1px solid var(--border); line-height:1.8;">
+          <strong>Ancient Roman and Greek sites visited by Cyriacus</strong><br><br>
+          <u>The city of Cyzicus</u><br>
+          • The wealth of the city had come from <strong>9</strong> ...................<br>
+          • <strong>10</strong> ................... to the ancient city ruins not available when visited by Cyriacus<br>
+          • The city was destroyed by a powerful <strong>11</strong> .................... in AD 123<br>
+          • A year later Emperor Hadrian supported a <strong>12</strong> ………………….. to rebuild the city<br>
+          • A temple to Jupiter was built – helped by an especially large <strong>13</strong> …………………… from Emperor Hadrian<br>
+          • Cyriacus found part of the temple, which was built in the time of Emperor Hadrian, and made drawings of the <strong>14</strong> ………………………… to the temple and its decorative carvings<br><br>
+          <u>The sanctuary of Delphi</u><br>
+          By the 15th century Delphi had almost disappeared due to natural disasters and <strong>15</strong> ………………..<br>
+          Cyriacus found a <strong>16</strong> ……………………. above Delphi
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">9</span>
+          <span class="yn-stem">The wealth of the city had come from</span>
+          <input type="text" class="gap-input question" data-q="9" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">10</span>
+          <span class="yn-stem">Not available when Cyriacus visited</span>
+          <input type="text" class="gap-input question" data-q="10" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">11</span>
+          <span class="yn-stem">The city was destroyed by a powerful ___ in AD 123</span>
+          <input type="text" class="gap-input question" data-q="11" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">12</span>
+          <span class="yn-stem">Hadrian supported a ___ to rebuild the city</span>
+          <input type="text" class="gap-input question" data-q="12" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">13</span>
+          <span class="yn-stem">A large ___ from Emperor Hadrian helped build the temple</span>
+          <input type="text" class="gap-input question" data-q="13" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">14</span>
+          <span class="yn-stem">Drawings of the ___ to the temple</span>
+          <input type="text" class="gap-input question" data-q="14" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">15</span>
+          <span class="yn-stem">Delphi disappeared due to natural disasters and ___</span>
+          <input type="text" class="gap-input question" data-q="15" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">16</span>
+          <span class="yn-stem">Cyriacus found a ___ above Delphi</span>
+          <input type="text" class="gap-input question" data-q="16" autocomplete="off">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="part-tab">
+    <span class="label">Passage 1</span>
+    <span class="progress" id="progress-1">0 of 16</span>
+    <div class="qnav" id="qnav-1"></div>
+  </div>
+  <div class="nav-arrows">
+    <button class="arrow-btn" id="prevBtn">&#8592;</button>
+    <button class="arrow-btn dark" id="nextBtn">&#8594;</button>
+  </div>
+  <button class="check-btn" id="finishBtn" title="Submit">&#10003;</button>
+</div>
+
+<div class="highlight-popup" id="highlightPopup">
+  <button id="hpHighlight"><span class="hp-swatch"></span>Highlight</button>
+  <button id="hpRemove">Remove highlight</button>
+  <button class="hp-close" id="hpClose">&times;</button>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+const TOTAL = 16;
+const Q_START = 1;
+const Q_END = 16;
+
+const KEY = {
+  1: ['TRUE'],
+  2: ['TRUE'],
+  3: ['FALSE'],
+  4: ['FALSE'],
+  5: ['FALSE'],
+  6: ['TRUE'],
+  7: ['FALSE'],
+  8: ['NOT GIVEN'],
+  9: ['commerce'],
+  10: ['guidebook'],
+  11: ['earthquake'],
+  12: ['campaign'],
+  13: ['donation'],
+  14: ['doorway'],
+  15: ['war'],
+  16: ['theatre', 'theater']
+};
+
+const answers = {};
+
+function normalize(v) { return (v || '').toString().trim().toUpperCase().replace(/\s+/g, ' '); }
+
+function isCorrect(n, val) {
+  const normVal = normalize(val);
+  return KEY[n].some(k => normalize(k) === normVal);
+}
+
+document.querySelectorAll('.question-radio').forEach(el => {
+  el.addEventListener('change', () => {
+    answers[el.dataset.q] = el.value;
+    updateNav();
+  });
+});
+
+document.querySelectorAll('select.question').forEach(el => {
+  const q = +el.dataset.q;
+  el.addEventListener('change', () => { answers[q] = el.value; updateNav(); });
+});
+
+document.querySelectorAll('input.gap-input.question').forEach(el => {
+  const q = +el.dataset.q;
+  el.addEventListener('input', () => { answers[q] = el.value; updateNav(); });
+});
+
+const qnavEl = document.getElementById('qnav-1');
+const progressEl = document.getElementById('progress-1');
+let activeQ = Q_START;
+
+function buildNav() {
+  qnavEl.innerHTML = '';
+  for (let n = Q_START; n <= Q_END; n++) {
+    const btn = document.createElement('button');
+    btn.className = 'qbtn';
+    btn.textContent = n;
+    btn.dataset.n = n;
+    btn.addEventListener('click', () => scrollToQ(n));
+    qnavEl.appendChild(btn);
+  }
+}
+
+function updateNav() {
+  const answered = Object.keys(answers).filter(k => answers[k] !== undefined && answers[k] !== '').length;
+  progressEl.textContent = `${answered} of ${TOTAL}`;
+  qnavEl.querySelectorAll('.qbtn').forEach(btn => {
+    const n = +btn.dataset.n;
+    btn.classList.toggle('answered', !!answers[n] && answers[n] !== '');
+    btn.classList.toggle('current', n === activeQ);
+  });
+}
+
+function scrollToQ(n) {
+  activeQ = n;
+  const el = document.querySelector(`.question-radio[data-q="${n}"], .question[data-q="${n}"]`);
+  if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.focus({ preventScroll: true }); }
+  updateNav();
+}
+
+document.querySelectorAll('.question, .question-radio').forEach(el => {
+  el.addEventListener('focus', () => { activeQ = +el.dataset.q; updateNav(); });
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => { if (activeQ > Q_START) scrollToQ(activeQ - 1); });
+document.getElementById('nextBtn').addEventListener('click', () => { if (activeQ < Q_END) scrollToQ(activeQ + 1); });
+
+buildNav();
+updateNav();
+
+function getBand(score) {
+  if (score >= 15) return '9.0';
+  if (score >= 14) return '8.5';
+  if (score >= 13) return '8.0';
+  if (score >= 12) return '7.5';
+  if (score >= 11)  return '7.0';
+  if (score >= 10)  return '6.5';
+  if (score >= 9)  return '6.0';
+  if (score >= 8)  return '5.5';
+  if (score >= 6)  return '5.0';
+  if (score >= 5)  return '4.5';
+  return '4.0';
+}
+
+function showResults() {
+  let score = 0;
+  const rows = [];
+  for (let n = Q_START; n <= Q_END; n++) {
+    const ok = isCorrect(n, answers[n]);
+    if (ok) score++;
+    rows.push({ n, given: answers[n] || '—', correct: KEY[n].join(' / '), ok });
+  }
+  const pct = Math.round(score / TOTAL * 100);
+  const band = getBand(score);
+  const color = pct >= 70 ? 'var(--correct)' : pct >= 50 ? '#d4800a' : 'var(--wrong)';
+
+  let html = `<h2>Your Results</h2>
+    <div class="score-row" style="color:${color}">${score} / ${TOTAL} <span>(${pct}%)</span></div>
+    <div class="band-row">Estimated Band: ${band}</div>
+    <table class="results-table">
+      <thead><tr><th>Q</th><th>Your Answer</th><th>Correct</th><th></th></tr></thead><tbody>`;
+  rows.forEach(r => {
+    html += `<tr>
+      <td><strong>${r.n}</strong></td>
+      <td>${r.given}</td>
+      <td>${r.correct}</td>
+      <td class="${r.ok ? 'mark-ok' : 'mark-bad'}">${r.ok ? '✓' : '✗'}</td>
+    </tr>`;
+  });
+  html += `</tbody></table>
+    <div class="actions">
+      <button class="secondary" onclick="document.getElementById('overlay').classList.remove('visible')">Review</button>
+    </div>`;
+
+  document.getElementById('modal').innerHTML = html;
+  document.getElementById('overlay').classList.add('visible');
+}
+
+document.getElementById('finishBtn').addEventListener('click', () => {
+  if (confirm('Submit and see your results?')) showResults();
+});
+
+document.getElementById('overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('overlay')) document.getElementById('overlay').classList.remove('visible');
+});
+
+document.getElementById('btn-dark').addEventListener('click', () => document.body.classList.add('dark'));
+document.getElementById('btn-light').addEventListener('click', () => document.body.classList.remove('dark'));
+
+let fontScale = 1;
+document.getElementById('btn-font-up').addEventListener('click', () => {
+  fontScale = Math.min(1.4, fontScale + 0.08);
+  document.documentElement.style.setProperty('--font-scale', fontScale);
+});
+document.getElementById('btn-font-down').addEventListener('click', () => {
+  fontScale = Math.max(0.7, fontScale - 0.08);
+  document.documentElement.style.setProperty('--font-scale', fontScale);
+});
+
+const splitter = document.getElementById('splitter');
+const leftPane = document.querySelector('.pane.left');
+let dragging = false, startX = 0, startW = 0;
+splitter.addEventListener('mousedown', e => { dragging = true; startX = e.clientX; startW = leftPane.offsetWidth; e.preventDefault(); });
+document.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  const newW = Math.max(200, Math.min(window.innerWidth - 250, startW + e.clientX - startX));
+  leftPane.style.width = newW + 'px';
+});
+document.addEventListener('mouseup', () => { dragging = false; });
+
+// ---- Selection Highlight ----
+const popup = document.getElementById('highlightPopup');
+let lastRange = null;
+
+function isInsideForm(node) {
+  while (node && node !== document.body) {
+    if (node.nodeType === 1 && /^(INPUT|SELECT|TEXTAREA|OPTION|BUTTON)$/.test(node.tagName)) return true;
+    node = node.parentNode;
+  }
+  return false;
+}
+
+function handleSelection() {
+  const sel = window.getSelection();
+  if (!sel || sel.isCollapsed || sel.toString().trim() === '') { popup.classList.remove('visible'); return; }
+  const range = sel.getRangeAt(0);
+  if (isInsideForm(range.commonAncestorContainer)) { popup.classList.remove('visible'); return; }
+  const pane = range.commonAncestorContainer.parentElement?.closest('#passagePane, #questionsPane');
+  if (!pane) { popup.classList.remove('visible'); return; }
+  lastRange = range.cloneRange();
+  const rect = range.getBoundingClientRect();
+  popup.style.left = (rect.left + rect.width / 2 - popup.offsetWidth / 2 + window.scrollX) + 'px';
+  popup.style.top = (rect.top - 48 + window.scrollY) + 'px';
+  popup.classList.add('visible');
+}
+
+document.getElementById('passagePane').addEventListener('mouseup', handleSelection);
+document.getElementById('questionsPane').addEventListener('mouseup', handleSelection);
+
+document.getElementById('hpHighlight').addEventListener('click', () => {
+  if (!lastRange) return;
+  const mark = document.createElement('mark');
+  mark.className = 'user-highlight';
+  try { lastRange.surroundContents(mark); }
+  catch (e) {
+    try { mark.appendChild(lastRange.extractContents()); lastRange.insertNode(mark); } catch (e2) {}
+  }
+  window.getSelection().removeAllRanges();
+  popup.classList.remove('visible');
+});
+
+document.getElementById('hpRemove').addEventListener('click', () => {
+  document.querySelectorAll('.user-highlight').forEach(m => {
+    const parent = m.parentNode;
+    while (m.firstChild) parent.insertBefore(m.firstChild, m);
+    parent.removeChild(m);
+    parent.normalize();
+  });
+  popup.classList.remove('visible');
+});
+document.getElementById('hpClose').addEventListener('click', () => popup.classList.remove('visible'));
+</script>
+
+<script>
+const TEST_ID = 'early-cultural-tourist-p1';
+const TEST_DURATION_MIN = 20;
+
+const C1_WORDS = [
+  { word: 'antiquities', def: 'Objects or buildings from the ancient past' },
+  { word: 'vocation', def: 'A strong feeling of suitability for a particular career or occupation' },
+  { word: 'inscriptions', def: 'Words carved onto a surface, especially stone' },
+  { word: 'seismic', def: 'Relating to earthquakes or other vibrations of the earth' },
+  { word: 'subsidise', def: 'To support financially, especially to reduce cost' },
+  { word: 'foliage', def: 'Plant leaves, collectively' },
+  { word: 'sanctuary', def: 'A place considered holy or sacred' },
+  { word: 'obliterated', def: 'Destroyed completely, wiped out' },
+  { word: 'excavate', def: 'To dig out and remove earth carefully to find buried remains' },
+  { word: 'posterity', def: 'All future generations of people' }
+];
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="db.js"></script>
+<script src="reading-test-common.js"></script>
+<script src="highlight-auto-dismiss.js"></script>
+<script src="activity-bridge-v15.js"></script>
+</body>
+</html>

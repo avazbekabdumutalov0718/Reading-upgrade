@@ -1,0 +1,69 @@
+# key|pattern|Uzbek explanation|new English example|cloze chunk
+not_because_but|Not because ..., but because ...|Noto‘g‘ri taxminni haqiqiy sabab bilan almashtiradi|I chose this book not because it was popular, but because the topic interested me.|not because
+since_then|Since then, + present perfect|O‘sha vaqtdan hozirgacha davom etgan holat|I joined the club last spring. Since then, I have made new friends.|Since then
+not_only|Not only ... but also ...|Ikki foyda yoki fikrni bog‘laydi|The course offers not only videos but also live practice.|not only
+no_choice_but|Have no choice but to + verb|Boshqa imkon qolmaganda qilinadigan ish|The last bus had left, so we had no choice but to walk.|no choice but to
+then_what_happened|Then what happened was that + clause|Hikoyadagi keyingi voqeani urg‘ulaydi|Then what happened was that our teacher changed the task.|Then what happened was that
+one_of_which|Plural noun, one of which + verb|Ko‘p narsadan bittasini ajratib ko‘rsatadi|I brought three notebooks, one of which was for new words.|one of which
+the_way|The way + clause + verb|Bir ish qanday bajarilganini ifodalaydi|The way she explained the rule made it easy to remember.|The way
+hardly_ever|Hardly ever + auxiliary + subject + verb|Kam sodir bo‘lishini inversiya bilan ta’kidlaydi|Hardly ever do I leave a lesson without taking notes.|Hardly ever do
+wish_could|I wish I could + verb|Hozir ro‘yobga chiqmayotgan istakni bildiradi|I wish I could visit the museum more often.|I wish I could
+as_much_as|As much as + clause, clause|Bir fikrni tan olib, qarama-qarshi fikrga o‘tadi|As much as I enjoy films, I prefer reading before bed.|As much as
+whether_or_not|Whether ... or not, + clause|Ikki imkonning natijaga ta’sir qilmasligini bildiradi|Whether it rains or not, the class will meet online.|Whether it rains or not
+unlike|Unlike + noun, clause|Boshqa holatga o‘xshamasligini qiyoslaydi|Unlike my old route, this one goes past the library.|Unlike
+when_needed|When needed, + clause|Zarur bo‘lgandagina amalga oshadi|When needed, I ask my teacher for a clearer example.|When needed
+either_one|Either one + singular verb|Ikki variantdan istalgan bittasini anglatadi|Either one of these topics works for my presentation.|Either one
+neither_one|Neither one + singular verb|Ikki variantning ikkalasi ham emas|Neither one of the two buses stops near my school.|Neither one
+none_of_them|None of them + verb|Uch yoki undan ko‘p variantning birortasi ham emas|I checked four dates, but none of them suited everyone.|none of them
+supposed_to|Be supposed to + verb|Kutilgan yoki belgilangan ishni bildiradi|We are supposed to submit our notes on Friday.|supposed to
+not_that_just|It is not that ..., it is just that ...|Noto‘g‘ri tushunchani muloyim tuzatadi|It's not that I avoid group work; it's just that I need time to prepare.|It's not that
+adjective_fronting|Adjective, subject + verb|Sifatni oldinga olib chiqib holatni ta’kidlaydi|Tired but pleased, I walked home after the debate.|Tired but pleased
+regret_not_ing|Regret not + -ing|O‘tmishda qilinmagan ishdan afsuslanadi|I regret not asking a question during the workshop.|regret not asking
+feel_comfortable_ing|Feel comfortable + -ing|Bir ishda o‘zini erkin his qilish|I feel comfortable speaking in a small group.|feel comfortable speaking
+have_difficulty_ing|Have difficulty + -ing|Bir ishni bajarishda qiynalish|At first I had difficulty following the speaker's accent.|had difficulty following
+spend_time_ing|Spend time + -ing|Bir ishga vaqt ajratish|I spend time reviewing my notes on Sunday.|spend time reviewing
+there_is_someone_ing|There is/are + noun + -ing|Hozir bir ish qilayotgan odamni tasvirlaydi|There are students waiting by the classroom door.|students waiting
+in_a_way_that|In a way that is + adjective|Usulning sifatini tushuntiradi|She gives feedback in a way that is clear and respectful.|in a way that is
+so_much_so|So much so that + clause|Natijaning kuchini ta’kidlaydi|The library was quiet, so much so that I could hear the clock.|so much so that
+not_as_often_before|Not as often as before|Oldingiga nisbatan kamroq tez-tez|I play football, but not as often as before.|not as often as before
+not_as_often_should|Not as often as I should|O‘zi istagan me’yordan kamroq|I practise pronunciation, though not as often as I should.|not as often as I should
+though_end|Clause, though|Gap oxirida yumshoq qarama-qarshilik beradi|The book is long. The chapters are easy to follow, though.|though
+unless|Unless + present clause|Agar ... bo‘lmasa degan shartni bildiradi|I will join the trip unless the weather changes.|unless
+be_to|Be to + verb|Rasmiy reja, ko‘rsatma yoki belgilangan ish|The team is to meet at the station at eight.|is to meet
+so_that|Clause + so that + clause|Maqsad yoki kutilgan natijani bildiradi|I write examples down so that I can use them later.|so that
+that_degree|That + adjective|Kutilgan darajani kuchaytiradi|I did not realise the hall was that large.|that large
+in_a_way|In a way, + clause|Fikrning qisman to‘g‘riligini ko‘rsatadi|In a way, the delay gave us more time to talk.|In a way
+somewhat|Somewhat + adjective|Sifatning mo‘tadil darajasini bildiradi|The second question was somewhat harder than the first.|somewhat
+reduced_relative|Noun + -ing / past participle|Relative clause qisqartiriladi|The students waiting outside have already registered.|students waiting
+which_is_why|Clause, which is why + clause|Oldingi sababdan kelib chiqadigan natija|The bus was delayed, which is why I arrived late.|which is why
+as_soon_as|As soon as + clause|Bir ish tugashi bilan boshqasi boshlanadi|As soon as the lesson ends, I will review my notes.|As soon as
+once|Once + clause|Bir voqeadan so‘ng yoki shart bajarilgach|Once I understand the rule, I will write my own example.|Once
+as_reason|As + clause, clause|As yordamida sababni ko‘rsatadi|As the room was crowded, we moved to the garden.|As the room
+since_reason|Since + clause, clause|Since yordamida sababni ko‘rsatadi|Since the recording was unclear, I listened again.|Since
+having_done|Having + past participle, clause|Bir ish tugab, keyingisi bo‘lganini bildiradi|Having finished my notes, I went for a short walk.|Having finished
+# Lesson 35: twenty-five common corrections, with newly written examples.
+one_of_plural|One of + plural noun + singular verb|One of dan keyin ot ko‘plikda keladi|One of my classmates plays the piano.|One of my classmates
+few_people|Fewer / few + countable plural|Sanasa bo‘ladigan ko‘plik bilan few/fewer ishlatiladi|Fewer people took the later bus.|Fewer people
+each_singular|Each + singular noun|Each dan keyin ot birlikda keladi|Each learner has a different question.|Each learner
+fail_exam|Fail + exam (no from)|Fail fe’lidan keyin imtihon bevosita keladi|I failed the first practice exam but learnt from it.|failed the first practice exam
+number_is|The number of + plural noun + is|The number of birlik kesim oladi|The number of visitors is increasing.|The number of visitors is
+embedded_what|Tell me what + subject + verb|Bilvosita savolda oddiy so‘z tartibi bo‘ladi|Tell me what the main problem is.|what the main problem is
+embedded_where|Can you tell me where + subject + verb?|Bilvosita savolda inversiya qilinmaydi|Can you tell me where the reading room is?|where the reading room is
+make_bare_inf|Make + object + base verb|Make dan so‘ng to ishlatilmaydi|The story made me think about my hometown.|made me think
+feel_adjective|Feel + adjective|His-tuyg‘uda myself ortiqcha bo‘ladi|I felt happy when the project was finished.|felt happy
+adjective_enough|Adjective + enough|Enough sifatdan keyin keladi|She is experienced enough to lead the discussion.|experienced enough
+agree_no_be|I agree (no am)|Agree fe’li bilan am ishlatilmaydi|I agree with your explanation.|I agree
+used_to_ing|Be used to + -ing/noun|Ko‘nikib qolmoq ma’nosida to dan keyin -ing keladi|I am used to studying in the morning.|used to studying
+look_forward_ing|Look forward to + -ing|Bu iboradagi to predlog, ortidan -ing keladi|I look forward to visiting the new museum.|look forward to visiting
+explain_to|Explain + thing + to + person|Explain me emas, narsani kishiga tushuntirish|Please explain the rule to me once more.|explain the rule to me
+police_are|The police + plural verb|Police ko‘plik kesim bilan ishlatiladi|The police are helping visitors near the station.|police are
+news_is|The news + singular verb|News shaklan s bilan tugasa ham birlik|The news was unexpected but welcome.|news was
+discuss_no_about|Discuss + object (no about)|Discuss dan keyin about kerak emas|Let's discuss the timetable after class.|discuss the timetable
+wish_could|I wish I could + verb|Hozir ro‘yobga chiqmayotgan istakni bildiradi|I wish I could visit the museum more often.|I wish I could
+if_present|If + present, will + base verb|Kelasi zamon shart qismida odatda will bo‘lmaydi|If I have time, I will revise the paragraph.|If I have time
+prefer_to|Prefer A to B|Qiyosda prefer dan keyin to ishlatiladi|I prefer the earlier class to the later one.|prefer the earlier class to
+had_better|Had better + base verb|Had better dan keyin to ishlatilmaydi|You had better check the address before leaving.|had better check
+since_year|Present perfect + since + starting year|Davomiy holat boshlanish vaqtiga since qo‘yiladi|She has studied English since 2023.|since 2023
+by_time_present|By the time + present, will have + V3|Kelajak vaqt ergash gapida present ishlatiladi|By the time you arrive, I will have printed the notes.|By the time you arrive
+by_time_past_perfect|By the time + past, had + V3|O‘tmishda oldin bo‘lgan ish past perfect bilan|By the time I arrived, the lecture had begun.|had begun
+uncountable_furniture|Furniture is uncountable|Furniture sanalmaydigan ot; furnitures deyilmaydi|We need a little furniture for the study room.|a little furniture

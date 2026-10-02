@@ -1,0 +1,3514 @@
+[
+  {
+    "unit": 1,
+    "title": "Family",
+    "items": [
+      {
+        "english": "Immediate family – asaosiy/kichkina oila {ota",
+        "translation": "ona, farzandlar)"
+      },
+      {
+        "english": "Extended family – katta oila (ota",
+        "translation": "ona, farzandlar, buvi, tog’a)"
+      },
+      {
+        "english": "Family tree – shajara oila daraxti",
+        "translation": ""
+      },
+      {
+        "english": "Family members – oila a’zolari",
+        "translation": ""
+      },
+      {
+        "english": "Distant relatives – uzoq qarindoshar",
+        "translation": ""
+      },
+      {
+        "english": "Loving family = close",
+        "translation": "knit family – baxtli, tinch, axil oila"
+      },
+      {
+        "english": "Carefree childhood – g’am",
+        "translation": "gussasiz bolalik"
+      },
+      {
+        "english": "Dysfunctional family – serg’alva oila",
+        "translation": ""
+      },
+      {
+        "english": "Troubled childhood – g’am",
+        "translation": "tashvishli bolalik"
+      },
+      {
+        "english": "Bitter divorce = messy divorce – urush",
+        "translation": "janjal qilib ajrashish"
+      },
+      {
+        "english": "Broken home – buzilgan oila",
+        "translation": ""
+      },
+      {
+        "english": "Custody of the children – bolalarga vasiylik",
+        "translation": ""
+      },
+      {
+        "english": "joint custody – ham ota, ham onaning vasilik qilishi",
+        "translation": ""
+      },
+      {
+        "english": "sole custody",
+        "translation": "yo ota, yo onaning vasilik qilishi"
+      },
+      {
+        "english": "pay child support – aliment to’lamoq",
+        "translation": ""
+      },
+      {
+        "english": "mutual divorce/separation – kelishib, janjalsiz ajrashish",
+        "translation": ""
+      },
+      {
+        "english": "stay on good terms with each other – bir",
+        "translation": "biri bilan yaxshi munoabatda qolmoq"
+      },
+      {
+        "english": "get pregnant – homilador bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "single mother – nikohsiz bola ko’rgan ayol",
+        "translation": ""
+      },
+      {
+        "english": "have an abortion – abort qildirish",
+        "translation": ""
+      },
+      {
+        "english": "give the baby up for adoption – bolani boqib olishga berib yuborish",
+        "translation": ""
+      },
+      {
+        "english": "due date",
+        "translation": "bola tug’uladigan kun"
+      },
+      {
+        "english": "give birth = have the baby – farzandni dunyoga keltirish",
+        "translation": ""
+      },
+      {
+        "english": "adoptive parents – boqib olgan ota",
+        "translation": "onasi"
+      },
+      {
+        "english": "bring up the child – bolani tarbiyalamoq",
+        "translation": ""
+      },
+      {
+        "english": "raise the child",
+        "translation": "bolani o’stirmoq"
+      },
+      {
+        "english": "family man – uyim",
+        "translation": "joyim deydigan erkak"
+      },
+      {
+        "english": "the black sheep of the family – oilani boshqa a’zolari bilan chiqisha olmaydigan",
+        "translation": ""
+      },
+      {
+        "english": "run in the blood = take after – o’xhamoq, qoniga tortgan",
+        "translation": ""
+      },
+      {
+        "english": "siblings – tug’ushgan jigarlar, opa",
+        "translation": "ukalar"
+      },
+      {
+        "english": "ancestors – ajdodlar",
+        "translation": ""
+      },
+      {
+        "english": "descendents = offspring – avlod",
+        "translation": ""
+      },
+      {
+        "english": "see eye to eye – butunlay fikriga qo’shilmoq (totally agree)",
+        "translation": ""
+      },
+      {
+        "english": "a get",
+        "translation": "together (noun) – norasmiy yig’ilish (dasturxon atrofida)"
+      },
+      {
+        "english": "to have a skeleton in the cupboard – oilani hammadan yashiradigan siri bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "biological father/mother – haqiqiy ota/onasi",
+        "translation": ""
+      },
+      {
+        "english": "family matters – oilaviy masalalar",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 2,
+    "title": "Relationships",
+    "items": [
+      {
+        "english": "make friends – do’st orttirmoq",
+        "translation": ""
+      },
+      {
+        "english": "casual acquaintances – odatdagi tanish bilishlar",
+        "translation": ""
+      },
+      {
+        "english": "frienemy – do’st qiyofasidagi dushman",
+        "translation": ""
+      },
+      {
+        "english": "close friends – yaqin do’stlar",
+        "translation": ""
+      },
+      {
+        "english": "love at first sight – bir ko’rishda sevib qolmoq",
+        "translation": ""
+      },
+      {
+        "english": "fall in love with – … bilan sevishmoq",
+        "translation": ""
+      },
+      {
+        "english": "significant other – muhim bir inson (wife/husband; boyfriend/girlfriend)",
+        "translation": ""
+      },
+      {
+        "english": "soul mate – qalliq, sevgilisi",
+        "translation": ""
+      },
+      {
+        "english": "have feelings for – kimnidir yoqtirmoq",
+        "translation": ""
+      },
+      {
+        "english": "the feeling is not mutual – tuyg’u ikki tomonlama emas",
+        "translation": ""
+      },
+      {
+        "english": "he’s/she’s just not my type – u menga to’g’ri kelmas ekan (вкус)",
+        "translation": ""
+      },
+      {
+        "english": "unrequited love – javobsiz sevgi",
+        "translation": ""
+      },
+      {
+        "english": "childhood sweetheart – bolalikdagi sevgilisi",
+        "translation": ""
+      },
+      {
+        "english": "mutual friend – ikki tomonlama do’st",
+        "translation": ""
+      },
+      {
+        "english": "make a commitment – turmush qurishga qaror qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "propose to the woman – ayolni qo’lini so’ramoq",
+        "translation": ""
+      },
+      {
+        "english": "happily married – baxtli turmush qurgan",
+        "translation": ""
+      },
+      {
+        "english": "have an affair – yurarkan",
+        "translation": ""
+      },
+      {
+        "english": "cheating on their wife/husband – xotin/eriga xiyonat qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "blind date – birinchi uchrashuv",
+        "translation": ""
+      },
+      {
+        "english": "break one’s heart – kimnidir yuragini sindirmoq",
+        "translation": ""
+      },
+      {
+        "english": "to find Mr. Right – o’ziga munosib qalliq topmoq",
+        "translation": ""
+      },
+      {
+        "english": "to find the right girl/boy – munosib qiz, yigit toppish",
+        "translation": ""
+      },
+      {
+        "english": "get engaged – unashtirilmoq",
+        "translation": ""
+      },
+      {
+        "english": "go Dutch – bo’lishib to’lamoq",
+        "translation": ""
+      },
+      {
+        "english": "it is on me – bu mening hisobimdan",
+        "translation": ""
+      },
+      {
+        "english": "kiss and make up – urushib, yarashish",
+        "translation": ""
+      },
+      {
+        "english": "a match made in heaven – tangri yaratgan juftlik",
+        "translation": ""
+      },
+      {
+        "english": "one’s one and only – kimningdir yakka",
+        "translation": "yagonasi"
+      },
+      {
+        "english": "puppy love – babnik sevgi",
+        "translation": ""
+      },
+      {
+        "english": "say I do – turmush qurmoq",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 3,
+    "title": "Appearance",
+    "items": [
+      {
+        "english": "absolutely gorgeous – juda ham chiroyli",
+        "translation": ""
+      },
+      {
+        "english": "long, sleek, jet, black hair – uzun tekis qora sochlar",
+        "translation": ""
+      },
+      {
+        "english": "pale blue eyes – ochiq havorang ko’zlar",
+        "translation": ""
+      },
+      {
+        "english": "radiant complexion – issiq istara",
+        "translation": ""
+      },
+      {
+        "english": "hourglass figure – ofatijon, ketvorgan",
+        "translation": ""
+      },
+      {
+        "english": "slender waist – ingichga bel, xipcha bel",
+        "translation": ""
+      },
+      {
+        "english": "round face – dumaloq yuz",
+        "translation": ""
+      },
+      {
+        "english": "upturned nose – qirra burun",
+        "translation": ""
+      },
+      {
+        "english": "bear a striking resemblance to – 2 tomchi suvdek o’xshamoq",
+        "translation": ""
+      },
+      {
+        "english": "hideously ugly – juda ham xunuk",
+        "translation": ""
+      },
+      {
+        "english": "curly shoulder",
+        "translation": "length hair – yelka uzunligidagi jingalak soch"
+      },
+      {
+        "english": "unkempt = messy hair – tartibsiz soch",
+        "translation": ""
+      },
+      {
+        "english": "square face – to’rtburchak yuz",
+        "translation": ""
+      },
+      {
+        "english": "ruddy complexion – qizil tanli odam",
+        "translation": ""
+      },
+      {
+        "english": "deep",
+        "translation": "set eyes – ichiga kirgan ko’zlar"
+      },
+      {
+        "english": "bushy eyebrows – qalin qoshlar",
+        "translation": ""
+      },
+      {
+        "english": "thick mustache – qalin mo’ylov",
+        "translation": ""
+      },
+      {
+        "english": "shaggy beard – qalin soqol",
+        "translation": ""
+      },
+      {
+        "english": "facial hair – yuzdagi tuklar",
+        "translation": ""
+      },
+      {
+        "english": "athletic build – kachok",
+        "translation": ""
+      },
+      {
+        "english": "broad shoulders – keng yelkalar",
+        "translation": ""
+      },
+      {
+        "english": "muscular arms – baquvvat bilaklar",
+        "translation": ""
+      },
+      {
+        "english": "trim one’s beard – soqolini kaltalatmoq",
+        "translation": ""
+      },
+      {
+        "english": "comb one’s hair – sochini taramoq",
+        "translation": ""
+      },
+      {
+        "english": "somewhat attractive – o’ziga xos jozibador",
+        "translation": ""
+      },
+      {
+        "english": "charming – jozibali",
+        "translation": ""
+      },
+      {
+        "english": "handsome – kelishgan",
+        "translation": ""
+      },
+      {
+        "english": "cut a dash – tashqi ko’rinishi bilan chuqur taassurot qoldirmoq",
+        "translation": ""
+      },
+      {
+        "english": "deck out – yasantirmoq, bezantirmoq",
+        "translation": ""
+      },
+      {
+        "english": "dressed to kill – daxshat kiyingan",
+        "translation": ""
+      },
+      {
+        "english": "dressed up to nines – bejirim, skromniy kiyingan, yarashgan",
+        "translation": ""
+      },
+      {
+        "english": "down at heel – juldur, yomon ahvolda",
+        "translation": ""
+      },
+      {
+        "english": "have a face that only mother could love – juda ham xunuk",
+        "translation": ""
+      },
+      {
+        "english": "look a side – yaxshi ko’rinmoq",
+        "translation": ""
+      },
+      {
+        "english": "look like a million dollars – zo’r ko’rinmoq",
+        "translation": ""
+      },
+      {
+        "english": "mutton dressed as lamb – yoshiga mos kiyinmaslik",
+        "translation": ""
+      },
+      {
+        "english": "pretty as a picture – juda ham chiroyli",
+        "translation": ""
+      },
+      {
+        "english": "all skin and bone – juda ham ozg’in",
+        "translation": ""
+      },
+      {
+        "english": "skin on the top – tepa kal",
+        "translation": ""
+      },
+      {
+        "english": "vertically challenged – juda ham bo’yi past",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 4,
+    "title": "Character and behavior",
+    "items": [
+      {
+        "english": "painfully shy – juda ham uyatchan",
+        "translation": ""
+      },
+      {
+        "english": "to have a vivid imagination – tasavvurga boy bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "have/has outgoing personality – kirishimli",
+        "translation": ""
+      },
+      {
+        "english": "sense of humor – hazilkashlik",
+        "translation": ""
+      },
+      {
+        "english": "brutally honest – juda ham rostgo’y",
+        "translation": ""
+      },
+      {
+        "english": "hurt one’s feelings – kimnidir tuyg’ulariga ozor bermoq",
+        "translation": ""
+      },
+      {
+        "english": "fiercely loyal – juda ham sadoqatli",
+        "translation": ""
+      },
+      {
+        "english": "to show one’s true color – asil basharasini ko’rsatmoq",
+        "translation": ""
+      },
+      {
+        "english": "to play a prank (negative) – kim bilandir o’ynashmoq, xazillashmoq",
+        "translation": ""
+      },
+      {
+        "english": "bear a grudge – kimgadir ichida doimiy nafrat his qilib yurish",
+        "translation": ""
+      },
+      {
+        "english": "low self",
+        "translation": "esteem – o’ziga past nazar bilan qaramoq, hurmat qilmaslik"
+      },
+      {
+        "english": "a mean streak (negative) – ziqna",
+        "translation": ""
+      },
+      {
+        "english": "come out of one’s shell – kamroq uyalmoq",
+        "translation": ""
+      },
+      {
+        "english": "to have a thicker skin – bezbet bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "speak one’s mind – oqibatini o’ylamasdan gapirmoq",
+        "translation": ""
+      },
+      {
+        "english": "have a tendency – moyilligi bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "to have a superiority complex – hammadan o’zini ustun qo’ymoq",
+        "translation": ""
+      },
+      {
+        "english": "to swallow one’s pride",
+        "translation": "g’ururini o’z ichiga yutmoq"
+      },
+      {
+        "english": "put others first – boshqalarini o’zidan ustun qo’yish",
+        "translation": ""
+      },
+      {
+        "english": "busy",
+        "translation": "body – hammaning ishiga burun suqadigan odam"
+      },
+      {
+        "english": "cheapskate (adj) – ziqna",
+        "translation": ""
+      },
+      {
+        "english": "couch potato – TV, yotish",
+        "translation": ""
+      },
+      {
+        "english": "down",
+        "translation": "to-earth(adj) – realist"
+      },
+      {
+        "english": "behind the times – zamondan orqaga qolib ketgan",
+        "translation": ""
+      },
+      {
+        "english": "go",
+        "translation": "getter – maqsad qo’yib erishadigan odam"
+      },
+      {
+        "english": "goody",
+        "translation": "goody – yaxshi xarakterdagi inson"
+      },
+      {
+        "english": "smart Alec – juda ham aqlli",
+        "translation": ""
+      },
+      {
+        "english": "a man of his word – bir so’zli odam",
+        "translation": ""
+      },
+      {
+        "english": "mover and shaker – aktiv va harakatchan",
+        "translation": ""
+      },
+      {
+        "english": "slimeball – jirkanch",
+        "translation": ""
+      },
+      {
+        "english": "social butterfly – hamma bilan kelishib ketadigan inson",
+        "translation": ""
+      },
+      {
+        "english": "wet blanket – mazzani beliga tepadigan, bormaylik, ketaylik",
+        "translation": ""
+      },
+      {
+        "english": "armchair critic – hech narsa qilmay, kritika qiladi",
+        "translation": ""
+      },
+      {
+        "english": "to perform one’s promise – va’dasini ustidan chiqmoq",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 5,
+    "title": "Houses and apartments",
+    "items": [
+      {
+        "english": "a short",
+        "translation": "term rental – qisqa muddatli ijara"
+      },
+      {
+        "english": "a two",
+        "translation": "bedroom apartment – 2ta spalnisi bor uy"
+      },
+      {
+        "english": "a studio apartment – bitta xonali, hammasi 1xonada",
+        "translation": ""
+      },
+      {
+        "english": "a five",
+        "translation": "story building – 5qavatli bino"
+      },
+      {
+        "english": "overlooking the ocean – okeanga qaragan",
+        "translation": ""
+      },
+      {
+        "english": "had a nice view of smth – biron narsani yaxshi ko’rinishi bor.",
+        "translation": ""
+      },
+      {
+        "english": "have a nice view of sky land – shahar kaftde ko’rinib turadi",
+        "translation": ""
+      },
+      {
+        "english": "have recently been remodeled/renovated – yaqindagina ta’mirdan chiqqan",
+        "translation": ""
+      },
+      {
+        "english": "fully furnished – to’liq jihozlangan",
+        "translation": ""
+      },
+      {
+        "english": "the spacious living room – juda ham katta mehmonxona (uydagi)",
+        "translation": ""
+      },
+      {
+        "english": "the bedrooms are rather cramped – spalnilar juda ham kichkina va noqulay",
+        "translation": ""
+      },
+      {
+        "english": "to feel homesick – uyini sog’inmoq",
+        "translation": ""
+      },
+      {
+        "english": "to have a place of my own – o’z uyiga va o’z vataniga ega bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "affordable housing – cho’ntakbop uylar, arzon uylar",
+        "translation": ""
+      },
+      {
+        "english": "upscale neighborhoods – boy mahalla",
+        "translation": ""
+      },
+      {
+        "english": "to take out a mortgage – bankdan uy olish kredit olmoq",
+        "translation": ""
+      },
+      {
+        "english": "pay smth off – to’lab tugatmoq, oxirigacha to’lamoq",
+        "translation": ""
+      },
+      {
+        "english": "a down payment – boshlang’ich to’lov",
+        "translation": ""
+      },
+      {
+        "english": "move into a new place – yangi joyga ko’chmoq",
+        "translation": ""
+      },
+      {
+        "english": "to throw a housewarming party – yangi uyni yuvmoq, nishonlamoq",
+        "translation": ""
+      },
+      {
+        "english": "as safe as houses – uydagi kabi xavfsiz",
+        "translation": ""
+      },
+      {
+        "english": "a halfway house – 1realibitatsiya markazi",
+        "translation": ""
+      },
+      {
+        "english": "a house is not a home – uy vatan bo’lolmaydi",
+        "translation": ""
+      },
+      {
+        "english": "angel in the house – uyim",
+        "translation": "joyim deydigan ayol"
+      },
+      {
+        "english": "basket house –1qahvaxona, qovoqxona, pub",
+        "translation": ""
+      },
+      {
+        "english": "to be out of house and home – ko’chada qolmoq(bonj)",
+        "translation": ""
+      },
+      {
+        "english": "brick house (charming, hourglass figure, to be in good shape)",
+        "translation": "ketvorgan"
+      },
+      {
+        "english": "eat out of house and home – juda ko’p, bo’kib yemoq",
+        "translation": ""
+      },
+      {
+        "english": "get on like a house on fire – tez chiqishib ketmoq",
+        "translation": ""
+      },
+      {
+        "english": "live in a glass house – o’zgalarning fikri bn yashamoq, tanqid ostida yashamoq",
+        "translation": ""
+      },
+      {
+        "english": "men make houses, women make homes",
+        "translation": "erkak uy quradi, ayol oila quradi"
+      }
+    ]
+  },
+  {
+    "unit": 6,
+    "title": "Eating",
+    "items": [
+      {
+        "english": "Eating habits – ovqatlanish odati, tartibi",
+        "translation": ""
+      },
+      {
+        "english": "Junk food – ozuqaviy moddalari kam ovqat",
+        "translation": ""
+      },
+      {
+        "english": "to go on a diet – diyeta qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "processed foods – ximikatlarga boy bo’lgan ovqatlar",
+        "translation": ""
+      },
+      {
+        "english": "food additives – ovqatga qo’shiladigan ximikatlar",
+        "translation": ""
+      },
+      {
+        "english": "a balanced diet – doimiy diyeta",
+        "translation": ""
+      },
+      {
+        "english": "nourishing meals – foydali, to’yimli ovqatlar",
+        "translation": ""
+      },
+      {
+        "english": "organic food – tabiiy ovqat",
+        "translation": ""
+      },
+      {
+        "english": "fresh produce = fresh food and vegetables",
+        "translation": ""
+      },
+      {
+        "english": "a quick snack – tez tamaddi qilish",
+        "translation": ""
+      },
+      {
+        "english": "to eat in moderation – narmalniy ovqatlanish",
+        "translation": ""
+      },
+      {
+        "english": "portion sizes – yeyiladigan ovqat hajmi",
+        "translation": ""
+      },
+      {
+        "english": "a home",
+        "translation": "cooked meal – uyda pishirilgan ovqatlar"
+      },
+      {
+        "english": "a hearty stew – hamma narsasi bor sho’rva",
+        "translation": ""
+      },
+      {
+        "english": "a healthy appetite – ko’p ovqatlanish",
+        "translation": ""
+      },
+      {
+        "english": "a second helping – ikkinchi porsiya",
+        "translation": ""
+      },
+      {
+        "english": "international cuisine – xalqaro oshxona, dunyo taomlari",
+        "translation": ""
+      },
+      {
+        "english": "food poisoning – ovqatdan zaharlanish",
+        "translation": ""
+      },
+      {
+        "english": "light meals/food – yengil taomlar",
+        "translation": ""
+      },
+      {
+        "english": "spoil one’s appetite – ishtahasini bo’g’moq, buzmoq",
+        "translation": ""
+      },
+      {
+        "english": "consume – iste’mol qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "filling food – to’yimli ovqat",
+        "translation": ""
+      },
+      {
+        "english": "fattening food – yog’li ovqat",
+        "translation": ""
+      },
+      {
+        "english": "digest – hazm qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "food adaptability – ovqatga moslashish",
+        "translation": ""
+      },
+      {
+        "english": "bon appetite – yoqimli ishtaha",
+        "translation": ""
+      },
+      {
+        "english": "go Dutch – bo’lishib to’lamoq",
+        "translation": ""
+      },
+      {
+        "english": "it is on me – bu mening hisobimdan",
+        "translation": ""
+      },
+      {
+        "english": "eat like a pig – befarosatlarcha ovqatlanmoq",
+        "translation": ""
+      },
+      {
+        "english": "eat like a horse – juda ham ko’p ovqatlanmoq",
+        "translation": ""
+      },
+      {
+        "english": "out to lunch = careless – e’tiborsiz, parvoyi palak",
+        "translation": ""
+      },
+      {
+        "english": "to stuff one’s face – rasvosini chiqarib ovqalanmoq(ifloslantirib)",
+        "translation": ""
+      },
+      {
+        "english": "gain weight – semirish",
+        "translation": ""
+      },
+      {
+        "english": "lose weight",
+        "translation": "ozmoq"
+      },
+      {
+        "english": "broth – sho’rva",
+        "translation": ""
+      },
+      {
+        "english": "too many cooks spoil the broth – qassob ko’paysa, mol harom o’ladi",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 7,
+    "title": "Books & Movies",
+    "items": [
+      {
+        "english": "movie trailer – kino haqida qisqacha video",
+        "translation": ""
+      },
+      {
+        "english": "the movie comes out – kino efir yuzini ko’radi",
+        "translation": ""
+      },
+      {
+        "english": "movie theater – kinoteatr",
+        "translation": ""
+      },
+      {
+        "english": "opening night – ochilish kechasi",
+        "translation": ""
+      },
+      {
+        "english": "film critic’s reviews – film tanqidchlarining fikrlari",
+        "translation": ""
+      },
+      {
+        "english": "nominated for an award – mukofotga nomzodi qo’yilgan",
+        "translation": ""
+      },
+      {
+        "english": "movie stars = famous actors/actresses",
+        "translation": ""
+      },
+      {
+        "english": "starring in an upcoming film – kelgusi filmda rol o’ynamoq",
+        "translation": ""
+      },
+      {
+        "english": "based on a true story – haqiqiy hayotiy voqealarga asoslangan",
+        "translation": ""
+      },
+      {
+        "english": "shooting the film on",
+        "translation": "site – kino olmoq"
+      },
+      {
+        "english": "leading role – bosh rol, asosiy qahramon",
+        "translation": ""
+      },
+      {
+        "english": "box",
+        "translation": "office hit – eng ko’p xit bo’lgan"
+      },
+      {
+        "english": "engrossed in a book – kitobni ichiga kirib ketgan",
+        "translation": ""
+      },
+      {
+        "english": "main character – asosiy qahramon",
+        "translation": ""
+      },
+      {
+        "english": "borrow books from the library – kutubxonadan kitob olmoq",
+        "translation": ""
+      },
+      {
+        "english": "controversial topic – muammoli masala",
+        "translation": ""
+      },
+      {
+        "english": "interesting and enjoyable read – qiziqarli va yoqimli o’qish",
+        "translation": ""
+      },
+      {
+        "english": "to return the book to the library – kitobni kutbxonaga qaytarmoq",
+        "translation": ""
+      },
+      {
+        "english": "renew it – yangilamoq, yangisiga almashtirmoq",
+        "translation": ""
+      },
+      {
+        "english": "beginning and end – boshlanishi va oxiri",
+        "translation": ""
+      },
+      {
+        "english": "opening and closing scenes/chapters – sahna/boblarning boshi va oxiri",
+        "translation": ""
+      },
+      {
+        "english": "crunch time – vazifani topshirishdan oldingi tig’iz vaqt",
+        "translation": ""
+      },
+      {
+        "english": "let your freak flag fly – muvaffaqiyatsizlikdan keyin o’zini ko’rsatib qo’ymoq",
+        "translation": ""
+      },
+      {
+        "english": "get out of hand – nazoratdan chiqib ketmoq",
+        "translation": ""
+      },
+      {
+        "english": "pound the pavement – omadsizlikdan keyin ish qidirmoq",
+        "translation": ""
+      },
+      {
+        "english": "pull a rabbit out of a hat – uddalab bo’lmas ishni qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "step up your game – forma, kuchli holatiga qaytmoq",
+        "translation": ""
+      },
+      {
+        "english": "pull yourself together – o’zini bosib olmoq, tinchlantirmoq",
+        "translation": ""
+      },
+      {
+        "english": "shape up or ship out! – narmalni ishla yoki dap bo’l",
+        "translation": ""
+      },
+      {
+        "english": "by the skin of one’s teeth = barely = hardly – zo’rg’a",
+        "translation": ""
+      },
+      {
+        "english": "go down in flames – juda katta muvaffaqiyatsizlikka uchramoq",
+        "translation": ""
+      },
+      {
+        "english": "hand in there – o’zingni bos",
+        "translation": ""
+      },
+      {
+        "english": "go the extra mile – hamma narsaga tayyor bo’lmoq, ortiqcha ish qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "popcorn movie – dam olish uchun tomosha qilinadigan kino",
+        "translation": ""
+      },
+      {
+        "english": "get the show on the road – tugatilmagan, xatolari bo’lsa ham ko’rsat, amaliyotga tadbiq",
+        "translation": ""
+      },
+      {
+        "english": "kick (something) off – boshlamoq",
+        "translation": ""
+      },
+      {
+        "english": "sell out – sotilmoq, sotib tugatmoq",
+        "translation": ""
+      },
+      {
+        "english": "break a leg = good luck – omad",
+        "translation": ""
+      },
+      {
+        "english": "to be in the lime light = to be in public eye – omma nazarida bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "museum piece – juda ham eski narsalr",
+        "translation": ""
+      },
+      {
+        "english": "the show must go on – qiyinchiliklarga qaramay hayot davom etadi; show davom etishi",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 8,
+    "title": "Music",
+    "items": [
+      {
+        "english": "Musically gifted – musiqaga tug’ma qobiliyati bor",
+        "translation": ""
+      },
+      {
+        "english": "sheet music – qog’ozda yozilgan musiqa (notalar)",
+        "translation": ""
+      },
+      {
+        "english": "strumming guitar – gitara chalmoq",
+        "translation": ""
+      },
+      {
+        "english": "composing music – musiqa yaratmoq",
+        "translation": ""
+      },
+      {
+        "english": "song lyrics – qo’shiq matni",
+        "translation": ""
+      },
+      {
+        "english": "a sizable following – juda ham ko’p fanatlar",
+        "translation": ""
+      },
+      {
+        "english": "to play gigs – kichkinagina norasmiy ijro",
+        "translation": ""
+      },
+      {
+        "english": "to record one’s debut album – dastlabki albomini yozmoq",
+        "translation": ""
+      },
+      {
+        "english": "a remixed track",
+        "translation": ""
+      },
+      {
+        "english": "a massive hit – juda ham mashhur",
+        "translation": ""
+      },
+      {
+        "english": "catchy tune = memorable music",
+        "translation": ""
+      },
+      {
+        "english": "upbeat temp – tez, sho’x ritm",
+        "translation": ""
+      },
+      {
+        "english": "albums will be released – albom xalqqa taqdim etiladi",
+        "translation": ""
+      },
+      {
+        "english": "record music live – musiqani jonli yozmoq",
+        "translation": ""
+      },
+      {
+        "english": "go on tour – gastrolga bormoq",
+        "translation": ""
+      },
+      {
+        "english": "big break – mashhur bo’lish uchun katta imkoniyat",
+        "translation": ""
+      },
+      {
+        "english": "music industry – musiqa sanoati",
+        "translation": ""
+      },
+      {
+        "english": "to sing along – qo’shilib, jo’r bo’lib kuylash",
+        "translation": ""
+      },
+      {
+        "english": "completely tone",
+        "translation": "deaf – ritmni his qilmaydigan odam"
+      },
+      {
+        "english": "to sing off",
+        "translation": "key – falsh kuylash"
+      },
+      {
+        "english": "contemporary music – zamonaviy musiqa",
+        "translation": ""
+      },
+      {
+        "english": "classical music – doimiy, eskirmaydigan musiqa",
+        "translation": ""
+      },
+      {
+        "english": "orchestral/instrumental music – music with instruments only (no singing)",
+        "translation": ""
+      },
+      {
+        "english": "rock music – rok musiqa",
+        "translation": ""
+      },
+      {
+        "english": "solo album – bitta odamning albomi",
+        "translation": ""
+      },
+      {
+        "english": "compilation album – turli qo’shiqlardan yig’ilgan musiqa",
+        "translation": ""
+      },
+      {
+        "english": "cult following – sodiq ishqibozlar",
+        "translation": ""
+      },
+      {
+        "english": "hit the right note – ma’qul gap bilan joyiga urmoq",
+        "translation": ""
+      },
+      {
+        "english": "blow one’s own trumpet – o’zini maqtamoq (faxrlanib)",
+        "translation": ""
+      },
+      {
+        "english": "it takes two to tango – qars ikki qo’ldan chiqadi",
+        "translation": ""
+      },
+      {
+        "english": "fit as a fiddle – juda sog’lom, otday",
+        "translation": ""
+      },
+      {
+        "english": "like a broken record – bitta narsani qaytarmoq",
+        "translation": ""
+      },
+      {
+        "english": "and all that jazz – va boshqalar",
+        "translation": ""
+      },
+      {
+        "english": "music to my ears – eshitishni istagan gap",
+        "translation": ""
+      },
+      {
+        "english": "swan song – nimaningdir tugash payti",
+        "translation": ""
+      },
+      {
+        "english": "ring a bell – tanish tuyulyapti",
+        "translation": ""
+      },
+      {
+        "english": "to sell for a song – arzonga sotmoq (o’pich)",
+        "translation": ""
+      },
+      {
+        "english": "elevator music – hamma joyda qaytariladigan musiqa; hammani joniga tekkan",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 9,
+    "title": "Sports",
+    "items": [
+      {
+        "english": "play soccer/basketball/tennis/baseball/golf",
+        "translation": ""
+      },
+      {
+        "english": "do yoga/gymnastics/martial arts/aerobics/exercises",
+        "translation": ""
+      },
+      {
+        "english": "lift weights – og’ir atletika",
+        "translation": ""
+      },
+      {
+        "english": "go swimming/biking/surfing/rock climbing/bowling/fishing",
+        "translation": ""
+      },
+      {
+        "english": "soccer game = football match",
+        "translation": ""
+      },
+      {
+        "english": "basketball game",
+        "translation": ""
+      },
+      {
+        "english": "lose the game – o’yinni boy bermoq",
+        "translation": ""
+      },
+      {
+        "english": "tie the game – durang",
+        "translation": ""
+      },
+      {
+        "english": "tennis match – tennis o’yini",
+        "translation": ""
+      },
+      {
+        "english": "win the game – o’yinni yutmoq",
+        "translation": ""
+      },
+      {
+        "english": "final score – yakuniy natija",
+        "translation": ""
+      },
+      {
+        "english": "home game – o’zini uyida o’ynash",
+        "translation": ""
+      },
+      {
+        "english": "away game – mehmonda o’ynash",
+        "translation": ""
+      },
+      {
+        "english": "tournament – turnir, musobaqa",
+        "translation": ""
+      },
+      {
+        "english": "to have the lead – oldinga chiqmoq",
+        "translation": ""
+      },
+      {
+        "english": "to make a comeback – o’yinga endi kirishyapti (ruhiy jihatdan)",
+        "translation": ""
+      },
+      {
+        "english": "to take the lead – hisobda oldinga chiqmoq",
+        "translation": ""
+      },
+      {
+        "english": "gymnastics competition – gimnastika musobaqasi",
+        "translation": ""
+      },
+      {
+        "english": "a martial arts competition – jang san’atlari musobaqasi",
+        "translation": ""
+      },
+      {
+        "english": "race – poyga",
+        "translation": ""
+      },
+      {
+        "english": "to enter a competition – musobaqaga kirmoq",
+        "translation": ""
+      },
+      {
+        "english": "first place – birinchi o’rin",
+        "translation": ""
+      },
+      {
+        "english": "to enhance one’s performances – o’zini kuchaytirmoq",
+        "translation": ""
+      },
+      {
+        "english": "to fail a drug test –",
+        "translation": ""
+      },
+      {
+        "english": "to achieve a personal bist – shaxsiy rekordga erishmoq",
+        "translation": ""
+      },
+      {
+        "english": "to break the world record – jahon rekordini buzmoq",
+        "translation": ""
+      },
+      {
+        "english": "to set a new world record – yangi jahon rekordini o’rnatmoq",
+        "translation": ""
+      },
+      {
+        "english": "to withdraw from the competition – musobaqadan chiqmoq",
+        "translation": ""
+      },
+      {
+        "english": "back the wrong course – noto’g’ri qaror qabul qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "ball is in someone’s court – kimningdir navbati",
+        "translation": ""
+      },
+      {
+        "english": "bat a thousand – hamma ishni muvaffaqiyatli qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "carry the ball – ma’sul bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "be cricket = to play fairly = to be fair – adolatli o’ynamoq",
+        "translation": ""
+      },
+      {
+        "english": "drop the ball – anqayib xato qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "fighting chance – muvaffaqiyat qozonish uchun imkoniyat",
+        "translation": ""
+      },
+      {
+        "english": "golf widow",
+        "translation": ""
+      },
+      {
+        "english": "hit the bull’s",
+        "translation": "eye – o’z maqsadiga zo’r erishmoq"
+      },
+      {
+        "english": "in deep water = in trouble – tashvishda, qiyinchilikda bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "neck and neck – tengma teng",
+        "translation": ""
+      },
+      {
+        "english": "paddle one’s own canoe – biron narsani mustaqil qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "sink or swim – yo muvaffaqiyatga, yoki muvaffaqiyatsizlikka uchramoq",
+        "translation": ""
+      },
+      {
+        "english": "sport of king’s = horse race",
+        "translation": "ot poygasi"
+      },
+      {
+        "english": "team player – odamlar bilan yaxshi ishlaydigan odam",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 10,
+    "title": "Computer",
+    "items": [
+      {
+        "english": "go under the knife – operatsiya qildirmoq",
+        "translation": ""
+      },
+      {
+        "english": "as right as rain – soppa",
+        "translation": "sog’, sog’lom"
+      },
+      {
+        "english": "start up the computer – computerni ishga tushurmoq",
+        "translation": ""
+      },
+      {
+        "english": "shut down the computer – computerni o’chirmoq",
+        "translation": ""
+      },
+      {
+        "english": "get online – online bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "check one’s e",
+        "translation": "mail – e-mailni tekshirmoq"
+      },
+      {
+        "english": "write and send messages – xabar yozib, uni jo’natish",
+        "translation": ""
+      },
+      {
+        "english": "to text",
+        "translation": "yoz"
+      },
+      {
+        "english": "reply to an e",
+        "translation": "mail – e-mailga javob yozmoq"
+      },
+      {
+        "english": "forward an e",
+        "translation": "mail- e-mail yubormoq"
+      },
+      {
+        "english": "attach a file – faylni qo’shib yuborish",
+        "translation": ""
+      },
+      {
+        "english": "log into one’s bank account – bank hisob raqamiga kirmoq",
+        "translation": ""
+      },
+      {
+        "english": "website is down – website ishlamayapti, offline",
+        "translation": ""
+      },
+      {
+        "english": "home page – asosiy qismi, varog’i",
+        "translation": ""
+      },
+      {
+        "english": "scheduled maintenance – jadvalga ko’ra ta’minlash",
+        "translation": ""
+      },
+      {
+        "english": "search engine – qidirish jarayoni",
+        "translation": ""
+      },
+      {
+        "english": "surf/browse the web – interda saytan",
+        "translation": "saytga o’tish"
+      },
+      {
+        "english": "burn a CD",
+        "translation": "komuterdan diskga yozish"
+      },
+      {
+        "english": "press the wrong key – no’to’g’ri tugmani bosmoq, xato qilib qo’ymoa",
+        "translation": ""
+      },
+      {
+        "english": "delete an important file – muhim faylni o’chib yubormoq",
+        "translation": ""
+      },
+      {
+        "english": "recover the file – faylni qayta tiklamoq",
+        "translation": ""
+      },
+      {
+        "english": "the computer freezes/locks up – computer muzlab qoldi, ishlamay qoldi,",
+        "translation": ""
+      },
+      {
+        "english": "restart/reboot the computer – perezagruzka",
+        "translation": ""
+      },
+      {
+        "english": "back up one’s files – fayllarni ehtiyotshart kopiya qilish",
+        "translation": ""
+      },
+      {
+        "english": "to install a program – pragmmani o’rnatish",
+        "translation": ""
+      },
+      {
+        "english": "scan for viruses and spyware – virus va ayg’oqchi fayllni skanner qilsh",
+        "translation": ""
+      },
+      {
+        "english": "all",
+        "translation": "singing, all-dancing – so’ngi model"
+      },
+      {
+        "english": "blow a fuse – uf tortmoq",
+        "translation": ""
+      },
+      {
+        "english": "cog in the machine – katta, kuchli kompaniyada arzimagan ish qilish, deyarli hech",
+        "translation": ""
+      },
+      {
+        "english": "don’t push my buttons! – asabimga tegma",
+        "translation": ""
+      },
+      {
+        "english": "hit the airwaves – radio yoki tvdan jonli efirga chiqmoq",
+        "translation": ""
+      },
+      {
+        "english": "well",
+        "translation": "oiled machine – yaxshi ishlayotgan, yaxshi holatdagi."
+      },
+      {
+        "english": "Study",
+        "translation": ""
+      },
+      {
+        "english": "pre",
+        "translation": "school – maktabgacha, bog’chadan ham oldin"
+      },
+      {
+        "english": "kindergarten – bog’cha",
+        "translation": ""
+      },
+      {
+        "english": "primary/elementary school – boshlang’ich maktab",
+        "translation": ""
+      },
+      {
+        "english": "first… grade –",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 11,
+    "title": "Academic English",
+    "items": [
+      {
+        "english": "middle/secondary school – o’rta maktab",
+        "translation": ""
+      },
+      {
+        "english": "high school – yuqori maktab (9",
+        "translation": "12)"
+      },
+      {
+        "english": "apply to colleges/universities – kollej/universitetlarga hujjat topshirmq",
+        "translation": ""
+      },
+      {
+        "english": "send in/submit one’s application – ariza, hujjatlarini yubormoq",
+        "translation": ""
+      },
+      {
+        "english": "to get good grades – yaxshi baholar olmoq",
+        "translation": ""
+      },
+      {
+        "english": "get/be awarded a scholarship – grant, stipendiya yutib olmoq",
+        "translation": ""
+      },
+      {
+        "english": "take classes/courses – kurs boshlamoq, darslarga bormoq",
+        "translation": ""
+      },
+      {
+        "english": "take notes – qisqacha yozib olmoq",
+        "translation": ""
+      },
+      {
+        "english": "to give a lecture – leksiya o’tmoq",
+        "translation": ""
+      },
+      {
+        "english": "give/make presentations – prezentatsiya qq",
+        "translation": ""
+      },
+      {
+        "english": "do research – tatqiqitlar olib bormoq",
+        "translation": ""
+      },
+      {
+        "english": "write an essay/an assignment/a report/a paper – insho… yozmoq",
+        "translation": ""
+      },
+      {
+        "english": "to hand in one’s work – ishini topshirmoq",
+        "translation": ""
+      },
+      {
+        "english": "grade the assignment – vazifalarni baholamoq",
+        "translation": ""
+      },
+      {
+        "english": "give a feedback – o’z fikrlarini bermoq",
+        "translation": ""
+      },
+      {
+        "english": "take tests/exams – imtohon topshirmoq",
+        "translation": ""
+      },
+      {
+        "english": "to pass the test – imtihondan o’tmoq",
+        "translation": ""
+      },
+      {
+        "english": "to fail the test – testdan yiqilmoq",
+        "translation": ""
+      },
+      {
+        "english": "withdraw from a course – kursga qatnamaslik, bormaslik",
+        "translation": ""
+      },
+      {
+        "english": "drop a course",
+        "translation": ""
+      },
+      {
+        "english": "choose a major/concentration – o’z sohasi, yo’nalishini tanlamoq",
+        "translation": ""
+      },
+      {
+        "english": "graduate from college – kollejni tugatmoq",
+        "translation": ""
+      },
+      {
+        "english": "get a diploma – diplom olmoq",
+        "translation": ""
+      },
+      {
+        "english": "have a degree – daraja bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "a bachelor’s degree/undergraduate – bakalavr",
+        "translation": ""
+      },
+      {
+        "english": "master’s degree",
+        "translation": "magistratura"
+      },
+      {
+        "english": "doctorate (PhD)",
+        "translation": ""
+      },
+      {
+        "english": "better late than never – hechdan ko’ra kech",
+        "translation": ""
+      },
+      {
+        "english": "back to the drawing board – yana boshidan boshlamoq",
+        "translation": ""
+      },
+      {
+        "english": "get your act together – o’z ustida qattiqroq ishlamoq",
+        "translation": ""
+      },
+      {
+        "english": "hit the sack/hay – dars tugaganidan keyin yotgani, dam olgani bormoq",
+        "translation": ""
+      },
+      {
+        "english": "no pain, no gain – qiyinchiliksiz bir nimaga erishib bo’lmaydi",
+        "translation": ""
+      },
+      {
+        "english": "on the ball – tushunmoq",
+        "translation": ""
+      },
+      {
+        "english": "so far so good – kundan kun yaxshi",
+        "translation": ""
+      },
+      {
+        "english": "wrap your head around something – juda qiyin bo’lgan narsani tushunmoq",
+        "translation": ""
+      },
+      {
+        "english": "call it a day – darsni tugatmoq",
+        "translation": ""
+      },
+      {
+        "english": "bookworm – ko’p kitob o’qiydigan odam",
+        "translation": ""
+      },
+      {
+        "english": "to make an outline – bajariladigan ishlarning rejasini tuzmoq",
+        "translation": ""
+      },
+      {
+        "english": "main points – asosiy qismlar, fikrlar",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 12,
+    "title": "Work",
+    "items": [
+      {
+        "english": "gather evidence – dalillar yig’moq",
+        "translation": ""
+      },
+      {
+        "english": "to support one’s claims – fikrni qo’llab",
+        "translation": "quvvatlamoq"
+      },
+      {
+        "english": "to propose a theory – nazariya taklif qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "to touch on several issues – turli masala, mavzularga bog’lamoq",
+        "translation": ""
+      },
+      {
+        "english": "draw parallel – o’xshashliklarini aniqlamoq",
+        "translation": ""
+      },
+      {
+        "english": "fall into different categories – turli xil mavzularga solishtirmoq",
+        "translation": ""
+      },
+      {
+        "english": "to make one’s case – o’zini fikrlarini(argument) bermoq",
+        "translation": ""
+      },
+      {
+        "english": "first draft – birinchi qoralama, chornavek",
+        "translation": ""
+      },
+      {
+        "english": "go into detail – asosiy qismga o’tish",
+        "translation": ""
+      },
+      {
+        "english": "revise the paper – xatolarini tekshirib, yaxshilamoq",
+        "translation": ""
+      },
+      {
+        "english": "final draft – topshiriladigan qog’oz",
+        "translation": ""
+      },
+      {
+        "english": "to carry out a study – ilmiy ish olib bormoq",
+        "translation": ""
+      },
+      {
+        "english": "key factors (important factors) – muhim omillar",
+        "translation": ""
+      },
+      {
+        "english": "play a role/part – ta’sirini ko’rsatmoq",
+        "translation": ""
+      },
+      {
+        "english": "perfect examples – aniq, yaqqol misollar",
+        "translation": ""
+      },
+      {
+        "english": "to prove one’s points – o’z fikrlarni isbotlash",
+        "translation": ""
+      },
+      {
+        "english": "briefly summarize – qisqacha xulosalamoq",
+        "translation": ""
+      },
+      {
+        "english": "draw conclusion – xulosa yozmoq, xulosaga kelmoq",
+        "translation": ""
+      },
+      {
+        "english": "to raise questions – savollar bilan tugatmoq",
+        "translation": ""
+      },
+      {
+        "english": "to cost an arm and a leg – juda qimmatga tushmoq",
+        "translation": ""
+      },
+      {
+        "english": "over the moon – juda ham xursand",
+        "translation": ""
+      },
+      {
+        "english": "once in a blue moon = rarely = when pigs fly – juda kamdan",
+        "translation": "kam, tuyani dumi"
+      },
+      {
+        "english": "a piece of cake – juda oson",
+        "translation": ""
+      },
+      {
+        "english": "a drop in the ocean – dengizdan tomchi",
+        "translation": ""
+      },
+      {
+        "english": "actions speak louder than words – yuz marta gapirganda bir marta qilgan yaxshi",
+        "translation": ""
+      },
+      {
+        "english": "it is a small world – yer yumaloq, kichkina",
+        "translation": ""
+      },
+      {
+        "english": "bite one’s tongue – tilini tishlab qolmoq",
+        "translation": ""
+      },
+      {
+        "english": "every cloud has a silver lining – hamma yomon narsani ham yaxshi tomoni",
+        "translation": ""
+      },
+      {
+        "english": "found my feet – sharoit, iqtisodiy nuqtai nazardan oyoqqa turib olmoq",
+        "translation": ""
+      },
+      {
+        "english": "to do an internship – oyliksiz praktika, amaliyot o’tamoq",
+        "translation": ""
+      },
+      {
+        "english": "entry level job – ko’p malaka va mahorat talab qilmaydigan ishlar",
+        "translation": ""
+      },
+      {
+        "english": "minimum wage – eng kam ish haqi, eng kam oylik",
+        "translation": ""
+      },
+      {
+        "english": "a good team player – jamoa bilan yaxshi ishlaydigan odam",
+        "translation": ""
+      },
+      {
+        "english": "to get a promotion – lavozimi oshmq",
+        "translation": ""
+      },
+      {
+        "english": "to get a rise – oyligi oshmoq",
+        "translation": ""
+      },
+      {
+        "english": "to be fired/dismissed – ishdan bo’shatilmoq",
+        "translation": ""
+      },
+      {
+        "english": "a heavy workload – juda ham og’ir ish",
+        "translation": ""
+      },
+      {
+        "english": "to work overtime – ko’p ortiqcha ishlamoq",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 13,
+    "title": "Business",
+    "items": [
+      {
+        "english": "demanding job – ko’p ma’suliyat talab qiladigan ish, ma’suliyatli ish",
+        "translation": ""
+      },
+      {
+        "english": "to quit one’s job – o’z ishidan ketmoq, tashlab ketmoq",
+        "translation": ""
+      },
+      {
+        "english": "to get a job – ish topmoq",
+        "translation": ""
+      },
+      {
+        "english": "competitive salary – o’rtacha oylikdan ham sal ko’proq, narmalni oylik",
+        "translation": ""
+      },
+      {
+        "english": "generous benefits – qo’shimcha foydalar",
+        "translation": ""
+      },
+      {
+        "english": "a well",
+        "translation": "paid/rewarding job – yaxshi haq to’lanadigan ish"
+      },
+      {
+        "english": "a career change – o’zini kareriyasidagi o’zgarish",
+        "translation": ""
+      },
+      {
+        "english": "apply for a job – ishga ariza bermoq",
+        "translation": ""
+      },
+      {
+        "english": "job ads – ish haqidagi reklama, ish reklamasi",
+        "translation": ""
+      },
+      {
+        "english": "interview the candidates – nomzodlarni suhbatdan o’tkazmoq",
+        "translation": ""
+      },
+      {
+        "english": "job description – ish haqidagi ma’lumotlar",
+        "translation": ""
+      },
+      {
+        "english": "job seekers – ish izlab yurgan odamlar (unemployed)",
+        "translation": ""
+      },
+      {
+        "english": "a menial job = entry level job – ko’p malaka va mahorat talab qilmaydigan ishlar",
+        "translation": ""
+      },
+      {
+        "english": "earn a living – yashash uchun pul topmoq",
+        "translation": ""
+      },
+      {
+        "english": "between jobs – pul topish uchun qilinadigan ishlar (ish topgungacha)",
+        "translation": ""
+      },
+      {
+        "english": "a great job offer – ajoyib ish taklifi",
+        "translation": ""
+      },
+      {
+        "english": "dream job – orzuyidagi ish",
+        "translation": ""
+      },
+      {
+        "english": "to be ahead of the pack – hamma (o’z raqobatchilari)dan oldinda bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "big picture – asosiy masala",
+        "translation": ""
+      },
+      {
+        "english": "(do smth) by the book – biron narsani to’g’ri bajarmoq",
+        "translation": ""
+      },
+      {
+        "english": "easy come easy go – tez kegan narsa, tez ketadi",
+        "translation": ""
+      },
+      {
+        "english": "game plan – muvaffaqiyatga erishish uchun ajoyib ish, biznes rejasi",
+        "translation": ""
+      },
+      {
+        "english": "to get down to business – asosiy ishga qaytmoq",
+        "translation": ""
+      },
+      {
+        "english": "get smth off the ground – biron narsani boshlamoq",
+        "translation": ""
+      },
+      {
+        "english": "to go down the drain – chippakka chiqmoq, behuda bo’ldi",
+        "translation": ""
+      },
+      {
+        "english": "to go extra mile – kutilgandan ham ko’proq ish qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "hands are tied – qo’llar bog’liq",
+        "translation": ""
+      },
+      {
+        "english": "in a nutshell – gapni po’stkallasini aytganda, lo’nda qilib aytganda",
+        "translation": ""
+      },
+      {
+        "english": "in full swing – to’liq kuch bilan",
+        "translation": ""
+      },
+      {
+        "english": "in the driver’s seat – boshqaruvchi",
+        "translation": ""
+      },
+      {
+        "english": "to go into business – biznesga kirmoq, o’z biznesi bilan shug’ullanmooq",
+        "translation": ""
+      },
+      {
+        "english": "set up a company – kompaniya tashkil etmoq, kompaniya tuzmq",
+        "translation": ""
+      },
+      {
+        "english": "do market research – bozorni o’rganmoq",
+        "translation": ""
+      },
+      {
+        "english": "operate at a loss – ziyoniga ishlamoq",
+        "translation": ""
+      },
+      {
+        "english": "break even – sarflagan xarajatlariga o’zini puli teng bo’lish",
+        "translation": ""
+      },
+      {
+        "english": "tough competition – qattiq raqobat",
+        "translation": ""
+      },
+      {
+        "english": "gain market share – juda ham ko’p mijozlarga ega bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "to go bankrupt – bankrot bo’lmoq",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 14,
+    "title": "Money",
+    "items": [
+      {
+        "english": "to make a profit – daromad topmoq, foyda qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "hire stuff/employees – ishchilarni yonlamoq",
+        "translation": ""
+      },
+      {
+        "english": "make a deal – shartnoma tuzmoq, kelishmoq",
+        "translation": ""
+      },
+      {
+        "english": "do business – ishlamoq, biznesni yuritmoq, biznes qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "sign a contract – shartnomani imzolamoq",
+        "translation": ""
+      },
+      {
+        "english": "launch a new product – yangi mahsulotni xalqqa taqdim etmoq, ishlab chiqarmoq",
+        "translation": ""
+      },
+      {
+        "english": "customer service – mijozlarga xizmat ko’rsatish",
+        "translation": ""
+      },
+      {
+        "english": "take one’s business elsewhere – agar biznesni yaxshi qilmasak, sheriklarimiz",
+        "translation": ""
+      },
+      {
+        "english": "a rival company – raqib kompaniya",
+        "translation": ""
+      },
+      {
+        "english": "run a business – biznesni boshqarmoq",
+        "translation": ""
+      },
+      {
+        "english": "take off/(business) – muvaffaqiyatli bo’lmoq; uchib ketmoq",
+        "translation": ""
+      },
+      {
+        "english": "“business is boming” – biznes zo’r rivojlanyapti",
+        "translation": ""
+      },
+      {
+        "english": "keep one’s eye on the ball – diqqatini bir narsaga yaxshilab qaratmoq",
+        "translation": ""
+      },
+      {
+        "english": "long shot – amalga oshishi qiyin bo’lgan ish(masalan uzoqqa o’q otish)",
+        "translation": ""
+      },
+      {
+        "english": "to be not going to fly – ish bermaydi, foydasiz",
+        "translation": ""
+      },
+      {
+        "english": "no brainer(adj) – miyani qotirishga hojat yo’q, juda oson",
+        "translation": ""
+      },
+      {
+        "english": "on the same page – bir fikrda",
+        "translation": ""
+      },
+      {
+        "english": "put all one’s eggs in one basket – biron narsani foyda berishiga qattiq ishonib",
+        "translation": ""
+      },
+      {
+        "english": "put the cart before the horse – bironta narsani no’to’g’ri bajarmoq",
+        "translation": ""
+      },
+      {
+        "english": "raise the bar – talabni oshirmoq",
+        "translation": ""
+      },
+      {
+        "english": "rock the boat – suvni loyqalatmoq(ibora)",
+        "translation": ""
+      },
+      {
+        "english": "the elephant in the room – hech kim hal qilolmaydigan, siyqasi chiqib ketgan",
+        "translation": ""
+      },
+      {
+        "english": "think outside the box – creative o’yla, mavzuni har tomonlama o’rganib chiq",
+        "translation": ""
+      },
+      {
+        "english": "upper hand – ustun, oldin, bir pog’ona baland",
+        "translation": ""
+      },
+      {
+        "english": "earn money – pul ishlab topmoq",
+        "translation": ""
+      },
+      {
+        "english": "inherit money – pul me’ros qilib qoldirmoq",
+        "translation": ""
+      },
+      {
+        "english": "inherit a fortune – boylik me’ros qilib qoldirmoq",
+        "translation": ""
+      },
+      {
+        "english": "make a deposit – bank hisob raqamiga pul qoldirmq",
+        "translation": ""
+      },
+      {
+        "english": "make a withdrawal – bank hisob raqamidan pulni yechib olmoq",
+        "translation": ""
+      },
+      {
+        "english": "spend money – pul sarflamoq",
+        "translation": ""
+      },
+      {
+        "english": "waste/squander smb’s money – pulni behudaga sarflamoq",
+        "translation": ""
+      },
+      {
+        "english": "money is tight – pul yo’q, pul kam",
+        "translation": ""
+      },
+      {
+        "english": "make a budget – sarflanadigan pullarni rejasini tuzmoq",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 15,
+    "title": "Travel",
+    "items": [
+      {
+        "english": "stick to the budget – rejalashtirilgan budjetga rioya qilish",
+        "translation": ""
+      },
+      {
+        "english": "to be broke – pulsiz qolmoq, sinmoq",
+        "translation": ""
+      },
+      {
+        "english": "financially savvy – pul, iqtisod sohasida daho",
+        "translation": ""
+      },
+      {
+        "english": "save money – pul yig’moq",
+        "translation": ""
+      },
+      {
+        "english": "emergency fund – har ehtimolga yig’ilgan pul",
+        "translation": ""
+      },
+      {
+        "english": "living expenses – kundalik xarajtlar",
+        "translation": ""
+      },
+      {
+        "english": "invest money in the stock market – birjaga pul tikmoq",
+        "translation": ""
+      },
+      {
+        "english": "lose money – pul yo’qotmoq",
+        "translation": ""
+      },
+      {
+        "english": "set aside money = save money – pul tejamoq",
+        "translation": ""
+      },
+      {
+        "english": "borrow money from the bank – bankdan pul qarz olmoq",
+        "translation": ""
+      },
+      {
+        "english": "take out a loan – kredit olmoq",
+        "translation": ""
+      },
+      {
+        "english": "pay the money back in the installments – foizlarini bilan (bankdan) qarzni",
+        "translation": ""
+      },
+      {
+        "english": "change/exchange money – pulni alamshtirmoq",
+        "translation": ""
+      },
+      {
+        "english": "local currency – mahalliy valyuta",
+        "translation": ""
+      },
+      {
+        "english": "counterfeit bills – soxta qog’oz pul",
+        "translation": ""
+      },
+      {
+        "english": "donate money – pul ehson qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "raise money – fondini, pulini ko’tarmoq",
+        "translation": ""
+      },
+      {
+        "english": "to be born with a silver spoon in one’s mouth – boy oilada tug’ulmoq",
+        "translation": ""
+      },
+      {
+        "english": "bread and butter – mo’may daromad",
+        "translation": ""
+      },
+      {
+        "english": "break the bank – pulini birdaniga tez ishlatib qo’ymoq, sovurib qo’ymoq",
+        "translation": ""
+      },
+      {
+        "english": "bring home the bacon – uyga pul topib kelmoq (uyimga 2ta non olib brishim",
+        "translation": ""
+      },
+      {
+        "english": "cash in one’s chips – biron narsa sotib olish uchun o’zidagi narsani pullamoq,",
+        "translation": ""
+      },
+      {
+        "english": "foot the bill – soliqlarni to’lamoq",
+        "translation": ""
+      },
+      {
+        "english": "go from rags to riches – kambag’allikdan boylikka qarab ketmoq",
+        "translation": ""
+      },
+      {
+        "english": "get a run for one’s money – muammoga duch kelmoq, o’zizni puliz uchun",
+        "translation": ""
+      },
+      {
+        "english": "have sticky fingers – qo’li egri bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "head over heels in debt – qulog’igacha qarzga botib ketmoq.",
+        "translation": ""
+      },
+      {
+        "english": "business trip – biznes sayohat",
+        "translation": ""
+      },
+      {
+        "english": "travel agency – sayohat agentligi, sayyohlik agentligi",
+        "translation": ""
+      },
+      {
+        "english": "booking one’s flight – samolyotga bilet sotib olmoq",
+        "translation": ""
+      },
+      {
+        "english": "make a hotel reservation – mehmonxonadan joy band qilib qo’ymoq",
+        "translation": ""
+      },
+      {
+        "english": "make the travel arrangements – sayohatni rejalashtirmoq",
+        "translation": ""
+      },
+      {
+        "english": "the plain is overbooked – samolyotga chiptalar oldindan ko’p zakaz qilingan",
+        "translation": ""
+      },
+      {
+        "english": "to be bumped to a later flight – keyingi reysga qolib ketmoq",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 16,
+    "title": "Weather",
+    "items": [
+      {
+        "english": "boarding pass – somolyotning bilet",
+        "translation": ""
+      },
+      {
+        "english": "window seat – oyna oldidagi o’rindiq",
+        "translation": ""
+      },
+      {
+        "english": "aisle seat – oyna oldidagi o’rindiq emas",
+        "translation": ""
+      },
+      {
+        "english": "bumpy flight – rasvo parvoz",
+        "translation": ""
+      },
+      {
+        "english": "connecting flight – o’zimni uchishim kerak bo’lgan reysim",
+        "translation": ""
+      },
+      {
+        "english": "have ten (…)",
+        "translation": "hour layover – keyingi reysni o’n (…) soat kutish"
+      },
+      {
+        "english": "checked luggage – tekshirilgan yukxona ichidagi yuklar",
+        "translation": ""
+      },
+      {
+        "english": "carry",
+        "translation": "on bag – samolyotda qo’lda olib ketiladigan yuklar"
+      },
+      {
+        "english": "check into a hotel – mehmonxonada ro’yxatdan o’tmoq",
+        "translation": ""
+      },
+      {
+        "english": "a seedy hotel – ishonchsiz (not safe) va noqulay mehmonxona",
+        "translation": ""
+      },
+      {
+        "english": "the red",
+        "translation": "light district – hududni eng yomon joylari (diskateka, tungi klub) bor"
+      },
+      {
+        "english": "a dingy room (disgusting, dirty and dark room) – rasvo qorong’u xona",
+        "translation": ""
+      },
+      {
+        "english": "luxury hotel – hashamatli mehmonxoan",
+        "translation": ""
+      },
+      {
+        "english": "to lose one’s luggage – yuklarini yo’qotib qo’ymoq",
+        "translation": ""
+      },
+      {
+        "english": "to travel light – ko’p yuk olmasdan sayohat qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "to be off the beaten track – juda ham odamlar kam boradigan joyda bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "to travel in a body – guruh bilan sayohat qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "travel broadens the mind – sayohat dunyoqarashni kengaytiradi",
+        "translation": ""
+      },
+      {
+        "english": "in the same boat – bir xil xolatda (kemaga tushganning joni bir)",
+        "translation": ""
+      },
+      {
+        "english": "backseat driver – odamlarga aql o’rgataveradigan odam",
+        "translation": ""
+      },
+      {
+        "english": "only port in a storm – bo’ronda xohalagan portda to’xtash; hech bo’lmaganda,",
+        "translation": ""
+      },
+      {
+        "english": "get away from it all – hammasidan voz kechish, hammasini unutish uchun",
+        "translation": ""
+      },
+      {
+        "english": "kick back = relax – dam olmoq",
+        "translation": ""
+      },
+      {
+        "english": "live like a king – qirollarday yashamoq",
+        "translation": ""
+      },
+      {
+        "english": "weather forecast – ob",
+        "translation": "havo bashorati"
+      },
+      {
+        "english": "the sun will be shining brightly – quyosh charaqlab turadi",
+        "translation": ""
+      },
+      {
+        "english": "clear skies – osmonda bulut yo’q",
+        "translation": ""
+      },
+      {
+        "english": "high temperatures – yuqori harorat",
+        "translation": ""
+      },
+      {
+        "english": "bask in the sunshine = soak up the sunshine – quyosh nurida toblanmoq",
+        "translation": ""
+      },
+      {
+        "english": "oppressively = scorching = swelteringly hot – juda ham issiq",
+        "translation": ""
+      },
+      {
+        "english": "hot and humid – issiq va nam",
+        "translation": ""
+      },
+      {
+        "english": "(to be) partly cloudy (the sky partially covered by clouds)– osmonning bir, ikkita",
+        "translation": ""
+      },
+      {
+        "english": "scattered clouds (just a few clouds) – kam bulutlar bilan qoplangan",
+        "translation": ""
+      },
+      {
+        "english": "heavy clouds – ko’p bulutlar",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 17,
+    "title": "City",
+    "items": [
+      {
+        "english": "towering skyscrapers – juda ham baland binolar",
+        "translation": ""
+      },
+      {
+        "english": "noise pollution – juda ham ko’p shovqin, shovqindan ifloslanish",
+        "translation": ""
+      },
+      {
+        "english": "coastal city – ocean qirg’og’idagi shahar",
+        "translation": ""
+      },
+      {
+        "english": "high",
+        "translation": "rise building – juda ham baland bino"
+      },
+      {
+        "english": "industrial zone – sanoatlashgan hudud",
+        "translation": ""
+      },
+      {
+        "english": "cozy little house – juda ham shinam kichkina uy",
+        "translation": ""
+      },
+      {
+        "english": "(on) outskirts of the city – shaharning tashqi qismi(da)",
+        "translation": ""
+      },
+      {
+        "english": "hectic pace – juda ham tez ritm",
+        "translation": ""
+      },
+      {
+        "english": "bustling streets (busy streets filled with people) – shovqinli, ko’p odamli ko’chalar",
+        "translation": ""
+      },
+      {
+        "english": "strewn with litter – axlat bilan to’lib ketgan",
+        "translation": ""
+      },
+      {
+        "english": "traffic jams – probka",
+        "translation": ""
+      },
+      {
+        "english": "narrow cobble stone streets – tor tosh yotqizilgan ko’chalar",
+        "translation": ""
+      },
+      {
+        "english": "eighteenth",
+        "translation": "century building – 18-asrga tegishli bo’lgan bino"
+      },
+      {
+        "english": "quaint shops – antikvar narsalar, suviner sotadigan do’konlar",
+        "translation": ""
+      },
+      {
+        "english": "gourmet restaurants – yuqori sifatli restarantlar",
+        "translation": ""
+      },
+      {
+        "english": "local cuisine – mahalliy oshxona, taom",
+        "translation": ""
+      },
+      {
+        "english": "open",
+        "translation": "air market – tashqaridagi usti ochiq bozor"
+      },
+      {
+        "english": "main square – asosiy xiyobon",
+        "translation": ""
+      },
+      {
+        "english": "street vendors – ko’chada narsasini yoyib sotadigan sotuvchilar",
+        "translation": ""
+      },
+      {
+        "english": "trendy cafes – mashhur kafelar",
+        "translation": ""
+      },
+      {
+        "english": "street crime – ko’cha jinoyati",
+        "translation": ""
+      },
+      {
+        "english": "inner",
+        "translation": "city areas (older, central, crowded part of a city, usually filled with poor"
+      },
+      {
+        "english": "cultural diversity – madaniyat xilma",
+        "translation": "xilligi"
+      },
+      {
+        "english": "pulsating nightlife – juda ham ko’p barlar, klublar bor hudud",
+        "translation": ""
+      },
+      {
+        "english": "you can’t fight city hall – sen hech qachon qog’ozbozlik, buyrakratiyani ustidan",
+        "translation": ""
+      },
+      {
+        "english": "cardboard city – uysiz odamlar yashaydigan hudud",
+        "translation": ""
+      },
+      {
+        "english": "fat city – iqtisodiy jihatdan narmalni holat(a secure and pleasant situation often",
+        "translation": ""
+      },
+      {
+        "english": "marble city – 1 qabriston; 2 juda ham ko’p haykallar bor hdud",
+        "translation": ""
+      },
+      {
+        "english": "Act of God – xudoning ishi (suv toshqinlari, zilzila)",
+        "translation": ""
+      },
+      {
+        "english": "Dead is a dodo – juda ham oddiy, zamondan ortda qolib ketgan (fuddy",
+        "translation": "duddy)"
+      },
+      {
+        "english": "second to none (the best)– eng zo’ri",
+        "translation": ""
+      },
+      {
+        "english": "(in the) middle of nowhere – yerni narigi tomonida, juda uzoqda",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 18,
+    "title": "Countryside",
+    "items": [
+      {
+        "english": "a little change of scenery – manzarani biroz o’zgartirish, havo almashtirish",
+        "translation": ""
+      },
+      {
+        "english": "surrounding countryside – atrofdagi qishloq hududlar",
+        "translation": ""
+      },
+      {
+        "english": "wildlife preserve – hayvonlar qo’riqlanadigan maxsus hudud",
+        "translation": ""
+      },
+      {
+        "english": "winding footpath – juda ko’p burilishlari bor aylanma so’qmoq",
+        "translation": ""
+      },
+      {
+        "english": "varied landscapes – turli xil landshaftlar",
+        "translation": ""
+      },
+      {
+        "english": "dense forests – zich o’rmonlar",
+        "translation": ""
+      },
+      {
+        "english": "vast meadows – juda ham katta o’tloqlar",
+        "translation": ""
+      },
+      {
+        "english": "gentle, rolling hills – qiya tepaliklar",
+        "translation": ""
+      },
+      {
+        "english": "rocky landscape – qoyali, tog’li landshaft",
+        "translation": ""
+      },
+      {
+        "english": "towering cliffs – baland qoyalar",
+        "translation": ""
+      },
+      {
+        "english": "magnificent waterfalls – ajoyib, ulkan sharsharalar",
+        "translation": ""
+      },
+      {
+        "english": "hiking trail – biron tog’li, qishloqli hududlarga piyoda sayrga chiqish",
+        "translation": ""
+      },
+      {
+        "english": "steepest face of the tallest mountain – baland tog’ning eng qiya yer yuzasi",
+        "translation": ""
+      },
+      {
+        "english": "foot of the mountain – tog’ning pastki qismi",
+        "translation": ""
+      },
+      {
+        "english": "clear, bubbling mountain stream – toza, musaffo tog’ jilg’asi",
+        "translation": ""
+      },
+      {
+        "english": "spectacular panoramic view – hamma joyni ajoyib ko’rinishi",
+        "translation": ""
+      },
+      {
+        "english": "jagged peaks – juda ham tik qoyalar",
+        "translation": ""
+      },
+      {
+        "english": "snow",
+        "translation": "covered peaks – qor bilan qoplangan cho’qqilar"
+      },
+      {
+        "english": "distant mountain range – bir",
+        "translation": "biriga ulanib ketgan tog’lar zanjiri"
+      },
+      {
+        "english": "lush green countryside – yashil o’siliklari bilan boy bo’lgan qishloq hududlari",
+        "translation": ""
+      },
+      {
+        "english": "slow",
+        "translation": "moving, shallow river – sekin oqadigan sayoz daryolar"
+      },
+      {
+        "english": "sun",
+        "translation": "drenched, sandy beaches – quyoshli, qumli sohillar, plyajlarr"
+      },
+      {
+        "english": "picturesque fishing village – rasmga tushadigan ajoyib manzarali qishloqlar",
+        "translation": ""
+      },
+      {
+        "english": "unobstructed view (there are no obstacles blocking the view) – ko’rishga hech",
+        "translation": ""
+      },
+      {
+        "english": "boat trip – qayiqda sayohat qilish",
+        "translation": ""
+      },
+      {
+        "english": "secluded beaches – yashirin plyajlar, qirg’oqlar",
+        "translation": ""
+      },
+      {
+        "english": "it’s well worth the trip – vaqtni sarflab borishga arziydi, arzigulik sayohat",
+        "translation": ""
+      },
+      {
+        "english": "it’s all Greek to me – manga bu tushunarsiz",
+        "translation": ""
+      },
+      {
+        "english": "pardon my French – qo’pol bo’lsaham uzr",
+        "translation": ""
+      },
+      {
+        "english": "when in Rome, do as the Romans do – borgan joyning qonun",
+        "translation": "qoidalariga rioya"
+      },
+      {
+        "english": "All roads lead to Rome – (hamma yo’llar Rimga olib boradi) hamma yo’l bilan",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 19,
+    "title": "Crime",
+    "items": [
+      {
+        "english": "to break the law – qonunni buzmoq",
+        "translation": ""
+      },
+      {
+        "english": "to commit a crime – jinoyat sodir qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "savage rape – shavqatsizlarcha zo’rlash",
+        "translation": ""
+      },
+      {
+        "english": "brutal murder – shavqatsizlarcha qotillik",
+        "translation": ""
+      },
+      {
+        "english": "barbaric, horrible, vicious crime – shavqatsizlarcha qilingan jinoyat",
+        "translation": ""
+      },
+      {
+        "english": "attempted murder – o’ldirishga harakat qilib ko’rilgan, lekin o’ldira olinmagan",
+        "translation": ""
+      },
+      {
+        "english": "(attempted) kidnapping – odam o’g’irlash",
+        "translation": ""
+      },
+      {
+        "english": "(attempted) break",
+        "translation": "in – uyga buzib, bosirib kirish"
+      },
+      {
+        "english": "allaged assault",
+        "translation": "isbotlanmagan qurolli tahdid"
+      },
+      {
+        "english": "allaged harassment – isbotlanmagan qiynoq",
+        "translation": ""
+      },
+      {
+        "english": "allaged rape – isbotlanmagan zo’rlash",
+        "translation": ""
+      },
+      {
+        "english": "victim – qurbon",
+        "translation": ""
+      },
+      {
+        "english": "to report the crime – jinoyat haqida ma’lumot bermoq",
+        "translation": ""
+      },
+      {
+        "english": "investigate the crime – jinoyatni taftish qilish",
+        "translation": ""
+      },
+      {
+        "english": "crime scene – jinoyat joyi, jinoyat sodir bo’lgan joy",
+        "translation": ""
+      },
+      {
+        "english": "gather forensic evidence (bullet, fingerprints, blood sample, DNA) – qonuniy",
+        "translation": ""
+      },
+      {
+        "english": "witnesses come forward – quvohlar paydo bo’ladi",
+        "translation": ""
+      },
+      {
+        "english": "a first",
+        "translation": "hand account – guvohdan olingan dastlabki guvohlik"
+      },
+      {
+        "english": "motives for the crime – jinoyatga sabab bo’lgan narsalar",
+        "translation": ""
+      },
+      {
+        "english": "to arrest suspects – gumondorlarni hibsga olmoq",
+        "translation": ""
+      },
+      {
+        "english": "to prove one’s innocence – aybsiz ekanligi isbotlamoq",
+        "translation": ""
+      },
+      {
+        "english": "to provide solid alibi – jinoyat qilmaganini isbotlash uchun, jinoyat sodir bo’lgan",
+        "translation": ""
+      },
+      {
+        "english": "unsolved crime – ochilmagan jinoyat",
+        "translation": ""
+      },
+      {
+        "english": "crime rate – jinoyat darajasi",
+        "translation": ""
+      },
+      {
+        "english": "crime wave – jinoyat to’lqini (katta darajada)",
+        "translation": ""
+      },
+      {
+        "english": "first",
+        "translation": "time offender – muqaddam sudlanmagan"
+      },
+      {
+        "english": "to have a criminal record – muqaddam sudlanmoq",
+        "translation": ""
+      },
+      {
+        "english": "serial killer – ketma",
+        "translation": "ketqotillik qilgan qotil"
+      },
+      {
+        "english": "organized crime – tashkillashtirilgan uyushgan jinoyat",
+        "translation": ""
+      },
+      {
+        "english": "notorious criminal – juda ham mashhur jinoyatchi",
+        "translation": ""
+      },
+      {
+        "english": "a cold",
+        "translation": "blooded killer/murderer – sovuq qon qotil"
+      },
+      {
+        "english": "a crazed/psychopathic killer – psixopat, jinni qotil, manyak",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 20,
+    "title": "Law/Justice",
+    "items": [
+      {
+        "english": "domestic violence – uy ichida bo’ladigan zo’ravonlik (er xotinini urishi,",
+        "translation": ""
+      },
+      {
+        "english": "drug trafficking – narkotik moddalarning noquniy oldi",
+        "translation": "sotdisi va tashish"
+      },
+      {
+        "english": "identity theft (imposter) – insonni shaxsiy ma’lumotlarini o’g’rilab, uni nomidan",
+        "translation": ""
+      },
+      {
+        "english": "sexual harassment – jinsiy zo’ravonlik",
+        "translation": ""
+      },
+      {
+        "english": "petty (a minor) crime – kichik jinoyat",
+        "translation": ""
+      },
+      {
+        "english": "armed robbery – qurolli bosqinchilik, talonchilik",
+        "translation": ""
+      },
+      {
+        "english": "bandit territory – huquqlarni, qonunlarni mensimaydigan hudud",
+        "translation": ""
+      },
+      {
+        "english": "behind bars (in the can) – qamoqda",
+        "translation": ""
+      },
+      {
+        "english": "cat burglar – mohir o’g’ri",
+        "translation": ""
+      },
+      {
+        "english": "do a runner – restoranga kirib, pulini bermasdan qochib ketish",
+        "translation": ""
+      },
+      {
+        "english": "get away with murder – jinoyat sodir qilib, jazodan qutulib qolish",
+        "translation": ""
+      },
+      {
+        "english": "highway robbery – qip",
+        "translation": "qizil o’g’rilik; bu tuppa tuzuk talonchilikku"
+      },
+      {
+        "english": "new sheriff in the town – yaqindagina lavozimga tayinlangan boshliqlarga",
+        "translation": ""
+      },
+      {
+        "english": "poacher turned gamekeeper – jinoyatchi birdaniga qonun himoyachisiga",
+        "translation": ""
+      },
+      {
+        "english": "to pass the law – qonunni qabul qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "to uphold and enforce the law – qonunni kuchga kiritmoq, amalga oshirmoq (to put",
+        "translation": ""
+      },
+      {
+        "english": "to be charged with a crime – jinoyatda ayblanmoq",
+        "translation": ""
+      },
+      {
+        "english": "to appear in court",
+        "translation": "sudga kelmoq"
+      },
+      {
+        "english": "to stand trial (be judged guilty or innocent) – aybsiz yoki aybdor deb",
+        "translation": ""
+      },
+      {
+        "english": "reach verdict (arrive at a decision)– bir xulosaga kelmoq",
+        "translation": ""
+      },
+      {
+        "english": "irrefutable, overwhelming or concrete evidence – rad etib bo’lmas dalil",
+        "translation": ""
+      },
+      {
+        "english": "jury will be unanimous – ularning barchasi rozi",
+        "translation": ""
+      },
+      {
+        "english": "evidence is circumstantial or inconclusive (the evidence does not 100%prove the",
+        "translation": ""
+      },
+      {
+        "english": "to have a hung jury – bir qarorga kelinmagam",
+        "translation": ""
+      },
+      {
+        "english": "a light sentence (small punishment) – yengil jazo",
+        "translation": ""
+      },
+      {
+        "english": "to pay a fine – jarima to’lamoq",
+        "translation": ""
+      },
+      {
+        "english": "do community service – jamoatchilik ishiga jalb qilinmoq",
+        "translation": ""
+      },
+      {
+        "english": "go to prison – qamoqqa bormoq (jinoyat qilgani uchun)",
+        "translation": ""
+      },
+      {
+        "english": "a harsh sentence – og’ir jazo",
+        "translation": ""
+      },
+      {
+        "english": "life in prison = life imprisonment – butun umrlik qamoq",
+        "translation": ""
+      },
+      {
+        "english": "death penalty – o’lim jazosi",
+        "translation": ""
+      },
+      {
+        "english": "to appeal the verdict (try to change decision) – qarorni o’zgartirishga harakat",
+        "translation": ""
+      },
+      {
+        "english": "a prolonged legal battle – uzoq cho’zilib ketgan sud ishi",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 21,
+    "title": "War/piece",
+    "items": [
+      {
+        "english": "to uphold the original verdict (to continue with original decision)",
+        "translation": ""
+      },
+      {
+        "english": "to overturn the original verdict (to change the decision)",
+        "translation": ""
+      },
+      {
+        "english": "a convicted criminal",
+        "translation": "ayblanuvchi"
+      },
+      {
+        "english": "to Serve time (to spend time in prison)",
+        "translation": ""
+      },
+      {
+        "english": "to be released from prison early for good behavior – yaxshi xulqi uchun",
+        "translation": ""
+      },
+      {
+        "english": "a threat to society – jamiyatga xavf",
+        "translation": ""
+      },
+      {
+        "english": "to be on parole – shartli ravishda ozod qilinmoq",
+        "translation": ""
+      },
+      {
+        "english": "to bring someone to justice – kimgadir nisbatan adolat olib kelmoq, kimgadir",
+        "translation": ""
+      },
+      {
+        "english": "miscarriage of justice – kimnidir nohaq ayblash",
+        "translation": ""
+      },
+      {
+        "english": "null and void – bir tiyinga qimmat, qonuniy ahamiyatga ega emas, odamlar amal",
+        "translation": ""
+      },
+      {
+        "english": "justice is blind – qonun oldida hamma birday",
+        "translation": ""
+      },
+      {
+        "english": "Jersey justice – juda ham shavqatsiz qonun",
+        "translation": ""
+      },
+      {
+        "english": "in the interest of justice = for the sake of justice – qonunga ko’ra, qonun yo’lida",
+        "translation": ""
+      },
+      {
+        "english": "law of the jungle – o’rmon qonuni, hamma o’zi uchun, tirik qolishi uchun",
+        "translation": ""
+      },
+      {
+        "english": "the long arm of the law – qonnunning kuchi, qonnunning uzun qo’li",
+        "translation": ""
+      },
+      {
+        "english": "not have a leg to stand on – dalil, yaqqol isbot yo’q",
+        "translation": ""
+      },
+      {
+        "english": "open",
+        "translation": "and-shut case – oydin, shunday ko’rinib turgan masala, jinoyat"
+      },
+      {
+        "english": "smoking gun – jinoyat sodir qilinganini ko’rsatadigan yaqqol daliliy ashyo",
+        "translation": ""
+      },
+      {
+        "english": "war has broken out – urush boshlandi",
+        "translation": ""
+      },
+      {
+        "english": "violence has erupted – urush boshlandi",
+        "translation": ""
+      },
+      {
+        "english": "declare war – urush ochmoq, urush e’lon qilmoq",
+        "translation": ""
+      },
+      {
+        "english": "pre",
+        "translation": "emptive strike – barvaqt, erta hujum"
+      },
+      {
+        "english": "stockpiling weapons – qurol",
+        "translation": "yaroqlani yig’moq (qurollanish poygasi)"
+      },
+      {
+        "english": "unprovoked attack – ogohlantirilmay, to’satdan boshlangan adolatsiz urush",
+        "translation": ""
+      },
+      {
+        "english": "tensions may rise – ziddiyatlar paydo bo’lishi",
+        "translation": ""
+      },
+      {
+        "english": "on the brink of war – urush arafasida",
+        "translation": ""
+      },
+      {
+        "english": "deploying troops – safarbar etilgan qo’shinlar",
+        "translation": ""
+      },
+      {
+        "english": "be stationed/posted – ma’lum bir hudduda joylashmoq",
+        "translation": ""
+      },
+      {
+        "english": "launch an offensive – jangni boshlamoq",
+        "translation": ""
+      },
+      {
+        "english": "storm/invade enemy territory – dushman hududini, territoriyasini egallamoq",
+        "translation": ""
+      },
+      {
+        "english": "horrors of war – urush daxshatlari",
+        "translation": ""
+      },
+      {
+        "english": "be caught in crossfire – urush o’chog’ida qolib ketgan",
+        "translation": ""
+      },
+      {
+        "english": "suffer civilian casualties – beayb odamlarning yaralanishi va o’lib ketishi",
+        "translation": ""
+      },
+      {
+        "english": "collateral damage – mulkka, binolarga yetkazilgan zararlar",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 22,
+    "title": "Global problems",
+    "items": [
+      {
+        "english": "refugees displaced – qochoqlar paydo bo’lishi",
+        "translation": ""
+      },
+      {
+        "english": "resettle in…",
+        "translation": "boshqa joyga ko’chib ketmoq, boshqa joydan qo’nim topmoq"
+      },
+      {
+        "english": "flee to…",
+        "translation": "qochmoq"
+      },
+      {
+        "english": "decisive battle – hal qiluvchi jang",
+        "translation": ""
+      },
+      {
+        "english": "negotiate a truce/ceasefire – urushni to’xtatishga kelishmoq",
+        "translation": ""
+      },
+      {
+        "english": "restore peace – tinchlikni qayta tiklamoq",
+        "translation": ""
+      },
+      {
+        "english": "fragile/uneasy peace – (juda ham erishish qiyin bo’lgan) mo’rt, nozik tinchlik,",
+        "translation": ""
+      },
+      {
+        "english": "bring stability – barqarorlik olib kelmoq",
+        "translation": ""
+      },
+      {
+        "english": "lasting peace – uzoq, davomiy tinchlik",
+        "translation": ""
+      },
+      {
+        "english": "peacekeeping forces – tinchlikparvar kuchlar",
+        "translation": ""
+      },
+      {
+        "english": "avert war – urushdan o’zini olib qochmoq, urushni oldini olmoq",
+        "translation": ""
+      },
+      {
+        "english": "open fire – o’t ochmoq",
+        "translation": ""
+      },
+      {
+        "english": "a turf war – 2 hududni talashib urushmoq",
+        "translation": ""
+      },
+      {
+        "english": "All’s fair in love and war – urushda hamma narsa mumkin",
+        "translation": ""
+      },
+      {
+        "english": "Before you can say knife – qisqa vaqtda",
+        "translation": ""
+      },
+      {
+        "english": "Bury the hatchet – urushni to’xtatmoq",
+        "translation": ""
+      },
+      {
+        "english": "to cross swords – urushmoq, bir",
+        "translation": "biri bilan nizolashmoq"
+      },
+      {
+        "english": "dodge the bullet – biror narsadan osonlik bilan, muvaffaqiyat bilan qutulib qolmoq",
+        "translation": ""
+      },
+      {
+        "english": "fight fire with fire – dushmanga o’zini taktikasi bilan javob qaytarmoq",
+        "translation": ""
+      },
+      {
+        "english": "get the axe – urushni to’xtatmoq, tugatmoq",
+        "translation": ""
+      },
+      {
+        "english": "have a riot = enjoy yourself = have a nice time",
+        "translation": ""
+      },
+      {
+        "english": "knight in shining armour – xaloskor",
+        "translation": ""
+      },
+      {
+        "english": "Lock and load – tayyor bo’lmoq",
+        "translation": ""
+      },
+      {
+        "english": "preserve/protect the environment – atrof muhitni saqlash/himoya qilish",
+        "translation": ""
+      },
+      {
+        "english": "fossil fuels – yonilg’i, yoqilg’ilar (neft, tabiiy gaz, ko’mir)",
+        "translation": ""
+      },
+      {
+        "english": "greenhouse gases – atmosferaga chiqayotgan issiqliklar, tutunlar",
+        "translation": ""
+      },
+      {
+        "english": "deplete the ozone layer – ozon qatlamini yemiradi",
+        "translation": ""
+      },
+      {
+        "english": "global warming – havoni global miqyosda, yer yuzida isib ketishi",
+        "translation": ""
+      },
+      {
+        "english": "climate change – ob",
+        "translation": "havo haroratidagi o’zgarishlar"
+      },
+      {
+        "english": "do irreparable damage – tuzatib bo’lmas zarar yetkazish",
+        "translation": ""
+      },
+      {
+        "english": "rising sea levels – dengiz sathini ko’tarilishi",
+        "translation": ""
+      },
+      {
+        "english": "natural disasters – tabiiy ofatlar",
+        "translation": ""
+      },
+      {
+        "english": "animal species have gone extinct – jonivorlar qirilib ketdi",
+        "translation": ""
+      },
+      {
+        "english": "animal species are endangered – yo’qolib ketish xavfi ostidagi hayvonlar",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 23,
+    "title": "Time",
+    "items": [
+      {
+        "english": "clean energy –",
+        "translation": ""
+      },
+      {
+        "english": "renewable resources – qayta tiklansa bo’ladigan, ishlatsa bo’ladigan manbalar",
+        "translation": ""
+      },
+      {
+        "english": "harmful to the environment – atrof",
+        "translation": "muhitga zarar"
+      },
+      {
+        "english": "die of hunger/starvation – ochlikdan halok bo’lib ketish",
+        "translation": ""
+      },
+      {
+        "english": "extreme poverty – juda ham qashshoqlik",
+        "translation": ""
+      },
+      {
+        "english": "developing countries – rivojlanayotgan mamlakatlar",
+        "translation": ""
+      },
+      {
+        "english": "food shortage – ovqat yetishmovchiligi",
+        "translation": ""
+      },
+      {
+        "english": "lack of access to clean water – toza suv yo’q",
+        "translation": ""
+      },
+      {
+        "english": "homeless people – uysiz odamlar",
+        "translation": ""
+      },
+      {
+        "english": "homeless shelters – uysizlarning boshpanalari",
+        "translation": ""
+      },
+      {
+        "english": "on the margins of society – jamiyatdan aralib qolgan, dunyodan uzilib qolgan",
+        "translation": ""
+      },
+      {
+        "english": "live below the poverty line – qashshoqlikdan ham yomon ahvolda yashamoq",
+        "translation": ""
+      },
+      {
+        "english": "welfare programs – odamlarga yordam, pul beradigan programmalar",
+        "translation": ""
+      },
+      {
+        "english": "to alleviate poverty – qashshoqlik, kambag’allikni yaxshilamoq",
+        "translation": ""
+      },
+      {
+        "english": "preventable diseases – oldini olsa bo’aldigan kassalliklar",
+        "translation": ""
+      },
+      {
+        "english": "safe and effective vaccines – xavfsiz va samarali vaksinalar",
+        "translation": ""
+      },
+      {
+        "english": "child labor – bolalar mehnati",
+        "translation": ""
+      },
+      {
+        "english": "disadvantaged backgrounds – juda ham qashshoq oilalar, holatlar",
+        "translation": ""
+      },
+      {
+        "english": "human trafficking – odam savdosi",
+        "translation": ""
+      },
+      {
+        "english": "sexual exploitation – jinsiy eksplatatsiya",
+        "translation": ""
+      },
+      {
+        "english": "at one’s wit’s end – oxirgi sabr kosam to’lib boryapti",
+        "translation": ""
+      },
+      {
+        "english": "catch",
+        "translation": "22 situation – uddalab bo’lmas holat"
+      },
+      {
+        "english": "the crux of the matter (the most important, serious part of the matter, problem",
+        "translation": ""
+      },
+      {
+        "english": "grasping at straws – somonni ichidan igna qidirmoq (chiqmagan jondan umid)",
+        "translation": ""
+      },
+      {
+        "english": "in dire straits = in a very serious, bad situation – juda ham qiyin holatda ahvolda",
+        "translation": ""
+      },
+      {
+        "english": "you’ve got your work cut out for you – oldingda juda ham qiyin vazifa turibdi",
+        "translation": ""
+      },
+      {
+        "english": "last resort =fighting chance",
+        "translation": "oxirgi imkoniyat"
+      },
+      {
+        "english": "the tip of the iceberg (only a small part of problem) – muammoning bir uchi,",
+        "translation": ""
+      },
+      {
+        "english": "a vicious cycle (when one problem causes another problem which then causes",
+        "translation": ""
+      },
+      {
+        "english": "in a rush – shoshgan",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "unit": 24,
+    "title": "Sound",
+    "items": [
+      {
+        "english": "around the clock – 24 soat",
+        "translation": ""
+      },
+      {
+        "english": "in one stroke –",
+        "translation": ""
+      },
+      {
+        "english": "not born yesterday – tajribali",
+        "translation": ""
+      },
+      {
+        "english": "on someone’s watch – kimnidir navbatida",
+        "translation": ""
+      },
+      {
+        "english": "lovely/pleasant/soft sound – yoqimli ovoz",
+        "translation": ""
+      },
+      {
+        "english": "horrible screeching sounds = unpleasant sound – yoqimsiz ovoz",
+        "translation": ""
+      },
+      {
+        "english": "background noise – orqadan eshitiladigan shovqin",
+        "translation": ""
+      },
+      {
+        "english": "annoying buzzing noise = unpleasant sound – yoqimsiz ovoz",
+        "translation": ""
+      },
+      {
+        "english": "loud sound/noise – baland shovqin, ovoz",
+        "translation": ""
+      },
+      {
+        "english": "deafening sound/noise – juda ham baland, kar qiladigan ovoz",
+        "translation": ""
+      },
+      {
+        "english": "faint/soft sound/noise – eshitilishi qiyin",
+        "translation": ""
+      },
+      {
+        "english": "muffled sound – ichkaridan chiqayotganday, tiniq eshitilmaydi (uyga qamalib",
+        "translation": ""
+      },
+      {
+        "english": "constant/incessant noise – davomiy shovqin",
+        "translation": ""
+      },
+      {
+        "english": "roar of traffic – avtomobillar shovqini",
+        "translation": ""
+      },
+      {
+        "english": "hum of machinery – zavoddagi tinmasdan ishlaydigan texnikalarning ovozi",
+        "translation": ""
+      },
+      {
+        "english": "music blaring – musiqani baland qilib qo’yilishi",
+        "translation": ""
+      },
+      {
+        "english": "birds chirping – qushlarning sayrashi",
+        "translation": ""
+      },
+      {
+        "english": "dogs barking – itlarning hurishi",
+        "translation": ""
+      },
+      {
+        "english": "waves crashing – to’lqinlarni kelib qoyaga urilishidan hosil bo’lgan qirg’oqdagi",
+        "translation": ""
+      },
+      {
+        "english": "wind whistling – shamolning shovqini",
+        "translation": ""
+      },
+      {
+        "english": "rumble of thunder – momoqaldiroq gumbirlashi",
+        "translation": ""
+      },
+      {
+        "english": "absolutely/completely/perfectly silent – jimjit",
+        "translation": ""
+      },
+      {
+        "english": "silence descended/fell – jimjitlik, sukunat cho’kdi",
+        "translation": ""
+      },
+      {
+        "english": "break/shatter the silence – jimjitlik, sukunatni buzmoq",
+        "translation": ""
+      },
+      {
+        "english": "oddly/strangely/uncharacteristically quiet – g’alati, kutilmagan jimjitlik (yosh",
+        "translation": ""
+      },
+      {
+        "english": "awkward/uncomfortable silence – hayajondan, uyalishdan kelib chiqqan",
+        "translation": ""
+      },
+      {
+        "english": "stony/sullen silence – urush, janjaldan keyingi jimjitlik",
+        "translation": ""
+      },
+      {
+        "english": "shocked/stunned silence – juda ham hayratlanib qolgandagi jimjitlik",
+        "translation": ""
+      },
+      {
+        "english": "ominously/eerily quiet – xavf ostidagi jimjitlik (o’rmonda bitta o’ziz ketyapsiz)",
+        "translation": ""
+      },
+      {
+        "english": "(as) sound as a bell – yangi, zo’r yaxshi holatda (mashina, tarvuzni urib",
+        "translation": ""
+      },
+      {
+        "english": "(as) sound as a dollar = solid oak – barqaror",
+        "translation": ""
+      },
+      {
+        "english": "empty vessels make the most sound – axmoq odam ko’p gapiradi",
+        "translation": ""
+      }
+    ]
+  }
+]

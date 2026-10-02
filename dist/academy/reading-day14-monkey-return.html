@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Reading – The return of monkey life</title>
+<link rel="stylesheet" href="reading-test-common.css">
+<style>
+  :root {
+    --bg: #ffffff; --bg-alt: #f4f5f7; --bg-panel: #ffffff;
+    --text: #111111; --text-muted: #555; --border: #d4d4d4;
+    --border-strong: #333; --accent: #e51e2a;
+    --select-bg: #cfe3ff; --select-active: #1e6cd8;
+    --footer-bg: #f4f5f7; --btn-bg: #ededed;
+    --arrow-bg: #1f1f1f; --arrow-fg: #ffffff;
+    --correct: #1a8a3c; --wrong: #cc2222;
+  }
+  body.dark {
+    --bg: #1a1a1d; --bg-alt: #232327; --bg-panel: #1f1f22;
+    --text: #ececec; --text-muted: #b5b5b5; --border: #3a3a3f;
+    --border-strong: #cfcfcf; --accent: #ff5c66;
+    --select-bg: #2c4d7a; --select-active: #4a8be0;
+    --footer-bg: #232327; --btn-bg: #2e2e33;
+    --arrow-bg: #ececec; --arrow-fg: #1a1a1d;
+    --correct: #4ed684; --wrong: #ff6b6b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
+
+  .topbar { height: 50px; border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 16px; background: var(--bg); position: relative; z-index: 5; }
+  .logo { font-weight: 800; font-size: 22px; letter-spacing: 1px; color: var(--accent); margin-right: 20px; user-select: none; }
+  .test-taker { font-size: 14px; font-weight: 700; }
+  .top-controls { margin-left: auto; display: flex; gap: 2px; align-items: center; }
+  .top-controls .icon-btn, .top-controls .text-btn { background: transparent; border: none; color: var(--text); padding: 6px 10px; cursor: pointer; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; transition: background 0.15s; }
+  .top-controls .icon-btn:hover, .top-controls .text-btn:hover { background: var(--bg-alt); }
+  .top-controls .icon-btn svg { width: 20px; height: 20px; display: block; }
+  .top-controls .text-btn { font-weight: 700; font-size: 16px; font-family: inherit; }
+  .top-controls .divider { width: 1px; height: 26px; background: var(--border); margin: 0 6px; }
+
+  .part-header { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 10px 20px; }
+  .part-header h2 { margin: 0 0 3px 0; font-size: 14px; font-weight: 700; }
+  .part-header p { margin: 0; font-size: 12px; color: var(--text-muted); }
+
+  .main { position: absolute; top: 50px; left: 0; right: 0; bottom: 50px; display: flex; flex-direction: column; }
+  .panes { flex: 1; display: flex; overflow: hidden; position: relative; }
+  .pane { overflow-y: auto; padding: 18px 28px; background: var(--bg-panel); line-height: 1.55; font-size: calc(14.5px * var(--font-scale, 1)); }
+  .pane.left { width: 50%; }
+  .pane.right { flex: 1; }
+  .splitter { width: 10px; background: var(--bg-alt); border-left: 1px solid var(--border); border-right: 1px solid var(--border); cursor: col-resize; position: relative; user-select: none; flex-shrink: 0; }
+  .splitter::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 18px; height: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; background-image: linear-gradient(to right, transparent 6px, var(--text) 6px, var(--text) 7px, transparent 7px, transparent 11px, var(--text) 11px, var(--text) 12px, transparent 12px); }
+
+  .passage h1 { font-size: 16px; font-weight: 700; margin: 0 0 14px 0; text-align: center; }
+  .passage p { margin: 0 0 11px 0; text-align: justify; }
+
+  .qblock { margin-bottom: 28px; }
+  .qblock h3 { margin: 0 0 6px 0; font-size: 14.5px; font-weight: 700; }
+  .qblock .instructions { font-size: 13px; margin-bottom: 12px; line-height: 1.6; }
+  .qblock .instructions strong { font-weight: 700; }
+
+  /* Row styles */
+  .yn-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; padding: 6px 8px; border-radius: 4px; border: 1px solid transparent; }
+  .yn-row:focus-within { border-color: var(--select-active); }
+  .qnum-yn { display: inline-block; min-width: 22px; font-weight: 700; border: 1px solid var(--border-strong); padding: 0 4px; text-align: center; font-size: 12px; flex-shrink: 0; margin-top: 3px; }
+  .yn-stem { flex: 1; font-size: 14px; line-height: 1.5; }
+  .yn-select { background: var(--bg); color: var(--text); border: 1px solid var(--border-strong); padding: 4px 6px; font-size: 13px; font-family: inherit; border-radius: 3px; min-width: 110px; flex-shrink: 0; }
+  .gap-input { background: var(--bg); color: var(--text); border: 1px solid var(--border-strong); padding: 3px 6px; font-size: 13px; border-radius: 3px; width: 180px; font-family: inherit; }
+
+  /* Radio Options */
+  .mc-option { display: block; margin: 5px 0; font-size: 13.5px; cursor: pointer; }
+  .mc-option input { margin-right: 8px; }
+
+  /* Footer */
+  .footer { position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: var(--footer-bg); border-top: 1px solid var(--border); display: flex; align-items: center; padding: 0 12px; gap: 8px; z-index: 4; }
+  .part-tab { display: flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 3px; border: 1px solid var(--border); background: var(--bg); user-select: none; }
+  .part-tab .label { font-weight: 700; font-size: 13px; }
+  .part-tab .progress { font-size: 11.5px; color: var(--text-muted); }
+  .qnav { display: flex; gap: 3px; margin-left: 2px; flex-wrap: wrap; }
+  .qbtn { width: 22px; height: 22px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 2px; font-family: inherit; }
+  .qbtn:hover { background: var(--bg-alt); }
+  .qbtn.current { border: 2px solid var(--text); font-weight: 700; }
+  .qbtn.answered { background: var(--bg-alt); }
+  .nav-arrows { display: flex; gap: 4px; margin-left: auto; }
+  .arrow-btn { width: 32px; height: 32px; background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .arrow-btn.dark { background: var(--arrow-bg); color: var(--arrow-fg); border-color: var(--arrow-bg); }
+  .check-btn { width: 36px; height: 32px; background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-left: 4px; }
+
+  .user-highlight { background: #f4ff55; padding: 1px 0; }
+  body.dark .user-highlight { background: #8a9100; color: #fff; }
+
+  .highlight-popup { position: absolute; display: none; background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.18); padding: 4px; z-index: 200; align-items: center; gap: 2px; font-size: 13.5px; user-select: none; }
+  .highlight-popup.visible { display: inline-flex; }
+  .highlight-popup button { background: transparent; border: none; padding: 8px 12px; cursor: pointer; color: var(--text); border-radius: 5px; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; font-size: 13.5px; font-weight: 500; }
+  .highlight-popup button:hover { background: var(--bg-alt); }
+  .highlight-popup .hp-swatch { display: inline-block; width: 16px; height: 16px; background: #f4ff55; border-radius: 3px; flex-shrink: 0; }
+  .highlight-popup .hp-close { padding: 6px 10px; font-size: 18px; color: var(--text-muted); line-height: 1; }
+
+  .pane::-webkit-scrollbar { width: 10px; }
+  .pane::-webkit-scrollbar-track { background: var(--bg-alt); }
+  .pane::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
+
+  /* Results overlay */
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: flex-start; justify-content: center; z-index: 100; padding: 20px; overflow-y: auto; }
+  .overlay.visible { display: flex; }
+  .modal { background: var(--bg-panel); color: var(--text); border: 1px solid var(--border); border-radius: 8px; max-width: 600px; width: 100%; padding: 28px 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); margin: auto; }
+  .modal h2 { margin: 0 0 10px 0; color: var(--accent); font-size: 22px; text-align: center; }
+  .score-row { text-align: center; font-size: 28px; font-weight: 800; margin: 6px 0 4px; }
+  .score-row span { font-size: 16px; font-weight: 400; color: var(--text-muted); }
+  .band-row { text-align: center; font-size: 18px; font-weight: 700; margin-bottom: 18px; color: var(--accent); }
+  .results-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 18px; }
+  .results-table th { background: var(--bg-alt); padding: 6px 10px; text-align: left; font-weight: 700; border-bottom: 2px solid var(--border); }
+  .results-table td { padding: 5px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .results-table tr:last-child td { border-bottom: none; }
+  .mark-ok  { color: var(--correct); font-weight: 700; font-size: 15px; }
+  .mark-bad { color: var(--wrong);   font-weight: 700; font-size: 15px; }
+  .modal .actions { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
+  .modal button { background: var(--accent); color: #fff; border: none; padding: 9px 22px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
+  .modal button.secondary { background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); }
+  .modal button:hover { opacity: 0.9; }
+</style>
+<link rel="stylesheet" href="max-bridge.css?v=1"><script src="max-bridge.js?v=1" defer></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">IELTS</div>
+  <div class="test-taker">VIVID IELTS</div>
+  <div class="top-controls">
+    <button id="btn-light" class="icon-btn" title="Light mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
+        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
+        <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/>
+      </svg>
+    </button>
+    <button id="btn-dark" class="icon-btn" title="Dark mode">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <div class="divider"></div>
+    <button id="btn-font-down" class="text-btn" title="Decrease font size">A-</button>
+    <button id="btn-font-up" class="text-btn" title="Increase font size">A+</button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="part-header">
+    <h2>Reading Passage 2</h2>
+    <p>Answer Questions 14–26, which are based on Reading Passage 2.</p>
+  </div>
+  <div class="panes">
+
+    <div class="pane left" id="passagePane">
+      <div class="passage">
+        <div style="font-weight:700;font-size:14px;margin-bottom:4px;">PASSAGE 2</div>
+        <div style="font-size:13px;margin-bottom:14px;color:var(--text-muted);">Answer Questions 14–26, which are based on Reading Passage 2.</div>
+        <h1>The return of monkey life</h1>
+        <p style="font-style:italic;">Rain forest trees growing anew on Central American farmland are helping scientists find ways for monkey and agriculture to benefit one another.</p>
+
+        <p><strong>A</strong> Hacienda La Pacifica, a remote working cattle ranch in Guanacaste province of northern Costa Rica, has for decades been home to a community of mantled howler monkeys. Other native primates - white-faced capuchin monkeys and spider monkeys were once common in this area, too, but vanished after the Pan-American Highway was built nearby in the 1950s and most of the surrounding land was cleared for cattle-raising. At Hacienda La Pacifica, however, an enlightened ranch owner chose to leave some strips of native trees growing. He used these as windbreaks to protect both cattle and their food crops from dry-season winds. In the process, the farmer unwittingly founded a unique laboratory for the study of monkeys.</p>
+
+        <p><strong>B</strong> Ken Glander, a primatologist from Duke University in the USA, is studying La Pacifica's monkeys in an effort to understand the relationship between howlers and regenerating forests at the edges of grazing lands. Studying such disturbed woodlands is increasingly important because throughout much of the New World Tropics, these are the only forests left. In the 18th century, tropical dry forests once covered most of Central America, but by the 1980s less than two percent remained undisturbed, and less than one percent was protected.</p>
+
+        <p><strong>C</strong> Howlers persists at La Pacifica, Glander explains, because they are leaf-eaters. They eat fruit when it is available but, unlike capuchin and spider monkeys, do not depend on large areas of fruiting trees. Glander is particularly interested in howlers' ability to thrive on leaves loaded with toxins - poisonous substances designed to protect the plants. For leaf-eaters, long-term exposure to a specific plant toxin can increase their ability to neutralize the poisonous substances and absorb the leaf nutrients. Watching generations of howlers at La Pacifica has shown Glander that the monkeys keep their systems primed by sampling a variety of plants and then focusing on a small number of the most nutritious food items. The leaves that grow in regenerating forests, like those at La Pacifica, are actually more howler-friendly than those produced by the centuries-old trees that survive farther south. In younger forests, trees put most of their limited energy into growing wood, leaves, and fruit, so they produce much lower levels of toxin than do well-established, old-growth trees.</p>
+
+        <p><strong>D</strong> The value of maturing forests to primates is also a subject of study at Santa Rosa National Park, about 35 miles northwest of La Pacifica. Large areas of Santa Rosa's forests had at one time been burnt to make space for cattle ranching and coffee farming, thereby devastating local monkey habitat. But in 1971 the government protected the area by designating it a National Park, and species of Indigenous trees which had been absent for decades began to invade the abandoned pastures. Capuchins were the first to begin using the reborn forests, followed by howlers. Eventually, even spider monkeys, fruit-eaters that need large areas of continuous forest, returned. In the first 28 years following protection of the area, the capuchin population doubled, while the number of howlers increased sevenfold.</p>
+
+        <p><strong>E</strong> Some of the same traits that allow howlers to survive at La Pacifica also explain their population boom in Santa Rosa, Howler reproduction is faster than that of other native monkey species. They give birth for the first time at about 3.5 years of age, compared with seven years for capuchins, and eight or more for spider monkeys. Also, while a female spider monkey will have a baby about once every four years, well-fed howlers can produce an infant every two years. Another factor is diet. Howlers are very adaptable feeders, and only need a comparatively small home range. Spider monkeys, on the other hand, need to occupy a huge home range. Also crucial is fact that the leaves howlers eat hold plenty of water, so the monkeys can survive away from open streams and water holes. This ability gives them a real advantage over capuchin and spider monkeys, which have suffered during the long, ongoing drought in the area.</p>
+
+        <p><strong>F</strong> Alejandro Estrada, an ecologist at Estacion de Biologia Los Tuxtlas in Veracruz, Mexico, has been studying the ecology of a group of howler monkeys that thrive in a habitat totally altered by humans: a cacao plantation in Tabasco state, Mexico. Cacao plants need shade to grow, so 40 years ago the owners of Cholula Cacao Farm planted figs, monkey pod and other tall trees to form a protective canopy over their crop. The howlers moved in about 25 years ago after nearby forests were cut. This strange habitat seems to support about as many monkeys as would a same-sized patch of wild forest. The howlers eat the leaves and fruit of the shade trees, leaving the valuable cacao pods alone.</p>
+
+        <p><strong>G</strong> Estrada believes the monkeys bring underappreciated benefits to such plantations, dispersing the seeds of fruits such as fig and other shade trees, and fertilizing the soil. Spider monkeys also forage for fruit here, though they need nearby areas of forest to survive in the long term. He hopes that farmers will begin to see the advantages of associating with wild monkeys, which could include potential ecotourism projects, 'Conservation is usually viewed as a conflict between farming practices and the need to preserve nature,' Estrada says. 'We're moving away from that vision and beginning to consider ways in which commercial activities may become a tool for the conservation of primates in human-modified landscapes.'</p>
+      </div>
+    </div>
+
+    <div class="splitter" id="splitter"></div>
+
+    <div class="pane right" id="questionsPane">
+
+      <div class="qblock">
+        <h3>Questions 14–17</h3>
+        <div class="instructions">
+          Reading Passage 2 has seven paragraphs, <strong>A–G</strong>.<br>
+          Which paragraph contains the following information? Write the correct letter, <strong>A–G</strong>, in boxes 14–17 on your answer sheet.<br>
+          <strong>NB</strong> You may use any letter more than once.
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">14</span>
+          <span class="yn-stem">a reason why newer forests provide howlers with better feeding opportunities than older forests</span>
+          <select class="yn-select question" data-q="14">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">15</span>
+          <span class="yn-stem">a reference to a change in farmers' attitudes towards wildlife</span>
+          <select class="yn-select question" data-q="15">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">16</span>
+          <span class="yn-stem">a description of the means by which howlers select the best available diet for themselves</span>
+          <select class="yn-select question" data-q="16">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">17</span>
+          <span class="yn-stem">figures relating to the reduction of natural wildlife habitat over a period of time</span>
+          <select class="yn-select question" data-q="17">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="qblock">
+        <h3>Questions 18–21</h3>
+        <div class="instructions">
+          Complete the summary below.<br>
+          Choose <strong>ONE WORD ONLY</strong> from the passage for each answer.<br>
+          Write your answers in boxes 18–21 on your answer sheet.
+        </div>
+
+        <div style="background:var(--bg-alt); padding:12px; border-radius:5px; margin-bottom:15px; font-size:13px; border:1px solid var(--border); line-height:1.8;">
+          <strong>Why do howlers have an advantage over other Central American monkeys?</strong><br><br>
+          Howler monkeys have a more rapid rate of <strong>18</strong> ………… than either capuchin of spider monkeys. Unlike the other local monkey species, howlers can survive without eating <strong>19</strong> ………… and so can live inside a relatively small habitat area. Their diet is more flexible, and they are able to tolerate leaves with high levels of <strong>20</strong> ………… . Howlers can also survive periods of <strong>21</strong> ………… better than the other monkey species can.
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">18</span>
+          <span class="yn-stem">Howler monkeys have a more rapid rate of ___</span>
+          <input type="text" class="gap-input question" data-q="18" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">19</span>
+          <span class="yn-stem">Howlers can survive without eating ___</span>
+          <input type="text" class="gap-input question" data-q="19" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">20</span>
+          <span class="yn-stem">Able to tolerate leaves with high levels of ___</span>
+          <input type="text" class="gap-input question" data-q="20" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">21</span>
+          <span class="yn-stem">Howlers can survive periods of ___</span>
+          <input type="text" class="gap-input question" data-q="21" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="qblock">
+        <h3>Questions 22–26</h3>
+        <div class="instructions">
+          Look at the following features (Questions 22–26) and the list of locations below.<br>
+          Match each feature with the correct location, <strong>A, B</strong> or <strong>C</strong>.<br>
+          Write the correct letter, <strong>A, B</strong> or <strong>C</strong>, in boxes 22–26 on your answer sheet.<br>
+          <strong>NB</strong> You may use any letter more than once.
+        </div>
+
+        <div style="background:var(--bg-alt); padding:12px; border-radius:5px; margin-bottom:15px; font-size:13px; border:1px solid var(--border);">
+          <strong>List of Locations</strong><br>
+          <strong>A</strong> Hacienda La Pacifica<br>
+          <strong>B</strong> Santa Rosa National Park<br>
+          <strong>C</strong> Cholula Cacao Farm
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">22</span>
+          <span class="yn-stem">It has seen the return of native tree species.</span>
+          <select class="yn-select question" data-q="22">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">23</span>
+          <span class="yn-stem">It supports only one species of native monkey.</span>
+          <select class="yn-select question" data-q="23">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">24</span>
+          <span class="yn-stem">Its monkey population helps the agriculture of the area.</span>
+          <select class="yn-select question" data-q="24">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">25</span>
+          <span class="yn-stem">It is home to populations of all three local monkey species.</span>
+          <select class="yn-select question" data-q="25">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">26</span>
+          <span class="yn-stem">Its landscape was altered by the construction of a transport link.</span>
+          <select class="yn-select question" data-q="26">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="part-tab">
+    <span class="label">Passage 2</span>
+    <span class="progress" id="progress-1">0 of 13</span>
+    <div class="qnav" id="qnav-1"></div>
+  </div>
+  <div class="nav-arrows">
+    <button class="arrow-btn" id="prevBtn">&#8592;</button>
+    <button class="arrow-btn dark" id="nextBtn">&#8594;</button>
+  </div>
+  <button class="check-btn" id="finishBtn" title="Submit">&#10003;</button>
+</div>
+
+<div class="highlight-popup" id="highlightPopup">
+  <button id="hpHighlight"><span class="hp-swatch"></span>Highlight</button>
+  <button id="hpRemove">Remove highlight</button>
+  <button class="hp-close" id="hpClose">&times;</button>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+const TOTAL = 13;
+const Q_START = 14;
+const Q_END = 26;
+
+const KEY = {
+  14: ['C'],
+  15: ['G'],
+  16: ['C'],
+  17: ['B'],
+  18: ['reproduction'],
+  19: ['fruit'],
+  20: ['toxins', 'toxin'],
+  21: ['drought'],
+  22: ['B'],
+  23: ['A'],
+  24: ['C'],
+  25: ['B'],
+  26: ['A']
+};
+
+const answers = {};
+
+function normalize(v) { return (v || '').toString().trim().toUpperCase().replace(/\s+/g, ' '); }
+
+function isCorrect(n, val) {
+  const normVal = normalize(val);
+  return KEY[n].some(k => normalize(k) === normVal);
+}
+
+document.querySelectorAll('.question-radio').forEach(el => {
+  el.addEventListener('change', () => {
+    answers[el.dataset.q] = el.value;
+    updateNav();
+  });
+});
+
+document.querySelectorAll('select.question').forEach(el => {
+  const q = +el.dataset.q;
+  el.addEventListener('change', () => { answers[q] = el.value; updateNav(); });
+});
+
+document.querySelectorAll('input.gap-input.question').forEach(el => {
+  const q = +el.dataset.q;
+  el.addEventListener('input', () => { answers[q] = el.value; updateNav(); });
+});
+
+const qnavEl = document.getElementById('qnav-1');
+const progressEl = document.getElementById('progress-1');
+let activeQ = Q_START;
+
+function buildNav() {
+  qnavEl.innerHTML = '';
+  for (let n = Q_START; n <= Q_END; n++) {
+    const btn = document.createElement('button');
+    btn.className = 'qbtn';
+    btn.textContent = n;
+    btn.dataset.n = n;
+    btn.addEventListener('click', () => scrollToQ(n));
+    qnavEl.appendChild(btn);
+  }
+}
+
+function updateNav() {
+  const answered = Object.keys(answers).filter(k => answers[k] !== undefined && answers[k] !== '').length;
+  progressEl.textContent = `${answered} of ${TOTAL}`;
+  qnavEl.querySelectorAll('.qbtn').forEach(btn => {
+    const n = +btn.dataset.n;
+    btn.classList.toggle('answered', !!answers[n] && answers[n] !== '');
+    btn.classList.toggle('current', n === activeQ);
+  });
+}
+
+function scrollToQ(n) {
+  activeQ = n;
+  const el = document.querySelector(`.question-radio[data-q="${n}"], .question[data-q="${n}"]`);
+  if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.focus({ preventScroll: true }); }
+  updateNav();
+}
+
+document.querySelectorAll('.question, .question-radio').forEach(el => {
+  el.addEventListener('focus', () => { activeQ = +el.dataset.q; updateNav(); });
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => { if (activeQ > Q_START) scrollToQ(activeQ - 1); });
+document.getElementById('nextBtn').addEventListener('click', () => { if (activeQ < Q_END) scrollToQ(activeQ + 1); });
+
+buildNav();
+updateNav();
+
+function getBand(score) {
+  if (score >= 13) return '9.0';
+  if (score >= 12) return '8.5';
+  if (score >= 11) return '8.0';
+  if (score >= 10) return '7.5';
+  if (score >= 9)  return '7.0';
+  if (score >= 8)  return '6.5';
+  if (score >= 7)  return '6.0';
+  if (score >= 6)  return '5.5';
+  if (score >= 5)  return '5.0';
+  if (score >= 4)  return '4.5';
+  return '4.0';
+}
+
+function showResults() {
+  let score = 0;
+  const rows = [];
+  for (let n = Q_START; n <= Q_END; n++) {
+    const ok = isCorrect(n, answers[n]);
+    if (ok) score++;
+    rows.push({ n, given: answers[n] || '—', correct: KEY[n].join(' / '), ok });
+  }
+  const pct = Math.round(score / TOTAL * 100);
+  const band = getBand(score);
+  const color = pct >= 70 ? 'var(--correct)' : pct >= 50 ? '#d4800a' : 'var(--wrong)';
+
+  let html = `<h2>Your Results</h2>
+    <div class="score-row" style="color:${color}">${score} / ${TOTAL} <span>(${pct}%)</span></div>
+    <div class="band-row">Estimated Band: ${band}</div>
+    <table class="results-table">
+      <thead><tr><th>Q</th><th>Your Answer</th><th>Correct</th><th></th></tr></thead><tbody>`;
+  rows.forEach(r => {
+    html += `<tr>
+      <td><strong>${r.n}</strong></td>
+      <td>${r.given}</td>
+      <td>${r.correct}</td>
+      <td class="${r.ok ? 'mark-ok' : 'mark-bad'}">${r.ok ? '✓' : '✗'}</td>
+    </tr>`;
+  });
+  html += `</tbody></table>
+    <div class="actions">
+      <button class="secondary" onclick="document.getElementById('overlay').classList.remove('visible')">Review</button>
+    </div>`;
+
+  document.getElementById('modal').innerHTML = html;
+  document.getElementById('overlay').classList.add('visible');
+}
+
+document.getElementById('finishBtn').addEventListener('click', () => {
+  if (confirm('Submit and see your results?')) showResults();
+});
+
+document.getElementById('overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('overlay')) document.getElementById('overlay').classList.remove('visible');
+});
+
+document.getElementById('btn-dark').addEventListener('click', () => document.body.classList.add('dark'));
+document.getElementById('btn-light').addEventListener('click', () => document.body.classList.remove('dark'));
+
+let fontScale = 1;
+document.getElementById('btn-font-up').addEventListener('click', () => {
+  fontScale = Math.min(1.4, fontScale + 0.08);
+  document.documentElement.style.setProperty('--font-scale', fontScale);
+});
+document.getElementById('btn-font-down').addEventListener('click', () => {
+  fontScale = Math.max(0.7, fontScale - 0.08);
+  document.documentElement.style.setProperty('--font-scale', fontScale);
+});
+
+const splitter = document.getElementById('splitter');
+const leftPane = document.querySelector('.pane.left');
+let dragging = false, startX = 0, startW = 0;
+splitter.addEventListener('mousedown', e => { dragging = true; startX = e.clientX; startW = leftPane.offsetWidth; e.preventDefault(); });
+document.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  const newW = Math.max(200, Math.min(window.innerWidth - 250, startW + e.clientX - startX));
+  leftPane.style.width = newW + 'px';
+});
+document.addEventListener('mouseup', () => { dragging = false; });
+
+// ---- Selection Highlight ----
+const popup = document.getElementById('highlightPopup');
+let lastRange = null;
+
+function isInsideForm(node) {
+  while (node && node !== document.body) {
+    if (node.nodeType === 1 && /^(INPUT|SELECT|TEXTAREA|OPTION|BUTTON)$/.test(node.tagName)) return true;
+    node = node.parentNode;
+  }
+  return false;
+}
+
+function handleSelection() {
+  const sel = window.getSelection();
+  if (!sel || sel.isCollapsed || sel.toString().trim() === '') { popup.classList.remove('visible'); return; }
+  const range = sel.getRangeAt(0);
+  if (isInsideForm(range.commonAncestorContainer)) { popup.classList.remove('visible'); return; }
+  const pane = range.commonAncestorContainer.parentElement?.closest('#passagePane, #questionsPane');
+  if (!pane) { popup.classList.remove('visible'); return; }
+  lastRange = range.cloneRange();
+  const rect = range.getBoundingClientRect();
+  popup.style.left = (rect.left + rect.width / 2 - popup.offsetWidth / 2 + window.scrollX) + 'px';
+  popup.style.top = (rect.top - 48 + window.scrollY) + 'px';
+  popup.classList.add('visible');
+}
+
+document.getElementById('passagePane').addEventListener('mouseup', handleSelection);
+document.getElementById('questionsPane').addEventListener('mouseup', handleSelection);
+
+document.getElementById('hpHighlight').addEventListener('click', () => {
+  if (!lastRange) return;
+  const mark = document.createElement('mark');
+  mark.className = 'user-highlight';
+  try { lastRange.surroundContents(mark); }
+  catch (e) {
+    try { mark.appendChild(lastRange.extractContents()); lastRange.insertNode(mark); } catch (e2) {}
+  }
+  window.getSelection().removeAllRanges();
+  popup.classList.remove('visible');
+});
+
+document.getElementById('hpRemove').addEventListener('click', () => {
+  document.querySelectorAll('.user-highlight').forEach(m => {
+    const parent = m.parentNode;
+    while (m.firstChild) parent.insertBefore(m.firstChild, m);
+    parent.removeChild(m);
+    parent.normalize();
+  });
+  popup.classList.remove('visible');
+});
+document.getElementById('hpClose').addEventListener('click', () => popup.classList.remove('visible'));
+</script>
+
+<script>
+const TEST_ID = 'monkey-return-p2';
+const TEST_DURATION_MIN = 20;
+
+const C1_WORDS = [
+  { word: 'primatologist', def: 'A scientist who studies primates' },
+  { word: 'regenerating', def: 'Growing back or being renewed after damage or loss' },
+  { word: 'toxin', def: 'A poisonous substance produced by a living organism' },
+  { word: 'canopy', def: 'The uppermost layer of branches and leaves in a forest' },
+  { word: 'devastate', def: 'To destroy or severely damage something' },
+  { word: 'ecotourism', def: 'Tourism directed towards natural environments to support conservation' },
+  { word: 'unwittingly', def: 'Without being aware, unintentionally' },
+  { word: 'disperse', def: 'To spread out over a wide area' },
+  { word: 'habitat', def: 'The natural home or environment of an animal or plant' },
+  { word: 'sevenfold', def: 'Seven times as great or as numerous' }
+];
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="db.js"></script>
+<script src="reading-test-common.js"></script>
+<script src="highlight-auto-dismiss.js"></script>
+<script src="activity-bridge-v15.js"></script>
+</body>
+</html>

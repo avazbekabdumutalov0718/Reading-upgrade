@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Voynich Manuscript — Avazbek Reader Booster</title>
+<link rel="stylesheet" href="../assets/shared.css">
+<style>
+.vocab-pop{ }
+</style>
+<link rel="stylesheet" href="../../max-bridge.css?v=1"><script src="../../max-bridge.js?v=1" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-ring"><img src="../assets/avazbek.png" alt="Avazbek"></div>
+      <div class="brand-text">
+        <h1>Avazbek <em>Reader Booster</em></h1>
+        <div class="tag">IELTS Academic Reading</div>
+      </div>
+    </div>
+    <button class="back-btn" onclick="location.href='../index.html'">&larr; Home</button>
+  </div>
+
+  <!-- ============ HOME (passage landing) ============ -->
+  <div id="home" class="section active">
+    <div class="hero">
+      <div class="eyebrow">Passage 23 of 30</div>
+      <h1>The Voynich Manuscript</h1>
+      <p class="byline">History's most mysterious book has resisted every attempt at decoding</p>
+      <p class="passage-tag">~<b>964</b> words &middot; <b>20</b> target words &middot; <b>14</b> questions</p>
+    </div>
+    <div class="menu">
+      <div class="menu-card" onclick="arbGo('reading')">
+        <div class="num">📖</div>
+        <h3>Read &amp; Answer</h3>
+        <p>Listen to the article, read it, then answer the questions.</p>
+      </div>
+      <div class="menu-card" onclick="arbGo('vocab')">
+        <div class="num">🗂️</div>
+        <h3>Vocabulary</h3>
+        <p>Study the word list, then drill it with flashcards.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ READING + QUESTIONS ============ -->
+  <div id="reading" class="section">
+    <div class="section-head">
+      <button class="back-btn" onclick="arbGo('home')">&larr; Back</button>
+      <h2>The Voynich Manuscript</h2>
+      <div class="sub">Read the article, then answer every question below.</div>
+    </div>
+
+    <div class="player">
+      <button class="play-btn" id="playBtn">&#9654;</button>
+      <button class="stop-btn" id="stopBtn">&#9632;</button>
+      <div class="player-status">
+        <div class="pl-title" id="plTitle">Listen to the article</div>
+        <div class="pl-sub" id="plSub">American accent &middot; tap play to start</div>
+      </div>
+      <select class="rate-select" id="rateSelect">
+        <option value="0.8">0.8&times; slow</option>
+        <option value="1" selected>1&times; normal</option>
+        <option value="1.2">1.2&times; fast</option>
+      </select>
+      <div class="player-note">The current paragraph glows gold while it is being read. Voice quality depends on your device.</div>
+    </div>
+
+    <div class="hint-strip"><span class="dot"></span> Tap any <span class="vocab">highlighted word</span> to see its meaning and Uzbek translation.</div>
+
+    <div class="article" id="articleBody">
+      <div class="art-sub">An Avazbek Reader Booster article &middot; ~964 words &middot; 20 target words</div>
+      <p>The starkly modern Beinecke Library at Yale University is home to some of the most valuable books in the world: first folios of Shakespeare, Gutenberg Bibles and manuscripts from the early Middle Ages. Yet the library's most controversial possession is an <span class="vocab" data-w="0">unprepossessing</span> <span class="vocab" data-w="1">vellum</span> manuscript about the size of a hardback book, containing 240-odd pages of drawings and text of unknown age and authorship. Catalogued as MS408, the manuscript would attract little attention were it not for the fact that the drawings hint at <span class="vocab" data-w="2">esoteric</span> knowledge, while the text seems to be some sort of code — one that no-one has been able to break. It's known to scholars as the Voynich manuscript, after the American book dealer Wilfrid Voynich, who bought the manuscript from a Jesuit college in Italy in 1912.</p>
+      <p>Over the years, the manuscript has attracted the attention of everyone from amateur <span class="vocab" data-w="3">dabblers</span> to top codebreakers, all determined to succeed where countless others have failed. Academic research papers, books and websites are devoted to making sense of the contents of the manuscript, which are freely available to all. 'Most other mysteries involve second-hand reports,' says Dr Gordon Rugg of Keele University, a leading Voynich expert. 'But this is one that you can see for yourself.'</p>
+      <p>It is certainly strange: page after page of drawings of weird plants, <span class="vocab" data-w="4">astrological</span> symbolism and human figures, accompanied by a script that looks like some form of <span class="vocab" data-w="5">shorthand</span>. What does it say — and what are the drawings about? Voynich himself believed that the manuscript was the work of the 13th-century English monk Roger Bacon, famed for his knowledge of <span class="vocab" data-w="6">alchemy</span>, philosophy and science. In 1921 Voynich's view that Bacon was the writer appeared to win support from the work of William Newbold, Professor of Philosophy at the University of Pennsylvania, who claimed to have found the key to the <span class="vocab" data-w="7">cipher</span> system used by Bacon. According to Newbold, the manuscript proved that Bacon had access to a microscope centuries before they were supposedly first invented. The claim that this medieval monk had observed living cells created a <span class="vocab" data-w="8">sensation</span>. It soon became clear, however, that Newbold had fallen victim to <span class="vocab" data-w="9">wishful thinking</span>. Other scholars showed that his 'decoding' methods produced a host of possible interpretations.</p>
+      <p>The Voynich manuscript has continued to <span class="vocab" data-w="10">defy</span> the efforts of world-class experts. In 1944, a team was assembled to tackle the mystery, led by William Friedman, the renowned American codebreaker. They began with the most basic codebreaking task: analysing the relative frequencies of the characters making up the text, looking for signs of an <span class="vocab" data-w="11">underlying</span> structure. Yet Friedman's team soon found themselves in deep water. The precise size of the 'alphabet' of the Voynich manuscript was unclear: it's possible to make out more than 70 distinct symbols among the 170,000-character text. Furthermore, Friedman discovered that some words and phrases appeared more often than expected in a standard language, casting doubt on claims that the manuscript concealed a real language, as encryption typically reduces word frequencies.</p>
+      <p>Friedman concluded that the most <span class="vocab" data-w="12">plausible</span> resolution of this <span class="vocab" data-w="13">paradox</span> was that 'Voynichese' is some sort of specially created artificial language, whose words are devised from concepts, rather than linguistics. So could the Voynich manuscript be the earliest-known example of artificial language? 'Friedman's hypothesis commands respect because of the lifetime of cryptanalytical expertise he brought to bear,' says Rob Churchill, co-author of The Voynich Manuscript. That still leaves a host of questions unanswered, however, such as the identity of the author and the meaning of the bizarre drawings. 'It does little to advance our understanding of the manuscript as a whole,' says Churchill.</p>
+      <p>Even though Friedman was working more than 60 years ago, he suspected that major insights would come from using the device that had already transformed codebreaking: the computer. In this he was right — it is now the key tool for uncovering clues about the manuscript's language.</p>
+      <p>The insights so far have been <span class="vocab" data-w="14">perplexing</span>. For example, in 2001 another leading Voynich scholar, Dr Gabriel Landini of Birmingham University in the UK, published the results of his study of the manuscript using a pattern-detecting method called spectral analysis. This revealed evidence that the manuscript contains genuine words, rather than random nonsense, consistent with the existence of some underlying natural language. Yet the following year, Voynich expert René Zandbergen of the European Space Agency in Darmstadt, Germany showed that the <span class="vocab" data-w="15">entropy</span> of the text (a measure of the rate of transfer of information) was consistent with Friedman's suspicions that an artificial language had been used.</p>
+      <p>Many are convinced that the Voynich manuscript isn't a <span class="vocab" data-w="16">hoax</span>. For how could a medieval hoaxer create so many telltale signs of a message from random nonsense? Yet even this has been challenged in new research by Rugg. Using a system, first published by the Italian mathematician Girolamo Cardano in 1550, in which a specially constructed <span class="vocab" data-w="17">grille</span> is used to pick out symbols from a table, Rugg found he could rapidly generate text with many of the basic traits of the Voynich manuscript. Publishing his results in 2004, Rugg stresses that he hadn't set out to prove the manuscript a hoax. 'I simply demonstrated that it's <span class="vocab" data-w="18">feasible</span> to hoax something this complex in a few months,' he says.</p>
+      <p>Inevitably, others beg to differ. Some scholars, such as Zandbergen, still suspect the text has genuine meaning, though believe it may never be <span class="vocab" data-w="19">decipherable</span>. Others, such as Churchill, have suggested that the sheer weirdness of the illustrations and text hint at an author who had lost touch with reality. What is clear is that the book-sized manuscript kept under lock and key at Yale University has lost none of its fascination. 'Many derive great intellectual pleasure from solving puzzles,' says Rugg. 'The Voynich manuscript is as challenging a puzzle as anyone could ask for.'</p>
+    </div>
+
+    <div class="card" style="margin-top:30px">
+      <h2 style="font-family:var(--serif);font-weight:400;margin-top:0">Questions</h2>
+<div class="rubric"><b>Questions 27–30.</b> Do the following statements agree with the information given? Choose <b>TRUE</b>, <b>FALSE</b> or <b>NOT GIVEN</b>.</div>
+<div class="q-block" data-q="27">
+<div><span class="q-num">27.</span>It is uncertain when the Voynich manuscript was written.</div>
+<label class="opt-row"><input type="radio" name="q27" value="TRUE"><span><b>TRUE</b> </span></label>
+<label class="opt-row"><input type="radio" name="q27" value="FALSE"><span><b>FALSE</b> </span></label>
+<label class="opt-row"><input type="radio" name="q27" value="NOT GIVEN"><span><b>NOT GIVEN</b> </span></label>
+</div>
+<div class="q-block" data-q="28">
+<div><span class="q-num">28.</span>Wilfrid Voynich donated the manuscript to the Beinecke Library.</div>
+<label class="opt-row"><input type="radio" name="q28" value="TRUE"><span><b>TRUE</b> </span></label>
+<label class="opt-row"><input type="radio" name="q28" value="FALSE"><span><b>FALSE</b> </span></label>
+<label class="opt-row"><input type="radio" name="q28" value="NOT GIVEN"><span><b>NOT GIVEN</b> </span></label>
+</div>
+<div class="q-block" data-q="29">
+<div><span class="q-num">29.</span>Interest in the Voynich manuscript extends beyond that of academics and professional codebreakers.</div>
+<label class="opt-row"><input type="radio" name="q29" value="TRUE"><span><b>TRUE</b> </span></label>
+<label class="opt-row"><input type="radio" name="q29" value="FALSE"><span><b>FALSE</b> </span></label>
+<label class="opt-row"><input type="radio" name="q29" value="NOT GIVEN"><span><b>NOT GIVEN</b> </span></label>
+</div>
+<div class="q-block" data-q="30">
+<div><span class="q-num">30.</span>The text of the Voynich manuscript contains just under 70 symbols.</div>
+<label class="opt-row"><input type="radio" name="q30" value="TRUE"><span><b>TRUE</b> </span></label>
+<label class="opt-row"><input type="radio" name="q30" value="FALSE"><span><b>FALSE</b> </span></label>
+<label class="opt-row"><input type="radio" name="q30" value="NOT GIVEN"><span><b>NOT GIVEN</b> </span></label>
+</div>
+<div class="rubric"><b>Questions 31–34.</b> Match each statement with the correct person, A–H. <i>A Gordon Rugg, B Roger Bacon, C William Newbold, D William Friedman, E Rob Churchill, F Gabriel Landini, G René Zandbergen, H Girolamo Cardano.</i></div>
+<div class="q-block" data-q="31">
+<div><span class="q-num">31.</span>The number of times that some words occur make it unlikely that the manuscript is based on an authentic language.</div>
+<label class="opt-row"><input type="radio" name="q31" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q31" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q31" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q31" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q31" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q31" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q31" value="G"><span><b>G</b> </span></label>
+<label class="opt-row"><input type="radio" name="q31" value="H"><span><b>H</b> </span></label>
+</div>
+<div class="q-block" data-q="32">
+<div><span class="q-num">32.</span>Unlike some other similar objects of fascination, people can gain direct access to the Voynich manuscript.</div>
+<label class="opt-row"><input type="radio" name="q32" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q32" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q32" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q32" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q32" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q32" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q32" value="G"><span><b>G</b> </span></label>
+<label class="opt-row"><input type="radio" name="q32" value="H"><span><b>H</b> </span></label>
+</div>
+<div class="q-block" data-q="33">
+<div><span class="q-num">33.</span>The person who wrote the manuscript may not have been entirely sane.</div>
+<label class="opt-row"><input type="radio" name="q33" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q33" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q33" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q33" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q33" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q33" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q33" value="G"><span><b>G</b> </span></label>
+<label class="opt-row"><input type="radio" name="q33" value="H"><span><b>H</b> </span></label>
+</div>
+<div class="q-block" data-q="34">
+<div><span class="q-num">34.</span>It is likely that the author of the manuscript is the same person as suggested by Wilfrid Voynich.</div>
+<label class="opt-row"><input type="radio" name="q34" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q34" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q34" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q34" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q34" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q34" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q34" value="G"><span><b>G</b> </span></label>
+<label class="opt-row"><input type="radio" name="q34" value="H"><span><b>H</b> </span></label>
+</div>
+<div class="rubric"><b>Questions 35–39.</b> Complete the summary. Use <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</div>
+<div class="q-block" data-q="35">
+<div><span class="q-num">35.</span>William Newbold believed that the author had been able to look at cells through a _____.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="q-block" data-q="36">
+<div><span class="q-num">36.</span>William Friedman concluded that the manuscript was written in an artificial language based on _____.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="q-block" data-q="37">
+<div><span class="q-num">37.</span>He believed that the _____ would continue to bring advances in codebreaking.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="q-block" data-q="38">
+<div><span class="q-num">38.</span>Dr Gabriel Landini used a system known as _____ in his research.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="q-block" data-q="39">
+<div><span class="q-num">39.</span>Dr Gordon Rugg's system involved a grille used to select symbols that appeared in a _____.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="rubric"><b>Question 40.</b> Choose the correct letter, A, B, C or D.</div>
+<div class="q-block" data-q="40">
+<div><span class="q-num">40.</span>The writer's main aim in this passage is to</div>
+<label class="opt-row"><input type="radio" name="q40" value="A"><span><b>A</b> explain the meaning of the manuscript.</span></label>
+<label class="opt-row"><input type="radio" name="q40" value="B"><span><b>B</b> determine the true identity of the manuscript's author.</span></label>
+<label class="opt-row"><input type="radio" name="q40" value="C"><span><b>C</b> describe the numerous attempts to decode the manuscript.</span></label>
+<label class="opt-row"><input type="radio" name="q40" value="D"><span><b>D</b> identify which research into the manuscript has had the most media coverage.</span></label>
+</div>
+      <div class="submit-bar">
+        <button class="btn btn-gold" onclick="submitQuiz()">Check answers</button>
+        <button class="btn" onclick="showKeyWords()">Key word table</button>
+      </div>
+      <div class="score-banner" id="scoreBanner"></div>
+    </div>
+
+    <div class="card" id="kwCard" style="margin-top:20px;display:none">
+      <h2 style="font-family:var(--serif);font-weight:400;margin-top:0">Key Word Table</h2>
+      <p style="color:var(--muted);font-size:.85rem">These are the words/phrases in the questions and their matching synonyms or forms in the passage — useful for spotting paraphrases.</p>
+<table class="kw-table"><tr><th>In the question</th><th>In the passage</th></tr>
+<tr><td class="qtext">Q27 &middot; uncertain when written</td><td class="ptext">240-odd pages of drawings and text of <b>unknown age</b> and authorship</td></tr>
+<tr><td class="qtext">Q28 &middot; Voynich donated to Beinecke</td><td class="ptext">who <b>bought</b> the manuscript from a Jesuit college in Italy in 1912 (no mention of donation)</td></tr>
+<tr><td class="qtext">Q29 &middot; interest beyond academics</td><td class="ptext">attracted the attention of everyone from <b>amateur dabblers</b> to top codebreakers</td></tr>
+<tr><td class="qtext">Q30 &middot; just under 70 symbols</td><td class="ptext">it's possible to make out <b>more than 70</b> distinct symbols</td></tr>
+<tr><td class="qtext">Q31 &middot; word frequency, unlikely authentic</td><td class="ptext">Friedman discovered that some words and phrases appeared <b>more often than expected</b></td></tr>
+<tr><td class="qtext">Q32 &middot; direct access, unlike others</td><td class="ptext">'most other mysteries involve second-hand reports ... but this is one that <b>you can see for yourself</b>'</td></tr>
+<tr><td class="qtext">Q33 &middot; author may not be sane</td><td class="ptext">Churchill ... suggested ... the author <b>had lost touch with reality</b></td></tr>
+<tr><td class="qtext">Q34 &middot; same author as Voynich suggested</td><td class="ptext">Newbold ... claimed to have found the key to the cipher system <b>used by Bacon</b></td></tr>
+<tr><td class="qtext">Q35 &middot; observed cells through a</td><td class="ptext">Bacon had access to a <b>microscope</b> centuries before they were supposedly first invented</td></tr>
+<tr><td class="qtext">Q36 &middot; artificial language based on</td><td class="ptext">whose words are devised from <b>concepts</b>, rather than linguistics</td></tr>
+<tr><td class="qtext">Q37 &middot; would bring advances</td><td class="ptext">major insights would come from using ... the <b>computer</b></td></tr>
+<tr><td class="qtext">Q38 &middot; system known as</td><td class="ptext">a pattern-detecting method called <b>spectral analysis</b></td></tr>
+<tr><td class="qtext">Q39 &middot; select symbols from a</td><td class="ptext">a specially constructed grille is used to pick out symbols from a <b>table</b></td></tr>
+<tr><td class="qtext">Q40 &middot; writer's main aim</td><td class="ptext">the manuscript has continued to <b>defy the efforts of world-class experts</b> ... [various attempts described throughout]</td></tr>
+</table>
+    </div>
+  </div>
+
+  <!-- ============ VOCAB ============ -->
+  <div id="vocab" class="section">
+    <div class="section-head">
+      <button class="back-btn" onclick="arbGo('home')">&larr; Back</button>
+      <h2>Vocabulary Revision</h2>
+      <div class="sub">The 20 golden words from the article. Read the list, then drill them with flashcards.</div>
+    </div>
+    <div class="tabbtns">
+      <div class="tabbtn active" id="tabWL" onclick="switchVocabTab('list')">📚 Word list</div>
+      <div class="tabbtn" id="tabFC" onclick="switchVocabTab('cards')">🗃️ Flashcards</div>
+      <div class="tabbtn" id="tabSP" onclick="switchVocabTab('speak')">🎤 Speak with Vocab</div>
+    </div>
+
+    <div id="vlist" class="card"></div>
+
+    <div id="vcards" style="display:none">
+      <div class="fc-stage" id="fcStageWrap">
+        <div class="fc-status" id="fcStatus"></div>
+        <div class="flashcard" id="fcCard"></div>
+        <div class="fc-actions" id="fcStage">
+          <button class="fc-review" onclick="fcEngine.review()">&#8635; Review again</button>
+          <button class="fc-know" onclick="fcEngine.know()">&#10003; I know it</button>
+        </div>
+      </div>
+      <div class="fc-done" id="fcDone"></div>
+    </div>
+
+    <div id="vspeak" class="card sp-stage" style="display:none">
+      <div id="spWrap"></div>
+    </div>
+  </div>
+
+  <!-- Vocab popup -->
+  <div class="vocab-pop" id="vocabPop">
+    <button class="vp-close">&times;</button>
+    <span class="vp-word"></span><span class="vp-pos"></span>
+    <div class="vp-def"></div>
+    <div class="vp-ex"></div>
+    <button class="vp-say">&#128266; Pronounce</button>
+  </div>
+
+</div>
+
+<script src="../assets/catalog.js"></script>
+<script src="../assets/shared.js"></script>
+<script>
+const PASSAGE_ID = 'p23';
+
+const VOCAB = [{"word": "unprepossessing", "pos": "adjective", "def": "not attractive or impressive in appearance", "uz": "unchalik jozibali bo'lmagan", "example": "It is a fairly unprepossessing manuscript to look at."}, {"word": "vellum", "pos": "noun", "def": "a fine parchment made from animal skin, used for writing", "uz": "pergament (teri qog'oz)", "example": "The manuscript is written on vellum."}, {"word": "esoteric", "pos": "adjective", "def": "understood by only a small group of specialists; mysterious", "uz": "sirli, ozchilikka tushunarli", "example": "The drawings hint at esoteric knowledge."}, {"word": "dabbler", "pos": "noun", "def": "a person who engages in something without serious commitment", "uz": "havaskor, ishqibozlik bilan shug'ullanuvchi", "example": "Amateur dabblers have tried to solve the mystery."}, {"word": "astrological", "pos": "adjective", "def": "relating to astrology, the study of the supposed influence of stars on events", "uz": "munajjimlikka oid", "example": "The pages include astrological symbolism."}, {"word": "shorthand", "pos": "noun", "def": "a quick method of writing using symbols to represent words", "uz": "stenografiya", "example": "The script resembles a form of shorthand."}, {"word": "alchemy", "pos": "noun", "def": "a medieval forerunner of chemistry concerned with transforming substances", "uz": "alkimyo", "example": "Bacon was famed for his knowledge of alchemy."}, {"word": "cipher", "pos": "noun", "def": "a secret or disguised way of writing; a code", "uz": "shifr, maxfiy yozuv", "example": "Newbold claimed to have found the key to the cipher."}, {"word": "sensation", "pos": "noun", "def": "a widespread reaction of great interest and excitement", "uz": "sensatsiya, katta qiziqish", "example": "The claim about the microscope created a sensation."}, {"word": "wishful thinking", "pos": "noun", "def": "the belief that something is true because one wants it to be, not because of evidence", "uz": "istak asosidagi noto'g'ri fikr", "example": "Newbold had fallen victim to wishful thinking."}, {"word": "defy", "pos": "verb", "def": "to resist or be too difficult for someone to deal with", "uz": "bo'ysunmaslik, qarshilik ko'rsatmoq", "example": "The manuscript continued to defy world-class experts."}, {"word": "underlying", "pos": "adjective", "def": "forming the basis or foundation of something, often hidden", "uz": "yashirin, tub asosidagi", "example": "They looked for signs of an underlying structure."}, {"word": "plausible", "pos": "adjective", "def": "seeming reasonable or probable", "uz": "ishonarli, oqilona ko'rinadigan", "example": "He proposed the most plausible explanation available."}, {"word": "paradox", "pos": "noun", "def": "a statement or situation that seems contradictory but may still be true", "uz": "paradoks, ziddiyatli holat", "example": "Friedman tried to resolve this strange paradox."}, {"word": "perplexing", "pos": "adjective", "def": "confusing or puzzling", "uz": "hayratga soluvchi, tushunarsiz", "example": "The insights gathered so far have been perplexing."}, {"word": "entropy", "pos": "noun", "def": "a measure of disorder or randomness, here in a stream of information", "uz": "entropiya (tartibsizlik o'lchovi)", "example": "The entropy of the text hinted at an artificial language."}, {"word": "hoax", "pos": "noun", "def": "a deception intended to trick people into believing something false", "uz": "firibgarlik, soxta ish", "example": "Many doubt that the manuscript is a hoax."}, {"word": "grille", "pos": "noun", "def": "a framework of bars used to cover, filter or select through something", "uz": "panjara, to'r", "example": "Rugg used a specially constructed grille to pick out symbols."}, {"word": "feasible", "pos": "adjective", "def": "possible to do; achievable", "uz": "amalga oshirish mumkin bo'lgan", "example": "He showed it was feasible to fake such a text quickly."}, {"word": "decipherable", "pos": "adjective", "def": "able to be understood or interpreted, especially a code", "uz": "shifrini ochish mumkin bo'lgan", "example": "Some believe the text may never be decipherable."}];
+
+const QUIZ = [{"id": 27, "type": "radio", "answer": "TRUE"}, {"id": 28, "type": "radio", "answer": "NOT GIVEN"}, {"id": 29, "type": "radio", "answer": "TRUE"}, {"id": 30, "type": "radio", "answer": "FALSE"}, {"id": 31, "type": "radio", "answer": "D"}, {"id": 32, "type": "radio", "answer": "A"}, {"id": 33, "type": "radio", "answer": "E"}, {"id": 34, "type": "radio", "answer": "C"}, {"id": 35, "type": "text", "answer": "microscope"}, {"id": 36, "type": "text", "answer": "concepts"}, {"id": 37, "type": "text", "answer": "computer"}, {"id": 38, "type": "text", "answer": ["spectral analysis", "spectral"]}, {"id": 39, "type": "text", "answer": "table"}, {"id": 40, "type": "radio", "answer": "C"}];
+
+ArbPlayer('#articleBody p', {});
+ArbVocabPopup(VOCAB);
+ArbHighlighter(['articleBody']);
+ArbRenderWordList(VOCAB, 'vlist');
+
+let fcEngine = null;
+let spEngine = null;
+function switchVocabTab(tab) {
+  document.getElementById('tabWL').classList.toggle('active', tab === 'list');
+  document.getElementById('tabFC').classList.toggle('active', tab === 'cards');
+  document.getElementById('tabSP').classList.toggle('active', tab === 'speak');
+  document.getElementById('vlist').style.display = tab === 'list' ? '' : 'none';
+  document.getElementById('vcards').style.display = tab === 'cards' ? '' : 'none';
+  document.getElementById('vspeak').style.display = tab === 'speak' ? '' : 'none';
+  if (tab === 'cards' && !fcEngine) {
+    fcEngine = ArbFlashcards(VOCAB, { onComplete: onVocabComplete, restartFnName: 'fcRestart' });
+  }
+  if (tab === 'speak' && !spEngine) {
+    spEngine = ArbSpeakPractice(VOCAB, {});
+  }
+}
+function fcRestart() { fcEngine.restart(); }
+function onVocabComplete() {
+  arbSetItem(PASSAGE_ID, { vocab: true });
+  checkAllDone();
+}
+
+function submitQuiz() {
+  const correct = ArbGradeQuiz(QUIZ, {});
+  const passMark = Math.ceil(QUIZ.length * 0.6);
+  if (correct >= passMark) {
+    arbSetItem(PASSAGE_ID, { quiz: true, score: correct, total: QUIZ.length });
+  } else {
+    arbSetItem(PASSAGE_ID, { score: correct, total: QUIZ.length });
+  }
+  checkAllDone();
+}
+
+function showKeyWords() {
+  document.getElementById('kwCard').style.display = 'block';
+  document.getElementById('kwCard').scrollIntoView({ behavior: 'smooth' });
+}
+
+function checkAllDone() {
+  if (arbIsComplete(PASSAGE_ID)) {
+    let banner = document.getElementById('unlockBanner');
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'unlockBanner';
+      banner.className = 'score-banner show';
+      banner.style.marginTop = '20px';
+      banner.innerHTML = '<div class="big">🔓 Unlocked!</div><div style="color:var(--muted);font-size:.85rem;margin-top:4px">Great work — the next passage is now open.</div><button class="btn btn-gold" style="margin-top:14px" onclick="location.href=\'../index.html\'">Back to map</button>';
+      document.querySelector('.wrap').appendChild(banner);
+    }
+  }
+}
+</script>
+</body>
+</html>

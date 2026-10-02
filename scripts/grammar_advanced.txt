@@ -1,0 +1,37 @@
+# key|pattern|Uzbek explanation|new English example|cloze chunk
+cleft|What ... is ...|Gapning muhim qismini alohida ta’kidlaydi|What I value about this class is the honest feedback.|What I value
+while_whereas|While / whereas + clause|Ikki holatni qiyoslaydi yoki qarama-qarshi qo‘yadi|While my brother prefers films, I would rather read.|While
+having_done|Having + past participle, clause|Bir ish tugab, keyingisi bo‘lganini bildiradi|Having finished my notes, I went for a short walk.|Having finished
+so_that|Clause + so that + clause|Maqsad yoki kutilgan natijani bildiradi|I write examples down so that I can use them later.|so that
+not_only|Not only ... but also ...|Ikki foyda yoki fikrni bog‘laydi|The course offers not only videos but also live practice.|not only
+not_only_inversion|Not only + auxiliary + subject + verb, but ... also ...|Gap boshida not only kelsa, inversiya ishlatiladi|Not only did we finish early, but we also checked our answers.|Not only did
+because_as_since|Because / as / since + clause|Sababni tushuntiradi; as va since ko‘pincha boshida keladi|Since the bus was late, I had time to revise my notes.|Since
+with_absolute|With + noun + -ing, main clause|Bir paytdagi sharoit yoki sababni ko‘rsatadi|With the rain getting heavier, we moved the meeting indoors.|With the rain getting heavier
+nominalisation|Verb or adjective → noun|Fe’l yoki sifatni otga aylantirib, fikrni ixchamlashtiradi|The improvement in transport made the town easier to reach.|improvement
+reduced_relative|Noun + -ing / past participle|Relative clause qisqartiriladi|The students waiting outside have already registered.|students waiting
+double_comparative|The more ..., the more ...|Bir o‘zgarish boshqasiga qanday ta’sir qilishini ko‘rsatadi|The more I practise aloud, the more confident I become.|The more I practise aloud
+subjunctive|It is vital that + subject + base verb|Rasmiy tavsiya yoki zaruriyatni bildiradi|It is vital that every learner have a chance to speak.|It is vital that
+as_long_as|As long as + present clause|Bir shart bajarilsa, natija yuz beradi|I will join the discussion as long as I can prepare first.|as long as
+no_matter_how|No matter how + adjective/adverb + clause|Qanchalik bo‘lmasin, natija o‘zgarmasligini bildiradi|No matter how busy the week becomes, I still review my vocabulary.|No matter how busy
+regardless_of|Regardless of + noun/-ing, + clause|Bir omildan qat’i nazar natija o‘zgarmaydi|Regardless of the weather, the library remains open.|Regardless of
+passive|Be + past participle|Bajaruvchidan ko‘ra ish yoki natijaga urg‘u beradi|The new library was opened at the start of term.|was opened
+may_might_could|May / might / could + base verb|Xulosani ehtiyotkorlik bilan aytadi|This change might help students plan their day.|might help
+tend_to|Tend to + base verb|Ko‘pincha ro‘y beradigan holatni bildiradi|I tend to remember stories better than lists.|tend to
+likely_to|Be likely to + base verb|Yuqori ehtimolni bildiradi|The later bus is likely to be crowded.|likely to
+seems_to|Seem to + base verb|Aniq bo‘lmagan taassurotni aytadi|That explanation seems to answer the question.|seems to
+can_be_considered|Can be considered + noun/adjective|Yumshoq baho beradi|A short walk can be considered a useful break.|can be considered
+is_believed_to|Is believed to + base verb|Boshqalarning fikrini ehtiyotkor ifodalaydi|The old bridge is believed to date back many years.|is believed to
+is_thought_to|Is thought to + base verb|Taxmin yoki keng tarqalgan fikrni bildiradi|The change is thought to improve access to the park.|is thought to
+probably_possibly|Probably / possibly + clause|Taxminni qat’iy hukm qilmay aytadi|The train will probably arrive before lunch.|probably
+generally|Generally, + clause|Umumiy tendensiyani bildiradi|Generally, I learn better when I can ask questions.|Generally
+largely|Largely + adjective / due to + noun|Asosiy darajani yoki sababni bildiradi|The improvement was largely due to clearer instructions.|largely due to
+relatively|Relatively + adjective|Qiyosga ko‘ra darajani yumshatadi|The second task was relatively straightforward.|relatively
+to_some_extent|To some extent, + clause|Fikr faqat qisman to‘g‘ri ekanini bildiradi|To some extent, a timetable helps me stay focused.|To some extent
+in_many_cases|In many cases, + clause|Hamma holatga birdek tatbiq qilmaydi|In many cases, a simple example makes the rule clearer.|In many cases
+under_certain|Under certain circumstances, + clause|Faqat muayyan sharoitni ko‘zda tutadi|Under certain circumstances, studying at home is easier.|Under certain circumstances
+there_is_tendency|There is a tendency for + noun + to + verb|Kuzatiladigan moyillikni bildiradi|There is a tendency for new learners to speak too quickly.|There is a tendency for
+could_be_argued|It could be argued that + clause|Bahsli fikrni ehtiyotkor bildiradi|It could be argued that shorter lessons aid concentration.|It could be argued that
+often_suggested|It is often suggested that + clause|Taklif yoki qarashni masofa saqlab beradi|It is often suggested that schools offer more practical tasks.|It is often suggested that
+research_shows|Research shows that + clause|Tadqiqot natijasiga tayanadigan jumla quradi|Research shows that regular practice can aid recall.|Research shows that
+studies_suggest|Studies suggest that + clause|Tadqiqot xulosasini ehtiyotkor beradi|Studies suggest that short breaks can help attention.|Studies suggest that
+evidence_indicates|Evidence indicates that + clause|Dalilga tayangan xulosani bildiradi|Evidence indicates that the revised route shortened the journey.|Evidence indicates that

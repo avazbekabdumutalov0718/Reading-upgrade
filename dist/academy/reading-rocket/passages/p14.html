@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decision Fatigue — Avazbek Reader Booster</title>
+<link rel="stylesheet" href="../assets/shared.css">
+<style>
+.vocab-pop{ }
+</style>
+<link rel="stylesheet" href="../../max-bridge.css?v=1"><script src="../../max-bridge.js?v=1" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-ring"><img src="../assets/avazbek.png" alt="Avazbek"></div>
+      <div class="brand-text">
+        <h1>Avazbek <em>Reader Booster</em></h1>
+        <div class="tag">IELTS Academic Reading</div>
+      </div>
+    </div>
+    <button class="back-btn" onclick="location.href='../index.html'">&larr; Home</button>
+  </div>
+
+  <!-- ============ HOME (passage landing) ============ -->
+  <div id="home" class="section active">
+    <div class="hero">
+      <div class="eyebrow">Passage 14 of 30</div>
+      <h1>Decision Fatigue</h1>
+      <p class="byline">'Decision fatigue' helps explain why sensible people make poor choices when tired</p>
+      <p class="passage-tag">~<b>907</b> words &middot; <b>20</b> target words &middot; <b>13</b> questions</p>
+    </div>
+    <div class="menu">
+      <div class="menu-card" onclick="arbGo('reading')">
+        <div class="num">📖</div>
+        <h3>Read &amp; Answer</h3>
+        <p>Listen to the article, read it, then answer the questions.</p>
+      </div>
+      <div class="menu-card" onclick="arbGo('vocab')">
+        <div class="num">🗂️</div>
+        <h3>Vocabulary</h3>
+        <p>Study the word list, then drill it with flashcards.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ READING + QUESTIONS ============ -->
+  <div id="reading" class="section">
+    <div class="section-head">
+      <button class="back-btn" onclick="arbGo('home')">&larr; Back</button>
+      <h2>Decision Fatigue</h2>
+      <div class="sub">Read the article, then answer every question below.</div>
+    </div>
+
+    <div class="player">
+      <button class="play-btn" id="playBtn">&#9654;</button>
+      <button class="stop-btn" id="stopBtn">&#9632;</button>
+      <div class="player-status">
+        <div class="pl-title" id="plTitle">Listen to the article</div>
+        <div class="pl-sub" id="plSub">American accent &middot; tap play to start</div>
+      </div>
+      <select class="rate-select" id="rateSelect">
+        <option value="0.8">0.8&times; slow</option>
+        <option value="1" selected>1&times; normal</option>
+        <option value="1.2">1.2&times; fast</option>
+      </select>
+      <div class="player-note">The current paragraph glows gold while it is being read. Voice quality depends on your device.</div>
+    </div>
+
+    <div class="hint-strip"><span class="dot"></span> Tap any <span class="vocab">highlighted word</span> to see its meaning and Uzbek translation.</div>
+
+    <div class="article" id="articleBody">
+      <div class="art-sub">An Avazbek Reader Booster article &middot; ~907 words &middot; 20 target words</div>
+      <p>No matter how <span class="vocab" data-w="0">rational</span> people try to be, they can't make decision after decision without paying a biological price. This 'decision fatigue' is different from ordinary physical fatigue. People are not conscious of being tired, but nevertheless they are low on energy. The more choices one makes throughout the day, the harder it becomes for the brain, and eventually it looks for shortcuts: either to act <span class="vocab" data-w="1">impulsively</span> instead of expending the energy to think through the possible results, or the ultimate energy saver: do nothing. Avoiding a decision often creates bigger problems in the long run, but for the moment it eases the mental strain.</p>
+      <p>Decision fatigue involves a phenomenon called ego <span class="vocab" data-w="2">depletion</span>, a term coined by social psychologist Roy F. Baumeister. His research demonstrated that there is a <span class="vocab" data-w="3">finite</span> store of mental stamina for exerting self-control. For example, when people fended off the <span class="vocab" data-w="4">temptation</span> to eat freshly baked biscuits, they were then less able to resist other temptations. When they tried to resist the urge to cry during a sad movie, afterwards they gave up more quickly on tasks requiring <span class="vocab" data-w="5">self-discipline</span>, such as working on a geometry puzzle. The experiments confirmed the 19th-century notion of willpower being like a muscle that became tired with use; something which could be <span class="vocab" data-w="6">conserved</span> by avoiding temptation.</p>
+      <p>Decision fatigue leaves people <span class="vocab" data-w="7">vulnerable</span> to marketers who know how to time their sales, as Jonathan Levav demonstrated. He visited a tailor to have a suit made for his wedding and began going through the choices of fabric, buttons, and so forth, and when he got through the third pile of fabric samples, Levav recalls, 'I couldn't tell the choices apart anymore. After a while my only response to the tailor became, "What do you recommend?"' Levav put the experience to use in an experiment conducted at German car dealerships, where real customers had to choose among four styles of gearshift knobs, 25 <span class="vocab" data-w="8">configurations</span> of the engine and gearbox, and a palette of 56 colours for the interior. As they started picking features, customers would carefully weigh the choices, but as decision fatigue set in they would start settling for the <span class="vocab" data-w="9">default</span> option. By manipulating the order of the car buyers' choices, the researchers found that customers would end up paying more.</p>
+      <p>Similarly, sweet snacks are featured prominently at cash registers at most supermarkets. With their willpower reduced after shopping, people are especially vulnerable to sweet drinks and snacks. While supermarkets figured this out a long time ago, only recently did researchers discover why. Baumeister's research team tested the notion that people could build up willpower by first <span class="vocab" data-w="10">indulging</span> in pleasure. They found that a delicious, thick milkshake strengthened willpower by helping people perform better than expected on their next task. However, the experiment also included a control group who drank a tasteless low-fat dairy beverage. It provided them with no pleasure, yet it produced similar improvements in self-control. Baumeister concluded that even the tasteless drink had worked because the brain, like the rest of the body, derived energy from <span class="vocab" data-w="11">glucose</span>, the simple sugar manufactured from all kinds of foods, including milk.</p>
+      <p>To establish cause and effect, researchers at Baumeister's lab tried refuelling the brain in experiments involving lemonade mixed either with sugar or with a diet sweetener. The sugary lemonade provided a burst of glucose. Its effects could be observed immediately in the lab; the sugarless sweeteners tasted similar but did not contain the glucose. Again and again, the sugar restored willpower, but the artificial sweetener had no effect. The glucose would <span class="vocab" data-w="12">mitigate</span> the ego depletion and sometimes completely reverse it, improving self-control and the quality of decisions. The subjects resisted national bias when making choices and, when making financial decisions, they were more likely to choose the better long-term strategy instead of going for a quick <span class="vocab" data-w="13">payoff</span>.</p>
+      <p>However, some brain researchers had <span class="vocab" data-w="14">reservations</span> about the glucose connection. Todd Heatherton, a pioneer of social neuroscience, believed in ego depletion but didn't see how this process could be caused simply by variations in glucose levels. To observe the process, and to see if it could be reversed by glucose, Heatherton's team recorded images of the brains of 45 people who were on a low-calorie diet as they reacted to pictures of food. Next, these dieters watched a comedy video while forcing themselves to <span class="vocab" data-w="15">suppress</span> their laughter — thereby draining mental energy and inducing ego depletion. When they were again shown pictures of food, further brain scans revealed more activity in the brain's <span class="vocab" data-w="16">reward</span> centre and a decrease in the <span class="vocab" data-w="17">amygdala</span>, which helps control impulses. The food's appeal, in other words, registered more strongly while impulse control weakened. What surprised Heatherton was that administering glucose completely reversed the brain changes brought about by ego depletion.</p>
+      <p>'Good decision-making is not a trait of the person,' Baumeister says. 'It's a state that <span class="vocab" data-w="18">fluctuates</span>.' His studies show that people with the best self-control are the ones who avoid temptations, and who establish habits that <span class="vocab" data-w="19">eliminate</span> the mental effort of making choices. Instead of counting on willpower all day, they conserve it so that it's available for important decisions. 'Even the wisest people won't make good choices when they're not rested and their glucose is low,' Baumeister notes. If a decision must be made late in the afternoon or in the evening, they know not to do it on an empty stomach. The best decision-makers, according to Baumeister, 'are the ones who know when not to trust themselves.'</p>
+    </div>
+
+    <div class="card" style="margin-top:30px">
+      <h2 style="font-family:var(--serif);font-weight:400;margin-top:0">Questions</h2>
+<div class="rubric"><b>Questions 14–19.</b> This passage has seven sections, A–G. Which section contains the following information?</div>
+<div class="q-block" data-q="14">
+<div><span class="q-num">14.</span>Research in which two substances that tasted alike had different effects on the subjects</div>
+<label class="opt-row"><input type="radio" name="q14" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="G"><span><b>G</b> </span></label>
+</div>
+<div class="q-block" data-q="15">
+<div><span class="q-num">15.</span>An instance where controlling emotions while viewing something upsetting led to a lack of perseverance in other activities</div>
+<label class="opt-row"><input type="radio" name="q15" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="G"><span><b>G</b> </span></label>
+</div>
+<div class="q-block" data-q="16">
+<div><span class="q-num">16.</span>An explanation of why it is important to eat something before making a decision at the end of the day</div>
+<label class="opt-row"><input type="radio" name="q16" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="G"><span><b>G</b> </span></label>
+</div>
+<div class="q-block" data-q="17">
+<div><span class="q-num">17.</span>A reference to a researcher who was not initially convinced of the effect of glucose</div>
+<label class="opt-row"><input type="radio" name="q17" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="G"><span><b>G</b> </span></label>
+</div>
+<div class="q-block" data-q="18">
+<div><span class="q-num">18.</span>An account of research that mirrored an experience the researcher had in his personal life</div>
+<label class="opt-row"><input type="radio" name="q18" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q18" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q18" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q18" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q18" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q18" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q18" value="G"><span><b>G</b> </span></label>
+</div>
+<div class="q-block" data-q="19">
+<div><span class="q-num">19.</span>An example of how the location of products in a shop can be used to take advantage of 'decision fatigue'</div>
+<label class="opt-row"><input type="radio" name="q19" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q19" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q19" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q19" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q19" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q19" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q19" value="G"><span><b>G</b> </span></label>
+</div>
+<div class="rubric"><b>Questions 20–22.</b> Complete the summary. Use <b>ONE WORD ONLY</b> from the passage for each answer.</div>
+<div class="q-block" data-q="20">
+<div><span class="q-num">20.</span>Even when people attempt to be _____, they experience 'decision fatigue' if they make several decisions in a row.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="q-block" data-q="21">
+<div><span class="q-num">21.</span>They are not aware of how _____ they are, but it becomes harder for their brains to decide as the day goes on.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="q-block" data-q="22">
+<div><span class="q-num">22.</span>After making many decisions in one day, the brain seeks _____ in order to conserve energy.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="rubric"><b>Questions 23–26.</b> Match each statement with the correct researcher, A, B or C. <i>A Roy F. Baumeister, B Jonathan Levav, C Todd Heatherton.</i> You may use any letter more than once.</div>
+<div class="q-block" data-q="23">
+<div><span class="q-num">23.</span>The energy people have for exercising willpower is limited.</div>
+<label class="opt-row"><input type="radio" name="q23" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q23" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q23" value="C"><span><b>C</b> </span></label>
+</div>
+<div class="q-block" data-q="24">
+<div><span class="q-num">24.</span>Even an unpleasant substance had a positive effect on willpower.</div>
+<label class="opt-row"><input type="radio" name="q24" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q24" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q24" value="C"><span><b>C</b> </span></label>
+</div>
+<div class="q-block" data-q="25">
+<div><span class="q-num">25.</span>People's responses to images changed after having to exercise self-control.</div>
+<label class="opt-row"><input type="radio" name="q25" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q25" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q25" value="C"><span><b>C</b> </span></label>
+</div>
+<div class="q-block" data-q="26">
+<div><span class="q-num">26.</span>The sequence of options presented to consumers could be used to the consumers' disadvantage.</div>
+<label class="opt-row"><input type="radio" name="q26" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q26" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q26" value="C"><span><b>C</b> </span></label>
+</div>
+      <div class="submit-bar">
+        <button class="btn btn-gold" onclick="submitQuiz()">Check answers</button>
+        <button class="btn" onclick="showKeyWords()">Key word table</button>
+      </div>
+      <div class="score-banner" id="scoreBanner"></div>
+    </div>
+
+    <div class="card" id="kwCard" style="margin-top:20px;display:none">
+      <h2 style="font-family:var(--serif);font-weight:400;margin-top:0">Key Word Table</h2>
+      <p style="color:var(--muted);font-size:.85rem">These are the words/phrases in the questions and their matching synonyms or forms in the passage — useful for spotting paraphrases.</p>
+<table class="kw-table"><tr><th>In the question</th><th>In the passage</th></tr>
+<tr><td class="qtext">Q14 &middot; two similar-tasting substances</td><td class="ptext">lemonade mixed either with sugar or with a <b>diet sweetener</b> ... tasted similar but did not contain the glucose</td></tr>
+<tr><td class="qtext">Q15 &middot; controlling emotions, lack of perseverance</td><td class="ptext">resist the urge to cry during a sad movie ... <b>gave up more quickly</b> on tasks requiring self-discipline</td></tr>
+<tr><td class="qtext">Q16 &middot; eat before deciding late</td><td class="ptext">they know not to do it <b>on an empty stomach</b></td></tr>
+<tr><td class="qtext">Q17 &middot; researcher unconvinced initially</td><td class="ptext">Todd Heatherton ... <b>didn't see how this process could be caused</b> simply by variations in glucose levels</td></tr>
+<tr><td class="qtext">Q18 &middot; research mirrored personal experience</td><td class="ptext">Levav ... 'I couldn't tell the choices apart anymore' ... put the experience to use in an <b>experiment</b></td></tr>
+<tr><td class="qtext">Q19 &middot; product location in shop</td><td class="ptext">sweet snacks are featured <b>prominently at cash registers</b></td></tr>
+<tr><td class="qtext">Q20 &middot; attempt to be ...</td><td class="ptext">no matter how <b>rational</b> people try to be</td></tr>
+<tr><td class="qtext">Q21 &middot; not aware of how ...</td><td class="ptext">people are not conscious of being <b>tired</b></td></tr>
+<tr><td class="qtext">Q22 &middot; brain seeks ...</td><td class="ptext">eventually it looks for <b>shortcuts</b></td></tr>
+<tr><td class="qtext">Q23 &middot; energy for willpower limited</td><td class="ptext">there is a <b>finite store of mental stamina</b></td></tr>
+<tr><td class="qtext">Q24 &middot; unpleasant substance, positive effect</td><td class="ptext">a tasteless low-fat dairy beverage ... produced <b>similar improvements</b> in self-control</td></tr>
+<tr><td class="qtext">Q25 &middot; responses to images changed</td><td class="ptext">further brain scans revealed <b>more activity in the brain's reward centre</b></td></tr>
+<tr><td class="qtext">Q26 &middot; sequence used to disadvantage</td><td class="ptext">by <b>manipulating the order</b> of the car buyers' choices</td></tr>
+</table>
+    </div>
+  </div>
+
+  <!-- ============ VOCAB ============ -->
+  <div id="vocab" class="section">
+    <div class="section-head">
+      <button class="back-btn" onclick="arbGo('home')">&larr; Back</button>
+      <h2>Vocabulary Revision</h2>
+      <div class="sub">The 20 golden words from the article. Read the list, then drill them with flashcards.</div>
+    </div>
+    <div class="tabbtns">
+      <div class="tabbtn active" id="tabWL" onclick="switchVocabTab('list')">📚 Word list</div>
+      <div class="tabbtn" id="tabFC" onclick="switchVocabTab('cards')">🗃️ Flashcards</div>
+      <div class="tabbtn" id="tabSP" onclick="switchVocabTab('speak')">🎤 Speak with Vocab</div>
+    </div>
+
+    <div id="vlist" class="card"></div>
+
+    <div id="vcards" style="display:none">
+      <div class="fc-stage" id="fcStageWrap">
+        <div class="fc-status" id="fcStatus"></div>
+        <div class="flashcard" id="fcCard"></div>
+        <div class="fc-actions" id="fcStage">
+          <button class="fc-review" onclick="fcEngine.review()">&#8635; Review again</button>
+          <button class="fc-know" onclick="fcEngine.know()">&#10003; I know it</button>
+        </div>
+      </div>
+      <div class="fc-done" id="fcDone"></div>
+    </div>
+
+    <div id="vspeak" class="card sp-stage" style="display:none">
+      <div id="spWrap"></div>
+    </div>
+  </div>
+
+  <!-- Vocab popup -->
+  <div class="vocab-pop" id="vocabPop">
+    <button class="vp-close">&times;</button>
+    <span class="vp-word"></span><span class="vp-pos"></span>
+    <div class="vp-def"></div>
+    <div class="vp-ex"></div>
+    <button class="vp-say">&#128266; Pronounce</button>
+  </div>
+
+</div>
+
+<script src="../assets/catalog.js"></script>
+<script src="../assets/shared.js"></script>
+<script>
+const PASSAGE_ID = 'p14';
+
+const VOCAB = [{"word": "rational", "pos": "adjective", "def": "based on logic and reason rather than emotion", "uz": "mantiqiy, oqilona", "example": "No matter how rational people try to be, decisions still tire the brain."}, {"word": "impulsively", "pos": "adverb", "def": "acting suddenly without thinking about the consequences", "uz": "o'ylamasdan, beixtiyor", "example": "A tired brain may choose to act impulsively."}, {"word": "depletion", "pos": "noun", "def": "the reduction in the amount of something", "uz": "kamayish, tugash", "example": "Ego depletion reduces a person's self-control."}, {"word": "temptation", "pos": "noun", "def": "a strong desire to do or have something, especially something unwise", "uz": "vasvasa, ozdirish", "example": "They fended off the temptation to eat biscuits."}, {"word": "finite", "pos": "adjective", "def": "having limits; not unlimited", "uz": "cheklangan, chekli", "example": "There is a finite store of mental stamina."}, {"word": "self-discipline", "pos": "noun", "def": "the ability to control one's own behaviour and impulses", "uz": "o'z-o'zini nazorat qilish", "example": "They gave up more quickly on tasks requiring self-discipline."}, {"word": "conserve", "pos": "verb", "def": "to save or protect something from being used up", "uz": "tejamoq, saqlamoq", "example": "Willpower can be conserved by avoiding temptation."}, {"word": "vulnerable", "pos": "adjective", "def": "easily influenced, harmed or affected by something", "uz": "zaif, ta'sirga beriluvchan", "example": "Decision fatigue leaves people vulnerable to marketers."}, {"word": "configuration", "pos": "noun", "def": "a particular arrangement of the parts or elements of something", "uz": "konfiguratsiya, tuzilma", "example": "Customers chose from 25 configurations of engine and gearbox."}, {"word": "default", "pos": "noun", "def": "the option automatically selected unless another is chosen", "uz": "standart tanlov, avtomatik holat", "example": "Tired customers settled for the default option."}, {"word": "indulge", "pos": "verb", "def": "to allow oneself to enjoy a pleasure", "uz": "o'zini erkin qo'yib yubormoq", "example": "Willpower may build up by first indulging in pleasure."}, {"word": "glucose", "pos": "noun", "def": "a simple sugar that is an important source of energy in the body", "uz": "glyukoza (shakar turi)", "example": "The brain derives energy from glucose."}, {"word": "mitigate", "pos": "verb", "def": "to make something less severe, serious or harmful", "uz": "yumshatmoq, kamaytirmoq", "example": "Glucose can mitigate the effects of ego depletion."}, {"word": "payoff", "pos": "noun", "def": "a financial or other reward, especially a short-term one", "uz": "foyda, mukofot", "example": "They avoided going for a quick payoff."}, {"word": "reservations", "pos": "noun", "def": "doubts about whether something is right, true or wise", "uz": "shubhalar, ikkilanish", "example": "Some researchers had reservations about the glucose theory."}, {"word": "suppress", "pos": "verb", "def": "to prevent a feeling or reaction from being expressed", "uz": "bostirmoq, ushlab turmoq", "example": "Dieters had to suppress their laughter during the video."}, {"word": "reward", "pos": "noun", "def": "something given or experienced in return for behaviour or effort", "uz": "mukofot, taqdirlash", "example": "Brain scans showed more activity in the reward centre."}, {"word": "amygdala", "pos": "noun", "def": "a part of the brain involved in emotion and impulse control", "uz": "amigdala (miya qismi)", "example": "Activity in the amygdala decreased after ego depletion."}, {"word": "fluctuate", "pos": "verb", "def": "to rise and fall irregularly; to change frequently", "uz": "o'zgarib turmoq, tebranmoq", "example": "Good decision-making is a state that fluctuates."}, {"word": "eliminate", "pos": "verb", "def": "to remove or get rid of something completely", "uz": "yo'q qilmoq, bartaraf etmoq", "example": "Habits can eliminate the mental effort of choosing."}];
+
+const QUIZ = [{"id": 14, "type": "radio", "answer": "E"}, {"id": 15, "type": "radio", "answer": "B"}, {"id": 16, "type": "radio", "answer": "G"}, {"id": 17, "type": "radio", "answer": "F"}, {"id": 18, "type": "radio", "answer": "C"}, {"id": 19, "type": "radio", "answer": "D"}, {"id": 20, "type": "text", "answer": "rational"}, {"id": 21, "type": "text", "answer": "tired"}, {"id": 22, "type": "text", "answer": "shortcuts"}, {"id": 23, "type": "radio", "answer": "A"}, {"id": 24, "type": "radio", "answer": "A"}, {"id": 25, "type": "radio", "answer": "C"}, {"id": 26, "type": "radio", "answer": "B"}];
+
+ArbPlayer('#articleBody p', {});
+ArbVocabPopup(VOCAB);
+ArbHighlighter(['articleBody']);
+ArbRenderWordList(VOCAB, 'vlist');
+
+let fcEngine = null;
+let spEngine = null;
+function switchVocabTab(tab) {
+  document.getElementById('tabWL').classList.toggle('active', tab === 'list');
+  document.getElementById('tabFC').classList.toggle('active', tab === 'cards');
+  document.getElementById('tabSP').classList.toggle('active', tab === 'speak');
+  document.getElementById('vlist').style.display = tab === 'list' ? '' : 'none';
+  document.getElementById('vcards').style.display = tab === 'cards' ? '' : 'none';
+  document.getElementById('vspeak').style.display = tab === 'speak' ? '' : 'none';
+  if (tab === 'cards' && !fcEngine) {
+    fcEngine = ArbFlashcards(VOCAB, { onComplete: onVocabComplete, restartFnName: 'fcRestart' });
+  }
+  if (tab === 'speak' && !spEngine) {
+    spEngine = ArbSpeakPractice(VOCAB, {});
+  }
+}
+function fcRestart() { fcEngine.restart(); }
+function onVocabComplete() {
+  arbSetItem(PASSAGE_ID, { vocab: true });
+  checkAllDone();
+}
+
+function submitQuiz() {
+  const correct = ArbGradeQuiz(QUIZ, {});
+  const passMark = Math.ceil(QUIZ.length * 0.6);
+  if (correct >= passMark) {
+    arbSetItem(PASSAGE_ID, { quiz: true, score: correct, total: QUIZ.length });
+  } else {
+    arbSetItem(PASSAGE_ID, { score: correct, total: QUIZ.length });
+  }
+  checkAllDone();
+}
+
+function showKeyWords() {
+  document.getElementById('kwCard').style.display = 'block';
+  document.getElementById('kwCard').scrollIntoView({ behavior: 'smooth' });
+}
+
+function checkAllDone() {
+  if (arbIsComplete(PASSAGE_ID)) {
+    let banner = document.getElementById('unlockBanner');
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'unlockBanner';
+      banner.className = 'score-banner show';
+      banner.style.marginTop = '20px';
+      banner.innerHTML = '<div class="big">🔓 Unlocked!</div><div style="color:var(--muted);font-size:.85rem;margin-top:4px">Great work — the next passage is now open.</div><button class="btn btn-gold" style="margin-top:14px" onclick="location.href=\'../index.html\'">Back to map</button>';
+      document.querySelector('.wrap').appendChild(banner);
+    }
+  }
+}
+</script>
+</body>
+</html>

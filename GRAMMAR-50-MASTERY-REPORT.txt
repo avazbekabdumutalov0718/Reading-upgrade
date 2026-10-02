@@ -1,0 +1,59 @@
+VIVID IELTS — GRAMMAR 50 MASTERY UPDATE
+Date: 2026-09-30
+
+WHAT CHANGED
+============
+1. Removed the old “Yodladim” as the main learning mechanism on each Grammar Structure card.
+2. Added a dedicated Mastery Lab to every one of the 161 grammar structures.
+3. Every structure now has exactly 5 exercise types × 10 tasks = 50 tasks.
+4. Total grammar mastery workload: 161 × 50 = 8,050 practice interactions.
+
+THE 5 EXERCISE TYPES
+====================
+1) Tanib olish — 10
+   - Alternates between meaning recognition and correct-example recognition.
+2) Bo‘shliqni to‘ldirish — 10
+   - User recalls and types the structure chunk from memory.
+3) Gapni tuzish — 10
+   - User rebuilds the example from shuffled word tokens.
+4) Xatoni tuzatish — 10
+   - User replaces an incorrect grammar chunk with the correct one.
+5) IELTS gap yozish — 10
+   - One original sentence for each of 10 IELTS topics:
+     Education, Technology, Health, Environment, Work & Career,
+     Travel, Family, Media, Culture, Society.
+   - Automatic check verifies basic structural signals and sentence length.
+   - The UI explicitly notes that this is not a full IELTS grammar evaluation.
+
+PROGRESS / MASTERY
+==================
+- Each structure displays 0/50 progress.
+- Each exercise type keeps its best /10 score.
+- Partial unfinished sessions are remembered and can continue later.
+- A structure becomes “Mustahkamlandi” after all five 10-question stages are completed
+  and combined best score is at least 40/50.
+- Weak stages can be replayed to improve best score.
+- Existing grammar mistake tracking remains connected.
+
+CLOUD SYNC
+==========
+- The new drill progress is stored inside the existing grammarProgress object.
+- grammarProgress is already part of the Supabase cloud state snapshot.
+- Therefore, when the user signs in with the same Supabase email/password account,
+  grammar mastery progress is included in the existing cloud sync flow.
+
+PWA / CACHE
+===========
+- App asset version was bumped to 20260930-grammar50.
+- Service worker cache version was bumped to ielts-max-shell-v3-grammar50.
+- grammar.css and grammar-content.json were added to the PWA shell cache list.
+
+VALIDATION
+==========
+- grammar-content.json: 161 unique structures.
+- Every structure has id, pattern, meaning, example, chunk, gap.
+- Every gap contains the expected blank placeholder.
+- Calculated total: 8,050 tasks.
+- app.js syntax: PASS (node --check).
+- service-worker.js syntax: PASS (node --check).
+- Existing Reading Words / MAX SPEAKING smoke test: PASS.

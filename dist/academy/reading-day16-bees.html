@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Reading – Bees and pollination</title>
+<link rel="stylesheet" href="reading-test-common.css">
+<style>
+  :root {
+    --bg: #ffffff; --bg-alt: #f4f5f7; --bg-panel: #ffffff;
+    --text: #111111; --text-muted: #555; --border: #d4d4d4;
+    --border-strong: #333; --accent: #e51e2a;
+    --select-bg: #cfe3ff; --select-active: #1e6cd8;
+    --footer-bg: #f4f5f7; --btn-bg: #ededed;
+    --arrow-bg: #1f1f1f; --arrow-fg: #ffffff;
+    --correct: #1a8a3c; --wrong: #cc2222;
+  }
+  body.dark {
+    --bg: #1a1a1d; --bg-alt: #232327; --bg-panel: #1f1f22;
+    --text: #ececec; --text-muted: #b5b5b5; --border: #3a3a3f;
+    --border-strong: #cfcfcf; --accent: #ff5c66;
+    --select-bg: #2c4d7a; --select-active: #4a8be0;
+    --footer-bg: #232327; --btn-bg: #2e2e33;
+    --arrow-bg: #ececec; --arrow-fg: #1a1a1d;
+    --correct: #4ed684; --wrong: #ff6b6b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
+
+  .topbar { height: 50px; border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 16px; background: var(--bg); position: relative; z-index: 5; }
+  .logo { font-weight: 800; font-size: 22px; letter-spacing: 1px; color: var(--accent); margin-right: 20px; user-select: none; }
+  .test-taker { font-size: 14px; font-weight: 700; }
+  .top-controls { margin-left: auto; display: flex; gap: 2px; align-items: center; }
+  .top-controls .icon-btn, .top-controls .text-btn { background: transparent; border: none; color: var(--text); padding: 6px 10px; cursor: pointer; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; transition: background 0.15s; }
+  .top-controls .icon-btn:hover, .top-controls .text-btn:hover { background: var(--bg-alt); }
+  .top-controls .icon-btn svg { width: 20px; height: 20px; display: block; }
+  .top-controls .text-btn { font-weight: 700; font-size: 16px; font-family: inherit; }
+  .top-controls .divider { width: 1px; height: 26px; background: var(--border); margin: 0 6px; }
+
+  .part-header { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 10px 20px; }
+  .part-header h2 { margin: 0 0 3px 0; font-size: 14px; font-weight: 700; }
+  .part-header p { margin: 0; font-size: 12px; color: var(--text-muted); }
+
+  .main { position: absolute; top: 50px; left: 0; right: 0; bottom: 50px; display: flex; flex-direction: column; }
+  .panes { flex: 1; display: flex; overflow: hidden; position: relative; }
+  .pane { overflow-y: auto; padding: 18px 28px; background: var(--bg-panel); line-height: 1.55; font-size: calc(14.5px * var(--font-scale, 1)); }
+  .pane.left { width: 50%; }
+  .pane.right { flex: 1; }
+  .splitter { width: 10px; background: var(--bg-alt); border-left: 1px solid var(--border); border-right: 1px solid var(--border); cursor: col-resize; position: relative; user-select: none; flex-shrink: 0; }
+  .splitter::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 18px; height: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; background-image: linear-gradient(to right, transparent 6px, var(--text) 6px, var(--text) 7px, transparent 7px, transparent 11px, var(--text) 11px, var(--text) 12px, transparent 12px); }
+
+  .passage h1 { font-size: 16px; font-weight: 700; margin: 0 0 14px 0; text-align: center; }
+  .passage p { margin: 0 0 11px 0; text-align: justify; }
+
+  .qblock { margin-bottom: 28px; }
+  .qblock h3 { margin: 0 0 6px 0; font-size: 14.5px; font-weight: 700; }
+  .qblock .instructions { font-size: 13px; margin-bottom: 12px; line-height: 1.6; }
+  .qblock .instructions strong { font-weight: 700; }
+
+  /* Row styles */
+  .yn-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; padding: 6px 8px; border-radius: 4px; border: 1px solid transparent; }
+  .yn-row:focus-within { border-color: var(--select-active); }
+  .qnum-yn { display: inline-block; min-width: 22px; font-weight: 700; border: 1px solid var(--border-strong); padding: 0 4px; text-align: center; font-size: 12px; flex-shrink: 0; margin-top: 3px; }
+  .yn-stem { flex: 1; font-size: 14px; line-height: 1.5; }
+  .yn-select { background: var(--bg); color: var(--text); border: 1px solid var(--border-strong); padding: 4px 6px; font-size: 13px; font-family: inherit; border-radius: 3px; min-width: 110px; flex-shrink: 0; }
+  .gap-input { background: var(--bg); color: var(--text); border: 1px solid var(--border-strong); padding: 3px 6px; font-size: 13px; border-radius: 3px; width: 180px; font-family: inherit; }
+
+  /* Radio Options */
+  .mc-option { display: block; margin: 5px 0; font-size: 13.5px; cursor: pointer; }
+  .mc-option input { margin-right: 8px; }
+
+  /* Footer */
+  .footer { position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: var(--footer-bg); border-top: 1px solid var(--border); display: flex; align-items: center; padding: 0 12px; gap: 8px; z-index: 4; }
+  .part-tab { display: flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 3px; border: 1px solid var(--border); background: var(--bg); user-select: none; }
+  .part-tab .label { font-weight: 700; font-size: 13px; }
+  .part-tab .progress { font-size: 11.5px; color: var(--text-muted); }
+  .qnav { display: flex; gap: 3px; margin-left: 2px; flex-wrap: wrap; }
+  .qbtn { width: 22px; height: 22px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 2px; font-family: inherit; }
+  .qbtn:hover { background: var(--bg-alt); }
+  .qbtn.current { border: 2px solid var(--text); font-weight: 700; }
+  .qbtn.answered { background: var(--bg-alt); }
+  .nav-arrows { display: flex; gap: 4px; margin-left: auto; }
+  .arrow-btn { width: 32px; height: 32px; background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .arrow-btn.dark { background: var(--arrow-bg); color: var(--arrow-fg); border-color: var(--arrow-bg); }
+  .check-btn { width: 36px; height: 32px; background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-left: 4px; }
+
+  .user-highlight { background: #f4ff55; padding: 1px 0; }
+  body.dark .user-highlight { background: #8a9100; color: #fff; }
+
+  .highlight-popup { position: absolute; display: none; background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.18); padding: 4px; z-index: 200; align-items: center; gap: 2px; font-size: 13.5px; user-select: none; }
+  .highlight-popup.visible { display: inline-flex; }
+  .highlight-popup button { background: transparent; border: none; padding: 8px 12px; cursor: pointer; color: var(--text); border-radius: 5px; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; font-size: 13.5px; font-weight: 500; }
+  .highlight-popup button:hover { background: var(--bg-alt); }
+  .highlight-popup .hp-swatch { display: inline-block; width: 16px; height: 16px; background: #f4ff55; border-radius: 3px; flex-shrink: 0; }
+  .highlight-popup .hp-close { padding: 6px 10px; font-size: 18px; color: var(--text-muted); line-height: 1; }
+
+  .pane::-webkit-scrollbar { width: 10px; }
+  .pane::-webkit-scrollbar-track { background: var(--bg-alt); }
+  .pane::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
+
+  /* Results overlay */
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: flex-start; justify-content: center; z-index: 100; padding: 20px; overflow-y: auto; }
+  .overlay.visible { display: flex; }
+  .modal { background: var(--bg-panel); color: var(--text); border: 1px solid var(--border); border-radius: 8px; max-width: 600px; width: 100%; padding: 28px 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); margin: auto; }
+  .modal h2 { margin: 0 0 10px 0; color: var(--accent); font-size: 22px; text-align: center; }
+  .score-row { text-align: center; font-size: 28px; font-weight: 800; margin: 6px 0 4px; }
+  .score-row span { font-size: 16px; font-weight: 400; color: var(--text-muted); }
+  .band-row { text-align: center; font-size: 18px; font-weight: 700; margin-bottom: 18px; color: var(--accent); }
+  .results-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 18px; }
+  .results-table th { background: var(--bg-alt); padding: 6px 10px; text-align: left; font-weight: 700; border-bottom: 2px solid var(--border); }
+  .results-table td { padding: 5px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .results-table tr:last-child td { border-bottom: none; }
+  .mark-ok  { color: var(--correct); font-weight: 700; font-size: 15px; }
+  .mark-bad { color: var(--wrong);   font-weight: 700; font-size: 15px; }
+  .modal .actions { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
+  .modal button { background: var(--accent); color: #fff; border: none; padding: 9px 22px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
+  .modal button.secondary { background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); }
+  .modal button:hover { opacity: 0.9; }
+</style>
+<link rel="stylesheet" href="max-bridge.css?v=1"><script src="max-bridge.js?v=1" defer></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">IELTS</div>
+  <div class="test-taker">VIVID IELTS</div>
+  <div class="top-controls">
+    <button id="btn-light" class="icon-btn" title="Light mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
+        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
+        <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/>
+      </svg>
+    </button>
+    <button id="btn-dark" class="icon-btn" title="Dark mode">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <div class="divider"></div>
+    <button id="btn-font-down" class="text-btn" title="Decrease font size">A-</button>
+    <button id="btn-font-up" class="text-btn" title="Increase font size">A+</button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="part-header">
+    <h2>Reading Passage 2</h2>
+    <p>Answer Questions 14–26 by referring to Reading Passage 2.</p>
+  </div>
+  <div class="panes">
+
+    <div class="pane left" id="passagePane">
+      <div class="passage">
+        <div style="font-weight:700;font-size:14px;margin-bottom:4px;">READING PASSAGE 2</div>
+        <div style="font-size:13px;margin-bottom:14px;color:var(--text-muted);">Answer Questions 14–26 by referring to Reading Passage 2 on pages 4 and 5 of the separate booklet.</div>
+
+        <p><strong>A</strong> Some time in the early Cretaceous period of the earth's history, hunting wasps of a certain type became bees by adopting a vegetarian diet, they began to rely more and more on the pollen of. plants as a source of protein for themselves and their offspring, as an alternative to insects. In so doing, they accidentally transported pollen on their bodies to other plants of the same species, bringing about pollination. The stage was thus set for a succession of ever-closer mutual adaptations of bees and flowering plants. In particular, flowers began to reward bees for their unwitting role in their reproduction by providing richer sources of pollen and another source of nutrition, nectar.</p>
+
+        <p><strong>B</strong> Today about 15 per cent of our diet consists of crops which are pollinated by bees. The meat and other animal products we consume are ultimately derived from bee-pollinated forage crops, and account for another 15 per cent. It follows that around one third of our food is directly or indirectly dependent on the pollinating services of bees. On a global basis, the annual value of agricultural crops dependent on the pollination services of bees is estimated at £1,000 million (US$1,590 million). Much of this pollination is due to honey bees, and in monetary terms it exceeds the value of the annual honey crop by a factor of fifty.</p>
+
+        <p><strong>C</strong> But the apparently harmonious relationship between bees and plants conceals a conflict of interests. Although flowers need bees and vice versa, it pays each partner to minimise its costs and maximise its profits. This may sound like an extreme case of attributing human qualities to non-human species, but using the marketplace and the principles of double-entry book-keeping as metaphors may give us some insights into what is really going on between bees and flowering plants. In the real world, both flower and bee operate in a competitive marketplace. A community of retailers, the flowers, seek to attract more or less discriminating consumers, the bees. Each flower has to juggle the costs and benefits of investing in advertising, by colour and scent, and providing rewards, nectar and pollen. Clearly a species which depends on cross-pollination is on a knife-edge: it must provide sufficient nectar to attract the interest of a bee, but not enough to satisfy all of its needs in one visit. A satiated bee would return to its nest rather than visit another flower. The bee, on the other hand, is out to get the maximum amount of pollen and nectar. It must assess the quality and quantity of rewards which are on offer and juggle its energy costs so that it makes a calorific profit on each foraging trip. The apparent harmony between plants and bees is therefore not all that it seems. Instead, it is an equilibrium based on compromises between the competing interests of the protagonists.</p>
+
+        <p><strong>D</strong> This sounds remarkably like the ideas of the 18th-century economist Adam Smith. In his book, The Wealth of Nations, Smith postulated that in human society the competitive interactions of different 'economic units' eventually resulted in a balanced, or 'harmonious' society. One might predict, therefore, that economists would find the relationships between bees and plants of some interest. This is the case in Israel, where economists are collaborating with botanists and entomologists in a long-term study of the pollination biology of the native flora, in an attempt to understand the dynamics of the relationship between communities of bees and plants.</p>
+
+        <p><strong>E</strong> This sort of study is of more than passing academic interest. It is important that authorities understand the dynamic relationships between plants and their pollinators. This is especially true when, say, devising conservation policies. A good example comes from the forests of tropical South America. Here, as in all rainforests, there is a high diversity of tree species. There may be more than 120 per acre, but in a given acre there may only be one or two individuals of any one species. These trees are pollinated by large, fast-flying bees. There is evidence that certain types of bee learn the distribution of these scattered trees and forage regularly along the same routes. This is called 'trap-lining' and the bees forage for up to 23km from their nests. The bees are therefore acting as long-distance pollinators.</p>
+
+        <p><strong>F</strong> An issue of current concern in tropical forest conservation is that of trying to estimate the minimum sustainable size of 'islands' of forest reserve in areas where large-scale felling is taking place. There is much discussion on seed dispersal distances. But this is only one half of the equation, so far as the reproduction of trees is concerned. There is another question that must be addressed in order to calculate whether proposed forest reserves are close enough to the nearest large tract of forest: 'What is the flight range of these long-distance foragers?' We need to know much more about bees and their relationships with plants before this question can be answered.</p>
+
+        <p><strong>G</strong> Bees, then, are vital to our survival. Furthermore, much of the visual impact of human environments derives from vegetation, and most vegetation is dependent on bees for pollination. Thus, as pollinators of crops and natural vegetation, bees occupy key positions in the web of relationships which sustain the living architecture of our planet.</p>
+      </div>
+    </div>
+
+    <div class="splitter" id="splitter"></div>
+
+    <div class="pane right" id="questionsPane">
+
+      <div class="qblock">
+        <h3>Questions 14–18</h3>
+        <div class="instructions">
+          Reading Passage 2 has seven paragraphs, <strong>A–G</strong>.<br>
+          Which paragraph contains the following information? For questions 14–18, choose the correct heading for each paragraph <strong>A, B, D, E</strong> and <strong>F</strong> from the list of headings (i–viii) below.<br>
+          Write the correct number, <strong>i–viii</strong>, in boxes 14–18 on your answer sheet.
+        </div>
+
+        <div style="background:var(--bg-alt); padding:12px; border-radius:5px; margin-bottom:15px; font-size:13px; border:1px solid var(--border); line-height:1.8;">
+          <strong>List of headings</strong><br>
+          <strong>i</strong> Parallels between bee and human activities<br>
+          <strong>ii</strong> An evolutionary turning point<br>
+          <strong>iii</strong> A lack of total co-operation<br>
+          <strong>iv</strong> The preservation of individual plant species<br>
+          <strong>v</strong> The commercial value of bees<br>
+          <strong>vi</strong> The structure of flowering plants<br>
+          <strong>vii</strong> The pursuit of self-interest<br>
+          <strong>viii</strong> The need for further research<br><br>
+          <em>Example: Paragraph C — Answer: vii</em>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">14</span>
+          <span class="yn-stem">Paragraph A</span>
+          <select class="yn-select question" data-q="14">
+            <option value=""></option><option value="i">i</option><option value="ii">ii</option><option value="iii">iii</option><option value="iv">iv</option><option value="v">v</option><option value="vi">vi</option><option value="vii">vii</option><option value="viii">viii</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">15</span>
+          <span class="yn-stem">Paragraph B</span>
+          <select class="yn-select question" data-q="15">
+            <option value=""></option><option value="i">i</option><option value="ii">ii</option><option value="iii">iii</option><option value="iv">iv</option><option value="v">v</option><option value="vi">vi</option><option value="vii">vii</option><option value="viii">viii</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">16</span>
+          <span class="yn-stem">Paragraph D</span>
+          <select class="yn-select question" data-q="16">
+            <option value=""></option><option value="i">i</option><option value="ii">ii</option><option value="iii">iii</option><option value="iv">iv</option><option value="v">v</option><option value="vi">vi</option><option value="vii">vii</option><option value="viii">viii</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">17</span>
+          <span class="yn-stem">Paragraph E</span>
+          <select class="yn-select question" data-q="17">
+            <option value=""></option><option value="i">i</option><option value="ii">ii</option><option value="iii">iii</option><option value="iv">iv</option><option value="v">v</option><option value="vi">vi</option><option value="vii">vii</option><option value="viii">viii</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">18</span>
+          <span class="yn-stem">Paragraph F</span>
+          <select class="yn-select question" data-q="18">
+            <option value=""></option><option value="i">i</option><option value="ii">ii</option><option value="iii">iii</option><option value="iv">iv</option><option value="v">v</option><option value="vi">vi</option><option value="vii">vii</option><option value="viii">viii</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="qblock">
+        <h3>Questions 19–25</h3>
+        <div class="instructions">
+          Complete the sentences below with words taken from Reading Passage 2.<br>
+          For questions 19–25, choose <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> from the passage for each answer.<br>
+          Write your answers in boxes 19–25 on your answer sheet.
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">19</span>
+          <span class="yn-stem">Hunting wasps used to feed on other …………, rather than on vegetation.</span>
+          <input type="text" class="gap-input question" data-q="19" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">20</span>
+          <span class="yn-stem">Flowering plants started to reward bees with rich pollen and an additional food in the form of ………….</span>
+          <input type="text" class="gap-input question" data-q="20" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">21</span>
+          <span class="yn-stem">Approximately …………. of human food production relies on the activity of bees.</span>
+          <input type="text" class="gap-input question" data-q="21" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">22</span>
+          <span class="yn-stem">If the process of …………. is to take place effectively, bees need to travel from one flower to another before going back to the nest.</span>
+          <input type="text" class="gap-input question" data-q="22" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">23</span>
+          <span class="yn-stem">Bees need to balance the …………. of each trip against the calorific rewards they obtain.</span>
+          <input type="text" class="gap-input question" data-q="23" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">24</span>
+          <span class="yn-stem">There can be over 120 different …………. in an acre of rainforest.</span>
+          <input type="text" class="gap-input question" data-q="24" autocomplete="off">
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">25</span>
+          <span class="yn-stem">The bees that pollinate large forests regularly practise an activity known as ………….</span>
+          <input type="text" class="gap-input question" data-q="25" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="qblock">
+        <h3>Question 26</h3>
+        <div class="instructions">
+          Choose the correct letter, <strong>A, B, C</strong> or <strong>D</strong>.<br>
+          Write the correct letter in box 26 on your answer sheet.
+        </div>
+
+        <div class="yn-row" style="flex-direction:column;">
+          <div><span class="qnum-yn">26</span> <strong style="font-size:14px;">Which is the best title for Reading Passage 2?</strong></div>
+          <div style="padding-left:32px; width:100%;">
+            <label class="mc-option"><input type="radio" name="q26" class="question-radio" data-q="26" value="A"> A The Ecological Importance of Bees</label>
+            <label class="mc-option"><input type="radio" name="q26" class="question-radio" data-q="26" value="B"> B The Evolutionary History of Bees</label>
+            <label class="mc-option"><input type="radio" name="q26" class="question-radio" data-q="26" value="C"> C The Social Behaviour of Bees</label>
+            <label class="mc-option"><input type="radio" name="q26" class="question-radio" data-q="26" value="D"> D The Geographical Distribution of Bees</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="part-tab">
+    <span class="label">Passage 2</span>
+    <span class="progress" id="progress-1">0 of 13</span>
+    <div class="qnav" id="qnav-1"></div>
+  </div>
+  <div class="nav-arrows">
+    <button class="arrow-btn" id="prevBtn">&#8592;</button>
+    <button class="arrow-btn dark" id="nextBtn">&#8594;</button>
+  </div>
+  <button class="check-btn" id="finishBtn" title="Submit">&#10003;</button>
+</div>
+
+<div class="highlight-popup" id="highlightPopup">
+  <button id="hpHighlight"><span class="hp-swatch"></span>Highlight</button>
+  <button id="hpRemove">Remove highlight</button>
+  <button class="hp-close" id="hpClose">&times;</button>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+const TOTAL = 13;
+const Q_START = 14;
+const Q_END = 26;
+
+const KEY = {
+  14: ['ii'],
+  15: ['v'],
+  16: ['i'],
+  17: ['iv'],
+  18: ['viii'],
+  19: ['insects'],
+  20: ['nectar'],
+  21: ['one third', '1/3', 'a third'],
+  22: ['pollination'],
+  23: ['energy costs', 'energy cost'],
+  24: ['tree species', 'trees'],
+  25: ['trap-lining', 'trap lining'],
+  26: ['A']
+};
+
+const answers = {};
+
+function normalize(v) { return (v || '').toString().trim().toUpperCase().replace(/\s+/g, ' '); }
+
+function isCorrect(n, val) {
+  const normVal = normalize(val);
+  return KEY[n].some(k => normalize(k) === normVal);
+}
+
+document.querySelectorAll('.question-radio').forEach(el => {
+  el.addEventListener('change', () => {
+    answers[el.dataset.q] = el.value;
+    updateNav();
+  });
+});
+
+document.querySelectorAll('select.question').forEach(el => {
+  const q = +el.dataset.q;
+  el.addEventListener('change', () => { answers[q] = el.value; updateNav(); });
+});
+
+document.querySelectorAll('input.gap-input.question').forEach(el => {
+  const q = +el.dataset.q;
+  el.addEventListener('input', () => { answers[q] = el.value; updateNav(); });
+});
+
+const qnavEl = document.getElementById('qnav-1');
+const progressEl = document.getElementById('progress-1');
+let activeQ = Q_START;
+
+function buildNav() {
+  qnavEl.innerHTML = '';
+  for (let n = Q_START; n <= Q_END; n++) {
+    const btn = document.createElement('button');
+    btn.className = 'qbtn';
+    btn.textContent = n;
+    btn.dataset.n = n;
+    btn.addEventListener('click', () => scrollToQ(n));
+    qnavEl.appendChild(btn);
+  }
+}
+
+function updateNav() {
+  const answered = Object.keys(answers).filter(k => answers[k] !== undefined && answers[k] !== '').length;
+  progressEl.textContent = `${answered} of ${TOTAL}`;
+  qnavEl.querySelectorAll('.qbtn').forEach(btn => {
+    const n = +btn.dataset.n;
+    btn.classList.toggle('answered', !!answers[n] && answers[n] !== '');
+    btn.classList.toggle('current', n === activeQ);
+  });
+}
+
+function scrollToQ(n) {
+  activeQ = n;
+  const el = document.querySelector(`.question-radio[data-q="${n}"], .question[data-q="${n}"]`);
+  if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.focus({ preventScroll: true }); }
+  updateNav();
+}
+
+document.querySelectorAll('.question, .question-radio').forEach(el => {
+  el.addEventListener('focus', () => { activeQ = +el.dataset.q; updateNav(); });
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => { if (activeQ > Q_START) scrollToQ(activeQ - 1); });
+document.getElementById('nextBtn').addEventListener('click', () => { if (activeQ < Q_END) scrollToQ(activeQ + 1); });
+
+buildNav();
+updateNav();
+
+function getBand(score) {
+  if (score >= 13) return '9.0';
+  if (score >= 12) return '8.5';
+  if (score >= 11) return '8.0';
+  if (score >= 10) return '7.5';
+  if (score >= 9)  return '7.0';
+  if (score >= 8)  return '6.5';
+  if (score >= 7)  return '6.0';
+  if (score >= 6)  return '5.5';
+  if (score >= 5)  return '5.0';
+  if (score >= 4)  return '4.5';
+  return '4.0';
+}
+
+function showResults() {
+  let score = 0;
+  const rows = [];
+  for (let n = Q_START; n <= Q_END; n++) {
+    const ok = isCorrect(n, answers[n]);
+    if (ok) score++;
+    rows.push({ n, given: answers[n] || '—', correct: KEY[n].join(' / '), ok });
+  }
+  const pct = Math.round(score / TOTAL * 100);
+  const band = getBand(score);
+  const color = pct >= 70 ? 'var(--correct)' : pct >= 50 ? '#d4800a' : 'var(--wrong)';
+
+  let html = `<h2>Your Results</h2>
+    <div class="score-row" style="color:${color}">${score} / ${TOTAL} <span>(${pct}%)</span></div>
+    <div class="band-row">Estimated Band: ${band}</div>
+    <table class="results-table">
+      <thead><tr><th>Q</th><th>Your Answer</th><th>Correct</th><th></th></tr></thead><tbody>`;
+  rows.forEach(r => {
+    html += `<tr>
+      <td><strong>${r.n}</strong></td>
+      <td>${r.given}</td>
+      <td>${r.correct}</td>
+      <td class="${r.ok ? 'mark-ok' : 'mark-bad'}">${r.ok ? '✓' : '✗'}</td>
+    </tr>`;
+  });
+  html += `</tbody></table>
+    <div class="actions">
+      <button class="secondary" onclick="document.getElementById('overlay').classList.remove('visible')">Review</button>
+    </div>`;
+
+  document.getElementById('modal').innerHTML = html;
+  document.getElementById('overlay').classList.add('visible');
+}
+
+document.getElementById('finishBtn').addEventListener('click', () => {
+  if (confirm('Submit and see your results?')) showResults();
+});
+
+document.getElementById('overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('overlay')) document.getElementById('overlay').classList.remove('visible');
+});
+
+document.getElementById('btn-dark').addEventListener('click', () => document.body.classList.add('dark'));
+document.getElementById('btn-light').addEventListener('click', () => document.body.classList.remove('dark'));
+
+let fontScale = 1;
+document.getElementById('btn-font-up').addEventListener('click', () => {
+  fontScale = Math.min(1.4, fontScale + 0.08);
+  document.documentElement.style.setProperty('--font-scale', fontScale);
+});
+document.getElementById('btn-font-down').addEventListener('click', () => {
+  fontScale = Math.max(0.7, fontScale - 0.08);
+  document.documentElement.style.setProperty('--font-scale', fontScale);
+});
+
+const splitter = document.getElementById('splitter');
+const leftPane = document.querySelector('.pane.left');
+let dragging = false, startX = 0, startW = 0;
+splitter.addEventListener('mousedown', e => { dragging = true; startX = e.clientX; startW = leftPane.offsetWidth; e.preventDefault(); });
+document.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  const newW = Math.max(200, Math.min(window.innerWidth - 250, startW + e.clientX - startX));
+  leftPane.style.width = newW + 'px';
+});
+document.addEventListener('mouseup', () => { dragging = false; });
+
+// ---- Selection Highlight ----
+const popup = document.getElementById('highlightPopup');
+let lastRange = null;
+
+function isInsideForm(node) {
+  while (node && node !== document.body) {
+    if (node.nodeType === 1 && /^(INPUT|SELECT|TEXTAREA|OPTION|BUTTON)$/.test(node.tagName)) return true;
+    node = node.parentNode;
+  }
+  return false;
+}
+
+function handleSelection() {
+  const sel = window.getSelection();
+  if (!sel || sel.isCollapsed || sel.toString().trim() === '') { popup.classList.remove('visible'); return; }
+  const range = sel.getRangeAt(0);
+  if (isInsideForm(range.commonAncestorContainer)) { popup.classList.remove('visible'); return; }
+  const pane = range.commonAncestorContainer.parentElement?.closest('#passagePane, #questionsPane');
+  if (!pane) { popup.classList.remove('visible'); return; }
+  lastRange = range.cloneRange();
+  const rect = range.getBoundingClientRect();
+  popup.style.left = (rect.left + rect.width / 2 - popup.offsetWidth / 2 + window.scrollX) + 'px';
+  popup.style.top = (rect.top - 48 + window.scrollY) + 'px';
+  popup.classList.add('visible');
+}
+
+document.getElementById('passagePane').addEventListener('mouseup', handleSelection);
+document.getElementById('questionsPane').addEventListener('mouseup', handleSelection);
+
+document.getElementById('hpHighlight').addEventListener('click', () => {
+  if (!lastRange) return;
+  const mark = document.createElement('mark');
+  mark.className = 'user-highlight';
+  try { lastRange.surroundContents(mark); }
+  catch (e) {
+    try { mark.appendChild(lastRange.extractContents()); lastRange.insertNode(mark); } catch (e2) {}
+  }
+  window.getSelection().removeAllRanges();
+  popup.classList.remove('visible');
+});
+
+document.getElementById('hpRemove').addEventListener('click', () => {
+  document.querySelectorAll('.user-highlight').forEach(m => {
+    const parent = m.parentNode;
+    while (m.firstChild) parent.insertBefore(m.firstChild, m);
+    parent.removeChild(m);
+    parent.normalize();
+  });
+  popup.classList.remove('visible');
+});
+document.getElementById('hpClose').addEventListener('click', () => popup.classList.remove('visible'));
+</script>
+
+<script>
+const TEST_ID = 'bees-pollination-p2';
+const TEST_DURATION_MIN = 20;
+
+const C1_WORDS = [
+  { word: 'pollination', def: 'The transfer of pollen from one flower to another, enabling reproduction' },
+  { word: 'entomologist', def: 'A scientist who studies insects' },
+  { word: 'forage', def: 'To search for food' },
+  { word: 'satiated', def: 'Fully satisfied, especially with food' },
+  { word: 'calorific', def: 'Relating to the amount of energy a food produces' },
+  { word: 'equilibrium', def: 'A state of balance between opposing forces' },
+  { word: 'flora', def: 'The plants of a particular region or time' },
+  { word: 'sustainable', def: 'Able to be maintained at a certain level without depleting resources' },
+  { word: 'felling', def: 'The cutting down of trees' },
+  { word: 'protagonist', def: 'A leading or important figure in a situation' }
+];
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="db.js"></script>
+<script src="reading-test-common.js"></script>
+<script src="highlight-auto-dismiss.js"></script>
+<script src="activity-bridge-v15.js"></script>
+</body>
+</html>

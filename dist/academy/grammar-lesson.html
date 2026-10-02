@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Grammar Lesson — VIVID IELTS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="max-bridge.css?v=1"><script src="max-bridge.js?v=1" defer></script>
+</head>
+<body class="dash-body">
+
+<div class="dash-shell">
+  <!-- (sidebar intentionally omitted on the lesson page — keeps focus on studying;
+       "Back to Grammar Hub" link below serves as navigation) -->
+  <div class="dash-main" style="width:100%;">
+    <header class="dash-topbar">
+      <a href="grammar.html" class="link-muted" style="white-space:nowrap;">← Grammar Hub</a>
+      <div class="dash-search" style="visibility:hidden;"></div>
+      <div class="dash-topbar-right">
+        <span id="lessonTenseLabel" class="dash-streak">Tense 1 of 12</span>
+      </div>
+    </header>
+
+    <div class="dash-content" style="max-width: 820px;">
+
+      <!-- STEP 1: EXPLANATION -->
+      <section id="explainStep">
+        <div class="dash-greeting">
+          <div>
+            <p class="eyebrow" id="tenseEyebrow">GRAMMAR · TENSE 1/12</p>
+            <h1 id="tenseName">Tense name</h1>
+            <p id="tenseSubtitle">Subtitle</p>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <h3>Structure</h3>
+          <div class="tense-structure" id="tenseStructure"></div>
+        </div>
+
+        <div class="dash-card" style="margin-top:20px;">
+          <h3>When to use it</h3>
+          <div class="usage-list" id="usageList"></div>
+        </div>
+
+        <div class="dash-card" style="margin-top:20px;">
+          <h3>Signal words</h3>
+          <div class="signal-chips" id="signalChips"></div>
+        </div>
+
+        <div class="dash-card" style="margin-top:20px;">
+          <h3>Common mistakes</h3>
+          <div class="mistake-list" id="mistakeList"></div>
+        </div>
+
+        <div class="lesson-nav-bar">
+          <button class="btn btn-primary btn-lg" id="toExercisesBtn">Continue to Practice →</button>
+        </div>
+      </section>
+
+      <!-- STEP 2: EXERCISES -->
+      <section id="exerciseStep" hidden>
+        <div class="dash-greeting">
+          <div>
+            <p class="eyebrow">PRACTICE</p>
+            <h1>Fill in the gaps</h1>
+            <p>Type the correct form. Check each answer, then move on.</p>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div id="exerciseList"></div>
+        </div>
+        <div class="lesson-nav-bar">
+          <button class="link-muted back-link" id="backToExplain">← Back to explanation</button>
+          <button class="btn btn-primary btn-lg" id="toTestBtn">Continue to Test (15 questions) →</button>
+        </div>
+      </section>
+
+      <!-- STEP 3: TEST -->
+      <section id="testStep" hidden>
+        <div class="test-wrap">
+          <p class="flash-progress" id="grammarTestProgress">Question 1 / 15</p>
+          <div class="test-card">
+            <h2 id="grammarTestQuestion">Question text</h2>
+            <div class="test-options" id="grammarTestOptions"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 4: RESULT -->
+      <section id="resultStep" hidden>
+        <div class="test-result">
+          <h2 id="resultTitle">Result</h2>
+          <p id="resultText">Score</p>
+          <div class="ai-card-actions" style="justify-content:center;">
+            <button class="btn btn-outline" id="retakeBtn">Retake this test</button>
+            <a href="grammar.html" class="btn btn-primary" id="continueBtn">Back to Grammar Hub</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="db.js"></script>
+<script src="auth-guard.js"></script>
+<script src="grammar-data.js"></script>
+<script src="grammar-lesson.js"></script>
+</body>
+</html>

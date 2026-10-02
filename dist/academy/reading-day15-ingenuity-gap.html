@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Reading – The Ingenuity Gap</title>
+<link rel="stylesheet" href="reading-test-common.css">
+<style>
+  :root {
+    --bg: #ffffff; --bg-alt: #f4f5f7; --bg-panel: #ffffff;
+    --text: #111111; --text-muted: #555; --border: #d4d4d4;
+    --border-strong: #333; --accent: #e51e2a;
+    --select-bg: #cfe3ff; --select-active: #1e6cd8;
+    --footer-bg: #f4f5f7; --btn-bg: #ededed;
+    --arrow-bg: #1f1f1f; --arrow-fg: #ffffff;
+    --correct: #1a8a3c; --wrong: #cc2222;
+  }
+  body.dark {
+    --bg: #1a1a1d; --bg-alt: #232327; --bg-panel: #1f1f22;
+    --text: #ececec; --text-muted: #b5b5b5; --border: #3a3a3f;
+    --border-strong: #cfcfcf; --accent: #ff5c66;
+    --select-bg: #2c4d7a; --select-active: #4a8be0;
+    --footer-bg: #232327; --btn-bg: #2e2e33;
+    --arrow-bg: #ececec; --arrow-fg: #1a1a1d;
+    --correct: #4ed684; --wrong: #ff6b6b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
+
+  .topbar { height: 50px; border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 16px; background: var(--bg); position: relative; z-index: 5; }
+  .logo { font-weight: 800; font-size: 22px; letter-spacing: 1px; color: var(--accent); margin-right: 20px; user-select: none; }
+  .test-taker { font-size: 14px; font-weight: 700; }
+  .top-controls { margin-left: auto; display: flex; gap: 2px; align-items: center; }
+  .top-controls .icon-btn, .top-controls .text-btn { background: transparent; border: none; color: var(--text); padding: 6px 10px; cursor: pointer; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; transition: background 0.15s; }
+  .top-controls .icon-btn:hover, .top-controls .text-btn:hover { background: var(--bg-alt); }
+  .top-controls .icon-btn svg { width: 20px; height: 20px; display: block; }
+  .top-controls .text-btn { font-weight: 700; font-size: 16px; font-family: inherit; }
+  .top-controls .divider { width: 1px; height: 26px; background: var(--border); margin: 0 6px; }
+
+  .part-header { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 10px 20px; }
+  .part-header h2 { margin: 0 0 3px 0; font-size: 14px; font-weight: 700; }
+  .part-header p { margin: 0; font-size: 12px; color: var(--text-muted); }
+
+  .main { position: absolute; top: 50px; left: 0; right: 0; bottom: 50px; display: flex; flex-direction: column; }
+  .panes { flex: 1; display: flex; overflow: hidden; position: relative; }
+  .pane { overflow-y: auto; padding: 18px 28px; background: var(--bg-panel); line-height: 1.55; font-size: calc(14.5px * var(--font-scale, 1)); }
+  .pane.left { width: 50%; }
+  .pane.right { flex: 1; }
+  .splitter { width: 10px; background: var(--bg-alt); border-left: 1px solid var(--border); border-right: 1px solid var(--border); cursor: col-resize; position: relative; user-select: none; flex-shrink: 0; }
+  .splitter::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 18px; height: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; background-image: linear-gradient(to right, transparent 6px, var(--text) 6px, var(--text) 7px, transparent 7px, transparent 11px, var(--text) 11px, var(--text) 12px, transparent 12px); }
+
+  .passage h1 { font-size: 16px; font-weight: 700; margin: 0 0 14px 0; text-align: center; }
+  .passage p { margin: 0 0 11px 0; text-align: justify; }
+
+  .qblock { margin-bottom: 28px; }
+  .qblock h3 { margin: 0 0 6px 0; font-size: 14.5px; font-weight: 700; }
+  .qblock .instructions { font-size: 13px; margin-bottom: 12px; line-height: 1.6; }
+  .qblock .instructions strong { font-weight: 700; }
+
+  /* Row styles */
+  .yn-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; padding: 6px 8px; border-radius: 4px; border: 1px solid transparent; }
+  .yn-row:focus-within { border-color: var(--select-active); }
+  .qnum-yn { display: inline-block; min-width: 22px; font-weight: 700; border: 1px solid var(--border-strong); padding: 0 4px; text-align: center; font-size: 12px; flex-shrink: 0; margin-top: 3px; }
+  .yn-stem { flex: 1; font-size: 14px; line-height: 1.5; }
+  .yn-select { background: var(--bg); color: var(--text); border: 1px solid var(--border-strong); padding: 4px 6px; font-size: 13px; font-family: inherit; border-radius: 3px; min-width: 110px; flex-shrink: 0; }
+  .gap-input { background: var(--bg); color: var(--text); border: 1px solid var(--border-strong); padding: 3px 6px; font-size: 13px; border-radius: 3px; width: 180px; font-family: inherit; }
+
+  /* Radio Options */
+  .mc-option { display: block; margin: 5px 0; font-size: 13.5px; cursor: pointer; }
+  .mc-option input { margin-right: 8px; }
+
+  /* Footer */
+  .footer { position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: var(--footer-bg); border-top: 1px solid var(--border); display: flex; align-items: center; padding: 0 12px; gap: 8px; z-index: 4; }
+  .part-tab { display: flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 3px; border: 1px solid var(--border); background: var(--bg); user-select: none; }
+  .part-tab .label { font-weight: 700; font-size: 13px; }
+  .part-tab .progress { font-size: 11.5px; color: var(--text-muted); }
+  .qnav { display: flex; gap: 3px; margin-left: 2px; flex-wrap: wrap; }
+  .qbtn { width: 22px; height: 22px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 2px; font-family: inherit; }
+  .qbtn:hover { background: var(--bg-alt); }
+  .qbtn.current { border: 2px solid var(--text); font-weight: 700; }
+  .qbtn.answered { background: var(--bg-alt); }
+  .nav-arrows { display: flex; gap: 4px; margin-left: auto; }
+  .arrow-btn { width: 32px; height: 32px; background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .arrow-btn.dark { background: var(--arrow-bg); color: var(--arrow-fg); border-color: var(--arrow-bg); }
+  .check-btn { width: 36px; height: 32px; background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-left: 4px; }
+
+  .user-highlight { background: #f4ff55; padding: 1px 0; }
+  body.dark .user-highlight { background: #8a9100; color: #fff; }
+
+  .highlight-popup { position: absolute; display: none; background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.18); padding: 4px; z-index: 200; align-items: center; gap: 2px; font-size: 13.5px; user-select: none; }
+  .highlight-popup.visible { display: inline-flex; }
+  .highlight-popup button { background: transparent; border: none; padding: 8px 12px; cursor: pointer; color: var(--text); border-radius: 5px; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; font-size: 13.5px; font-weight: 500; }
+  .highlight-popup button:hover { background: var(--bg-alt); }
+  .highlight-popup .hp-swatch { display: inline-block; width: 16px; height: 16px; background: #f4ff55; border-radius: 3px; flex-shrink: 0; }
+  .highlight-popup .hp-close { padding: 6px 10px; font-size: 18px; color: var(--text-muted); line-height: 1; }
+
+  .pane::-webkit-scrollbar { width: 10px; }
+  .pane::-webkit-scrollbar-track { background: var(--bg-alt); }
+  .pane::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
+
+  /* Results overlay */
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: flex-start; justify-content: center; z-index: 100; padding: 20px; overflow-y: auto; }
+  .overlay.visible { display: flex; }
+  .modal { background: var(--bg-panel); color: var(--text); border: 1px solid var(--border); border-radius: 8px; max-width: 600px; width: 100%; padding: 28px 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); margin: auto; }
+  .modal h2 { margin: 0 0 10px 0; color: var(--accent); font-size: 22px; text-align: center; }
+  .score-row { text-align: center; font-size: 28px; font-weight: 800; margin: 6px 0 4px; }
+  .score-row span { font-size: 16px; font-weight: 400; color: var(--text-muted); }
+  .band-row { text-align: center; font-size: 18px; font-weight: 700; margin-bottom: 18px; color: var(--accent); }
+  .results-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 18px; }
+  .results-table th { background: var(--bg-alt); padding: 6px 10px; text-align: left; font-weight: 700; border-bottom: 2px solid var(--border); }
+  .results-table td { padding: 5px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .results-table tr:last-child td { border-bottom: none; }
+  .mark-ok  { color: var(--correct); font-weight: 700; font-size: 15px; }
+  .mark-bad { color: var(--wrong);   font-weight: 700; font-size: 15px; }
+  .modal .actions { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
+  .modal button { background: var(--accent); color: #fff; border: none; padding: 9px 22px; font-size: 14px; font-weight: 600; border-radius: 4px; cursor: pointer; }
+  .modal button.secondary { background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); }
+  .modal button:hover { opacity: 0.9; }
+</style>
+<link rel="stylesheet" href="max-bridge.css?v=1"><script src="max-bridge.js?v=1" defer></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">IELTS</div>
+  <div class="test-taker">VIVID IELTS</div>
+  <div class="top-controls">
+    <button id="btn-light" class="icon-btn" title="Light mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
+        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
+        <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/>
+      </svg>
+    </button>
+    <button id="btn-dark" class="icon-btn" title="Dark mode">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <div class="divider"></div>
+    <button id="btn-font-down" class="text-btn" title="Decrease font size">A-</button>
+    <button id="btn-font-up" class="text-btn" title="Increase font size">A+</button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="part-header">
+    <h2>Reading Passage 3</h2>
+    <p>Answer Questions 33–46, which are based on Reading Passage 3 pages 10 and 11.</p>
+  </div>
+  <div class="panes">
+
+    <div class="pane left" id="passagePane">
+      <div class="passage">
+        <div style="font-weight:700;font-size:14px;margin-bottom:4px;">READING PASSAGE 3</div>
+        <div style="font-size:13px;margin-bottom:14px;color:var(--text-muted);">Answer Questions 33–46, which are based on Reading Passage 3 pages 10 and 11.</div>
+        <h1>The Ingenuity Gap</h1>
+        <p style="font-style:italic;">In this book introduction the author explains what he means by 'ingenuity' and discusses the factors that influence the requirement for and provision of new ideas in today's society.</p>
+
+        <p>Ingenuity, as I define it here, consists not only of ideas for new technologies like computers or drought-resistant crops but, more fundamentally, of ideas for better institutions and social arrangements, like efficient markets and competent governments.</p>
+
+        <p>How much and what kinds of ingenuity a society requires depends on a range of factors, including the society's goals and the circumstances within which it must achieve those goals—whether it has a young population or an ageing one, an abundance of natural resources or a scarcity of them, an easy climate or a punishing one, whatever the case may be.</p>
+
+        <p>How much and what kinds of ingenuity a society supplies also depends on many factors, such as the nature of human inventiveness and understanding, the rewards an economy gives to the producers of useful knowledge, and the strength of political opposition to social and institutional reforms.</p>
+
+        <p>A good supply of the right kinds of ingenuity is essential, but it isn't, of course, enough by itself. We know that the creation of wealth, for example, depends not only on an adequate supply of useful ideas but also on the availability of other, more conventional factors of production, like capital and labor. Similarly, prosperity, stability and justice usually depend on the resolution, or at least the containment, of major political struggles over wealth and power.</p>
+
+        <p>The past century's countless incremental changes in our societies around the planet, in our technologies and our interactions with our surrounding natural environment, have accumulated to create a qualitatively new world.</p>
+
+        <p>Because these changes have accumulated slowly, it's often hard for us to recognize how profound and sweeping they've been. They include far larger and denser populations; much higher per capita consumption of natural resources; and far better and more widely available technologies for the movement of people, materials, and especially information.</p>
+
+        <p>In combination, these changes have sharply increased the density, intensity, and pace of our interactions with each other; they have greatly increased the burden we place on our natural environment; and they have helped shift power from national and international institutions to individuals in subgroups, such as political special interests and ethnic factions. The management of our relationship with the new world requires immense and ever-increasing amounts of social and technical ingenuity.</p>
+
+        <p>When we enhance the performance of any system, from our cars to the planet's network of financial institutions, we tend to make it more complex. Many of the natural systems critical to our well-being, like the global climate and the oceans, are extraordinarily complex, to begin with. We often can't predict or manage the behavior of complex systems with much precision, because they are often very sensitive to the smallest of changes and perturbations, and their behavior can flip from one mode to another suddenly and dramatically. Over the last 100 years as the human-made and natural systems we depend upon have become more complex, and as our demands on them have increased, the institutions and technologies we use to manage them must become more complex too, which further boosts our requirement for ingenuity.</p>
+
+        <p>However, we should not jump to the conclusion that the supply of ingenuity always increases in lockstep with our ingenuity requirement: while it's true that necessity is often the mother of invention, we can't always rely on the right kind of ingenuity appearing when and where we need it. In many cases, the complexity and speed of operation of today's vital economic, social, and ecological systems exceed the human brain's grasp. Not many of us have more than a rudimentary understanding of how these systems work. They remain fraught with countless "unknown unknowns," which makes it hard to supply the ingenuity we need to solve problems associated with these systems.</p>
+
+        <p>In this book, I explore a wide range of other factors that will limit our ability to supply the ingenuity required in the coming century. For example, the crush of information in our everyday lives is shortening our attention span, limiting the time we have to reflect on critical matters of public policy, and making policy arguments more superficial.</p>
+
+        <p>Modern markets and science are an important part of the story of how we supply ingenuity. Markets are critically important because they give entrepreneurs an incentive to produce knowledge. As for science, although it seems to face no theoretical limits, at least in the foreseeable future, practical constraints often slow its progress. The cost of scientific research tends to increase as it delves deeper into nature.</p>
+
+        <p>And science's rate of advance depends on the characteristics of the natural phenomena it investigates, simply because some phenomena area intrinsically harder to understand than others, so the production of useful new knowledge in these areas can be very slow. Consequently, there is often a critical time lag between the recognition between a problem and the delivery of sufficient ingenuity, in the form of technologies, to solve that problem. Progress in the social sciences is especially slow, for reasons we don't yet fully understand; but we desperately need better social scientific knowledge to build the sophisticated institutions today's world demands.</p>
+      </div>
+    </div>
+
+    <div class="splitter" id="splitter"></div>
+
+    <div class="pane right" id="questionsPane">
+
+      <div class="qblock">
+        <h3>Questions 33–36</h3>
+        <div class="instructions">
+          Complete each sentence with the correct ending, <strong>A–F</strong>, below.<br>
+          Write the correct letter, <strong>A–F</strong>, in boxes 33–36 on your answer sheet.
+        </div>
+
+        <div style="background:var(--bg-alt); padding:12px; border-radius:5px; margin-bottom:15px; font-size:13px; border:1px solid var(--border);">
+          <strong>A</strong> does not depend on ingenuity alone.<br>
+          <strong>B</strong> depends in on the successful management of certain disputes.<br>
+          <strong>C</strong> has often been misunderstood.<br>
+          <strong>D</strong> is not limited to the creation of new inventions.<br>
+          <strong>E</strong> frequently increases in accordance with the material successes achieved.<br>
+          <strong>F</strong> is linked to factors such as the weather.
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">33</span>
+          <span class="yn-stem">The author's definition of ingenuity</span>
+          <select class="yn-select question" data-q="33">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">34</span>
+          <span class="yn-stem">The type of ingenuity required by a society</span>
+          <select class="yn-select question" data-q="34">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">35</span>
+          <span class="yn-stem">The creation of wealth</span>
+          <select class="yn-select question" data-q="35">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">36</span>
+          <span class="yn-stem">The stability of a society</span>
+          <select class="yn-select question" data-q="36">
+            <option value=""></option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="qblock">
+        <h3>Questions 37–39</h3>
+        <div class="instructions">
+          Choose the correct letter, <strong>A</strong>, <strong>B</strong>, <strong>C</strong> or <strong>D</strong>.<br>
+          Write the correct letter in boxes 37–39 on your answer sheet.
+        </div>
+
+        <div class="yn-row" style="flex-direction:column;">
+          <div><span class="qnum-yn">37</span> <strong style="font-size:14px;">What point does the author make about the incremental changes of the last century?</strong></div>
+          <div style="padding-left:32px; width:100%;">
+            <label class="mc-option"><input type="radio" name="q37" class="question-radio" data-q="37" value="A"> A Their effect on the environment has been positive.</label>
+            <label class="mc-option"><input type="radio" name="q37" class="question-radio" data-q="37" value="B"> B They have not affected all parts of the world.</label>
+            <label class="mc-option"><input type="radio" name="q37" class="question-radio" data-q="37" value="C"> C Their significance may not be noticed.</label>
+            <label class="mc-option"><input type="radio" name="q37" class="question-radio" data-q="37" value="D"> D They have had less impact than those of previous centuries.</label>
+          </div>
+        </div>
+
+        <div class="yn-row" style="flex-direction:column;">
+          <div><span class="qnum-yn">38</span> <strong style="font-size:14px;">According to the author, one effect of the combined changes is that life has become</strong></div>
+          <div style="padding-left:32px; width:100%;">
+            <label class="mc-option"><input type="radio" name="q38" class="question-radio" data-q="38" value="A"> A easier.</label>
+            <label class="mc-option"><input type="radio" name="q38" class="question-radio" data-q="38" value="B"> B faster.</label>
+            <label class="mc-option"><input type="radio" name="q38" class="question-radio" data-q="38" value="C"> C more interesting.</label>
+            <label class="mc-option"><input type="radio" name="q38" class="question-radio" data-q="38" value="D"> D more enjoyable.</label>
+          </div>
+        </div>
+
+        <div class="yn-row" style="flex-direction:column;">
+          <div><span class="qnum-yn">39</span> <strong style="font-size:14px;">What observation does the author make about complex natural systems?</strong></div>
+          <div style="padding-left:32px; width:100%;">
+            <label class="mc-option"><input type="radio" name="q39" class="question-radio" data-q="39" value="A"> A They can be greatly affected by minor alterations.</label>
+            <label class="mc-option"><input type="radio" name="q39" class="question-radio" data-q="39" value="B"> B They cannot be compared to human-made systems.</label>
+            <label class="mc-option"><input type="radio" name="q39" class="question-radio" data-q="39" value="C"> C Their performance cannot be improved by human intervention.</label>
+            <label class="mc-option"><input type="radio" name="q39" class="question-radio" data-q="39" value="D"> D Their behavior is better understood than ever before.</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="qblock">
+        <h3>Questions 40–46</h3>
+        <div class="instructions">
+          Do the following statements agree with the views of the writer in Reading Passage 3?<br>
+          In boxes 40–46 on your answer sheet, write:<br>
+          <strong>YES</strong> if the statement agrees with the views of the writer<br>
+          <strong>NO</strong> if the statement contradicts the views of the writer<br>
+          <strong>NOT GIVEN</strong> if it is impossible to say what the writer thinks about this
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">40</span>
+          <span class="yn-stem">Changes in the last 100 years have increased the need for human ingenuity.</span>
+          <select class="yn-select question" data-q="40">
+            <option value=""></option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">41</span>
+          <span class="yn-stem">The amount of ingenuity available is strictly related to the demand which exists for it.</span>
+          <select class="yn-select question" data-q="41">
+            <option value=""></option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">42</span>
+          <span class="yn-stem">Although ingenuity may be available, it may be inappropriate for the tasks that need solutions at the time.</span>
+          <select class="yn-select question" data-q="42">
+            <option value=""></option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">43</span>
+          <span class="yn-stem">Few people today truly understand the way the modern world works.</span>
+          <select class="yn-select question" data-q="43">
+            <option value=""></option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">44</span>
+          <span class="yn-stem">Access to more and more information is improving our grasp of current affairs.</span>
+          <select class="yn-select question" data-q="44">
+            <option value=""></option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">45</span>
+          <span class="yn-stem">Future generations will be critical of the way today's governments have conducted themselves.</span>
+          <select class="yn-select question" data-q="45">
+            <option value=""></option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+
+        <div class="yn-row">
+          <span class="qnum-yn">46</span>
+          <span class="yn-stem">It is inevitable that some areas of scientific study advance more quickly than others.</span>
+          <select class="yn-select question" data-q="46">
+            <option value=""></option><option value="YES">YES</option><option value="NO">NO</option><option value="NOT GIVEN">NOT GIVEN</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="part-tab">
+    <span class="label">Passage 3</span>
+    <span class="progress" id="progress-1">0 of 14</span>
+    <div class="qnav" id="qnav-1"></div>
+  </div>
+  <div class="nav-arrows">
+    <button class="arrow-btn" id="prevBtn">&#8592;</button>
+    <button class="arrow-btn dark" id="nextBtn">&#8594;</button>
+  </div>
+  <button class="check-btn" id="finishBtn" title="Submit">&#10003;</button>
+</div>
+
+<div class="highlight-popup" id="highlightPopup">
+  <button id="hpHighlight"><span class="hp-swatch"></span>Highlight</button>
+  <button id="hpRemove">Remove highlight</button>
+  <button class="hp-close" id="hpClose">&times;</button>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+const TOTAL = 14;
+const Q_START = 33;
+const Q_END = 46;
+
+const KEY = {
+  33: ['D'],
+  34: ['F'],
+  35: ['A'],
+  36: ['B'],
+  37: ['C'],
+  38: ['B'],
+  39: ['A'],
+  40: ['YES'],
+  41: ['NO'],
+  42: ['YES'],
+  43: ['YES'],
+  44: ['NO'],
+  45: ['NOT GIVEN'],
+  46: ['YES']
+};
+
+const answers = {};
+
+function normalize(v) { return (v || '').toString().trim().toUpperCase().replace(/\s+/g, ' '); }
+
+function isCorrect(n, val) {
+  const normVal = normalize(val);
+  return KEY[n].some(k => normalize(k) === normVal);
+}
+
+document.querySelectorAll('.question-radio').forEach(el => {
+  el.addEventListener('change', () => {
+    answers[el.dataset.q] = el.value;
+    updateNav();
+  });
+});
+
+document.querySelectorAll('select.question').forEach(el => {
+  const q = +el.dataset.q;
+  el.addEventListener('change', () => { answers[q] = el.value; updateNav(); });
+});
+
+const qnavEl = document.getElementById('qnav-1');
+const progressEl = document.getElementById('progress-1');
+let activeQ = Q_START;
+
+function buildNav() {
+  qnavEl.innerHTML = '';
+  for (let n = Q_START; n <= Q_END; n++) {
+    const btn = document.createElement('button');
+    btn.className = 'qbtn';
+    btn.textContent = n;
+    btn.dataset.n = n;
+    btn.addEventListener('click', () => scrollToQ(n));
+    qnavEl.appendChild(btn);
+  }
+}
+
+function updateNav() {
+  const answered = Object.keys(answers).filter(k => answers[k] !== undefined && answers[k] !== '').length;
+  progressEl.textContent = `${answered} of ${TOTAL}`;
+  qnavEl.querySelectorAll('.qbtn').forEach(btn => {
+    const n = +btn.dataset.n;
+    btn.classList.toggle('answered', !!answers[n] && answers[n] !== '');
+    btn.classList.toggle('current', n === activeQ);
+  });
+}
+
+function scrollToQ(n) {
+  activeQ = n;
+  const el = document.querySelector(`.question-radio[data-q="${n}"], .question[data-q="${n}"]`);
+  if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.focus({ preventScroll: true }); }
+  updateNav();
+}
+
+document.querySelectorAll('.question, .question-radio').forEach(el => {
+  el.addEventListener('focus', () => { activeQ = +el.dataset.q; updateNav(); });
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => { if (activeQ > Q_START) scrollToQ(activeQ - 1); });
+document.getElementById('nextBtn').addEventListener('click', () => { if (activeQ < Q_END) scrollToQ(activeQ + 1); });
+
+buildNav();
+updateNav();
+
+function getBand(score) {
+  if (score >= 13) return '9.0';
+  if (score >= 12) return '8.5';
+  if (score >= 11) return '8.0';
+  if (score >= 10) return '7.5';
+  if (score >= 9)  return '7.0';
+  if (score >= 8)  return '6.5';
+  if (score >= 7)  return '6.0';
+  if (score >= 6)  return '5.5';
+  if (score >= 5)  return '5.0';
+  if (score >= 4)  return '4.5';
+  return '4.0';
+}
+
+function showResults() {
+  let score = 0;
+  const rows = [];
+  for (let n = Q_START; n <= Q_END; n++) {
+    const ok = isCorrect(n, answers[n]);
+    if (ok) score++;
+    rows.push({ n, given: answers[n] || '—', correct: KEY[n].join(' / '), ok });
+  }
+  const pct = Math.round(score / TOTAL * 100);
+  const band = getBand(score);
+  const color = pct >= 70 ? 'var(--correct)' : pct >= 50 ? '#d4800a' : 'var(--wrong)';
+
+  let html = `<h2>Your Results</h2>
+    <div class="score-row" style="color:${color}">${score} / ${TOTAL} <span>(${pct}%)</span></div>
+    <div class="band-row">Estimated Band: ${band}</div>
+    <table class="results-table">
+      <thead><tr><th>Q</th><th>Your Answer</th><th>Correct</th><th></th></tr></thead><tbody>`;
+  rows.forEach(r => {
+    html += `<tr>
+      <td><strong>${r.n}</strong></td>
+      <td>${r.given}</td>
+      <td>${r.correct}</td>
+      <td class="${r.ok ? 'mark-ok' : 'mark-bad'}">${r.ok ? '✓' : '✗'}</td>
+    </tr>`;
+  });
+  html += `</tbody></table>
+    <div class="actions">
+      <button class="secondary" onclick="document.getElementById('overlay').classList.remove('visible')">Review</button>
+    </div>`;
+
+  document.getElementById('modal').innerHTML = html;
+  document.getElementById('overlay').classList.add('visible');
+}
+
+document.getElementById('finishBtn').addEventListener('click', () => {
+  if (confirm('Submit and see your results?')) showResults();
+});
+
+document.getElementById('overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('overlay')) document.getElementById('overlay').classList.remove('visible');
+});
+
+document.getElementById('btn-dark').addEventListener('click', () => document.body.classList.add('dark'));
+document.getElementById('btn-light').addEventListener('click', () => document.body.classList.remove('dark'));
+
+let fontScale = 1;
+document.getElementById('btn-font-up').addEventListener('click', () => {
+  fontScale = Math.min(1.4, fontScale + 0.08);
+  document.documentElement.style.setProperty('--font-scale', fontScale);
+});
+document.getElementById('btn-font-down').addEventListener('click', () => {
+  fontScale = Math.max(0.7, fontScale - 0.08);
+  document.documentElement.style.setProperty('--font-scale', fontScale);
+});
+
+const splitter = document.getElementById('splitter');
+const leftPane = document.querySelector('.pane.left');
+let dragging = false, startX = 0, startW = 0;
+splitter.addEventListener('mousedown', e => { dragging = true; startX = e.clientX; startW = leftPane.offsetWidth; e.preventDefault(); });
+document.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  const newW = Math.max(200, Math.min(window.innerWidth - 250, startW + e.clientX - startX));
+  leftPane.style.width = newW + 'px';
+});
+document.addEventListener('mouseup', () => { dragging = false; });
+
+// ---- Selection Highlight ----
+const popup = document.getElementById('highlightPopup');
+let lastRange = null;
+
+function isInsideForm(node) {
+  while (node && node !== document.body) {
+    if (node.nodeType === 1 && /^(INPUT|SELECT|TEXTAREA|OPTION|BUTTON)$/.test(node.tagName)) return true;
+    node = node.parentNode;
+  }
+  return false;
+}
+
+function handleSelection() {
+  const sel = window.getSelection();
+  if (!sel || sel.isCollapsed || sel.toString().trim() === '') { popup.classList.remove('visible'); return; }
+  const range = sel.getRangeAt(0);
+  if (isInsideForm(range.commonAncestorContainer)) { popup.classList.remove('visible'); return; }
+  const pane = range.commonAncestorContainer.parentElement?.closest('#passagePane, #questionsPane');
+  if (!pane) { popup.classList.remove('visible'); return; }
+  lastRange = range.cloneRange();
+  const rect = range.getBoundingClientRect();
+  popup.style.left = (rect.left + rect.width / 2 - popup.offsetWidth / 2 + window.scrollX) + 'px';
+  popup.style.top = (rect.top - 48 + window.scrollY) + 'px';
+  popup.classList.add('visible');
+}
+
+document.getElementById('passagePane').addEventListener('mouseup', handleSelection);
+document.getElementById('questionsPane').addEventListener('mouseup', handleSelection);
+
+document.getElementById('hpHighlight').addEventListener('click', () => {
+  if (!lastRange) return;
+  const mark = document.createElement('mark');
+  mark.className = 'user-highlight';
+  try { lastRange.surroundContents(mark); }
+  catch (e) {
+    try { mark.appendChild(lastRange.extractContents()); lastRange.insertNode(mark); } catch (e2) {}
+  }
+  window.getSelection().removeAllRanges();
+  popup.classList.remove('visible');
+});
+
+document.getElementById('hpRemove').addEventListener('click', () => {
+  document.querySelectorAll('.user-highlight').forEach(m => {
+    const parent = m.parentNode;
+    while (m.firstChild) parent.insertBefore(m.firstChild, m);
+    parent.removeChild(m);
+    parent.normalize();
+  });
+  popup.classList.remove('visible');
+});
+document.getElementById('hpClose').addEventListener('click', () => popup.classList.remove('visible'));
+</script>
+
+<script>
+const TEST_ID = 'ingenuity-gap-p3';
+const TEST_DURATION_MIN = 20;
+
+const C1_WORDS = [
+  { word: 'ingenuity', def: 'The quality of being clever, original, and inventive' },
+  { word: 'incremental', def: 'Relating to increases or additions, especially small and regular ones' },
+  { word: 'perturbation', def: 'A deviation of a system from its normal or regular state or path' },
+  { word: 'rudimentary', def: 'Basic, involving or limited to the simplest facts or elements' },
+  { word: 'superficial', def: 'Existing or occurring at or on the surface, lacking depth' },
+  { word: 'lockstep', name: 'lockstep', def: 'A pattern of movement or development in which entities are perfectly aligned' },
+  { word: 'entrepreneur', def: 'A person who organizes and operates a business, taking on financial risk' },
+  { word: 'containment', def: 'The action of keeping something harmful under control' },
+  { word: 'qualitatively', def: 'In a way that relates to quality rather than quantity' },
+  { word: 'intrinsically', def: 'In an essential or natural way' }
+];
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="db.js"></script>
+<script src="reading-test-common.js"></script>
+<script src="highlight-auto-dismiss.js"></script>
+<script src="activity-bridge-v15.js"></script>
+</body>
+</html>

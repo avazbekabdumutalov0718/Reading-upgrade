@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Music — Avazbek Reader Booster</title>
+<link rel="stylesheet" href="../assets/shared.css">
+<style>
+.vocab-pop{ }
+</style>
+<link rel="stylesheet" href="../../max-bridge.css?v=1"><script src="../../max-bridge.js?v=1" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-ring"><img src="../assets/avazbek.png" alt="Avazbek"></div>
+      <div class="brand-text">
+        <h1>Avazbek <em>Reader Booster</em></h1>
+        <div class="tag">IELTS Academic Reading</div>
+      </div>
+    </div>
+    <button class="back-btn" onclick="location.href='../index.html'">&larr; Home</button>
+  </div>
+
+  <!-- ============ HOME (passage landing) ============ -->
+  <div id="home" class="section active">
+    <div class="hero">
+      <div class="eyebrow">Passage 08 of 30</div>
+      <h1>Mind Music</h1>
+      <p class="byline">Scientists investigate 'earworms', the music we can't get out of our head</p>
+      <p class="passage-tag">~<b>910</b> words &middot; <b>20</b> target words &middot; <b>13</b> questions</p>
+    </div>
+    <div class="menu">
+      <div class="menu-card" onclick="arbGo('reading')">
+        <div class="num">📖</div>
+        <h3>Read &amp; Answer</h3>
+        <p>Listen to the article, read it, then answer the questions.</p>
+      </div>
+      <div class="menu-card" onclick="arbGo('vocab')">
+        <div class="num">🗂️</div>
+        <h3>Vocabulary</h3>
+        <p>Study the word list, then drill it with flashcards.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ READING + QUESTIONS ============ -->
+  <div id="reading" class="section">
+    <div class="section-head">
+      <button class="back-btn" onclick="arbGo('home')">&larr; Back</button>
+      <h2>Mind Music</h2>
+      <div class="sub">Read the article, then answer every question below.</div>
+    </div>
+
+    <div class="player">
+      <button class="play-btn" id="playBtn">&#9654;</button>
+      <button class="stop-btn" id="stopBtn">&#9632;</button>
+      <div class="player-status">
+        <div class="pl-title" id="plTitle">Listen to the article</div>
+        <div class="pl-sub" id="plSub">American accent &middot; tap play to start</div>
+      </div>
+      <select class="rate-select" id="rateSelect">
+        <option value="0.8">0.8&times; slow</option>
+        <option value="1" selected>1&times; normal</option>
+        <option value="1.2">1.2&times; fast</option>
+      </select>
+      <div class="player-note">The current paragraph glows gold while it is being read. Voice quality depends on your device.</div>
+    </div>
+
+    <div class="hint-strip"><span class="dot"></span> Tap any <span class="vocab">highlighted word</span> to see its meaning and Uzbek translation.</div>
+
+    <div class="article" id="articleBody">
+      <div class="art-sub">An Avazbek Reader Booster article &middot; ~910 words &middot; 20 target words</div>
+      <p>Ever had a song stuck in your head, playing on an endless loop? Scientists call them 'involuntary musical images', or '<span class="vocab" data-w="0">earworms</span>', and a wave of new research is shining light on why they occur and what can be learned from them. Some neuroscientists and cognitive psychologists are studying earworms to explore the mysteries of memory and the part of the brain that is beyond our conscious control. 'The idea that we have full control over our thought processes is an <span class="vocab" data-w="1">illusion</span>,' says psychologist Lauren Stewart, who founded the master's programme in music, mind and brain at Goldsmiths, University of London, UK, where recent research has taken place. Researchers haven't been able to watch what happens in the brain when earworms occur, because they happen unpredictably. Much of what is known about them comes from surveys, questionnaires, diaries and lab experiments. Earworms are, in this sense, an example of the <span class="vocab" data-w="2">involuntary</span> power of memory.</p>
+      <p>A Goldsmiths study published in the journal Memory and Cognition this year showed that the singing we hear in our heads tends to be true to actual recordings. Researchers had 17 volunteers tap to the beat of any earworm they heard during a four-day period while a device attached to their wrist recorded their movements. The tapping <span class="vocab" data-w="3">tempos</span> were within 10% of the tempos of the original recordings. Another Goldsmiths study, published this year in Consciousness and Cognition, found that people who report hearing earworms often, and find them most <span class="vocab" data-w="4">intrusive</span>, have slightly different brain structures, with more gray matter in areas associated with processing emotions.</p>
+      <p>Studies also show that the music in our heads often starts playing during times of 'low <span class="vocab" data-w="5">cognitive</span> load', such as while showering, getting dressed, walking, or doing chores. Dr Stewart likens earworms to 'sonic screen savers' that keep the mind entertained while it is otherwise unoccupied. She and her colleagues tested that theory by having volunteers listen to songs and giving them various tasks afterwards. The volunteers who sat idly for the next five minutes were the most likely to report hearing the music in their heads. Dr Stewart observed that the more challenging the activity, the less likely the volunteers were to hear the music. Diary studies also show songs tend to match people's moods and therefore they are not random. If you are energised and upbeat, an earworm that occurs is likely to be uptempo too.</p>
+      <p>Songs the brain <span class="vocab" data-w="6">fixates</span> on are usually those it has been exposed to recently, surveys show, which is why tunes getting heavy radio play frequently top the earworm charts. Even tunes you may have heard but didn't pay attention to can worm their way into your <span class="vocab" data-w="7">subconscious</span>, says Ira Hyman, a psychologist at Western Washington University in Bellingham, USA. In an unpublished study there, participants who listened to music while doing other tasks were more likely to report that the songs returned as earworms later on, compared with participants who simply listened.</p>
+      <p>Some earworms are just <span class="vocab" data-w="8">fragments</span> of a song that repeat like a broken record. So, when the mind hits a part of a song it can't remember, it loops back rather than moving on. That could make an earworm even more <span class="vocab" data-w="9">entrenched</span>, Dr Hyman says. According to a theory known as the Zeigarnik effect, named for a Soviet psychologist, Bluma Zeigarnik, unfinished thoughts and activities weigh on the mind more heavily than those that are completed, although experiments exposing students to interrupted songs have yielded mixed results.</p>
+      <p>Researchers say they can't <span class="vocab" data-w="10">pinpoint</span> a spot in the brain where earworms live. Imaging studies by Andrea Halpern at Bucknell University, in Lewisburg, USA, have shown that deliberately imagining music and actually listening to music activate many of the same <span class="vocab" data-w="11">neurological</span> networks. Dr Halpern's earlier studies showed that when subjects listened to the first few notes of familiar music, areas in the right frontal and superior temporal portions of the brain became activated, along with the <span class="vocab" data-w="12">supplementary</span> motor area at the top, which is typically involved in remembering sequences. When the same subjects were asked to voluntarily imagine music and were asked to recall it, there was activity in the left frontal portions of the brain instead.</p>
+      <p>One factor that makes some songs stick might be <span class="vocab" data-w="13">repetition</span>. 'Repetition leads to familiarity which leads to <span class="vocab" data-w="14">anticipation</span>, which is satisfied by hearing the song,' says John Seabrook, author of The Song Machine: Inside the Hit Factory, about how producers pump pop songs full of 'hooks', the punchy <span class="vocab" data-w="15">melodic</span> phrases designed to target the brain and leave it wanting more. The researchers are comparing the melodic structure of 100 often-mentioned songs with 100 similarly popular songs that weren't cited as earworms, to assess the difference. Songs with earworm potential appear to share certain features: a repeating pattern of ups and downs in pitch, and an <span class="vocab" data-w="16">irregular</span> musical interval.</p>
+      <p>The researchers plan next to test their results in reverse, and play <span class="vocab" data-w="17">ringtones</span> from songs of both the earworm and non-earworm <span class="vocab" data-w="18">variety</span> for volunteers several times a day to see which ones get stuck. Drs Stewart and Halpern are now working together to <span class="vocab" data-w="19">recruit</span> survey participants for a study looking at whether people at different stages of life experience earworms differently. 'You can argue that older people might get them more often because they know more songs,' Dr Halpern says. 'But the few responses we have so far indicate that they have earworms less often. It could be that they don't play music as often as younger people do.'</p>
+    </div>
+
+    <div class="card" style="margin-top:30px">
+      <h2 style="font-family:var(--serif);font-weight:400;margin-top:0">Questions</h2>
+<div class="rubric"><b>Questions 14–17.</b> The passage has eight paragraphs, A–H. Which paragraph contains the following information?</div>
+<div class="q-block" data-q="14">
+<div><span class="q-num">14.</span>A description of the characteristics common to songs with earworms</div>
+<label class="opt-row"><input type="radio" name="q14" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="G"><span><b>G</b> </span></label>
+<label class="opt-row"><input type="radio" name="q14" value="H"><span><b>H</b> </span></label>
+</div>
+<div class="q-block" data-q="15">
+<div><span class="q-num">15.</span>A justification for research into earworms</div>
+<label class="opt-row"><input type="radio" name="q15" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="G"><span><b>G</b> </span></label>
+<label class="opt-row"><input type="radio" name="q15" value="H"><span><b>H</b> </span></label>
+</div>
+<div class="q-block" data-q="16">
+<div><span class="q-num">16.</span>A description of the brain's reaction to known and unknown songs</div>
+<label class="opt-row"><input type="radio" name="q16" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="G"><span><b>G</b> </span></label>
+<label class="opt-row"><input type="radio" name="q16" value="H"><span><b>H</b> </span></label>
+</div>
+<div class="q-block" data-q="17">
+<div><span class="q-num">17.</span>Details of proposed research into the frequency with which earworms occur in different age groups</div>
+<label class="opt-row"><input type="radio" name="q17" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="D"><span><b>D</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="E"><span><b>E</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="F"><span><b>F</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="G"><span><b>G</b> </span></label>
+<label class="opt-row"><input type="radio" name="q17" value="H"><span><b>H</b> </span></label>
+</div>
+<div class="rubric"><b>Questions 18–21.</b> Complete the summary. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</div>
+<div class="q-block" data-q="18">
+<div><span class="q-num">18.</span>Researchers proved music we imagine is similar to recordings by asking volunteers to record the rhythm of music using a monitor on their ___.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="q-block" data-q="19">
+<div><span class="q-num">19.</span>Those who hear earworms more frequently have brains that may deal with ___ differently from other people.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="q-block" data-q="20">
+<div><span class="q-num">20.</span>Dr Stewart believes the brain is ___ by earworms when it is not focused on a task.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="q-block" data-q="21">
+<div><span class="q-num">21.</span>A reduction in the occurrence of earworms was found to be directly related to how ___ the task was.</div>
+<input type="text" placeholder="Type your answer">
+</div>
+<div class="rubric"><b>Questions 22–26.</b> Match each statement with the correct researcher, A–D. <i>A Lauren Stewart, B Ira Hyman, C Andrea Halpern, D John Seabrook.</i> You may use any letter more than once.</div>
+<div class="q-block" data-q="22">
+<div><span class="q-num">22.</span>Some musicians create music that is intentionally memorable.</div>
+<label class="opt-row"><input type="radio" name="q22" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q22" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q22" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q22" value="D"><span><b>D</b> </span></label>
+</div>
+<div class="q-block" data-q="23">
+<div><span class="q-num">23.</span>People are unable to completely regulate how they think.</div>
+<label class="opt-row"><input type="radio" name="q23" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q23" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q23" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q23" value="D"><span><b>D</b> </span></label>
+</div>
+<div class="q-block" data-q="24">
+<div><span class="q-num">24.</span>We can remember songs without knowing that we have heard them.</div>
+<label class="opt-row"><input type="radio" name="q24" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q24" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q24" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q24" value="D"><span><b>D</b> </span></label>
+</div>
+<div class="q-block" data-q="25">
+<div><span class="q-num">25.</span>Thinking about music has a similar effect on the brain to hearing music.</div>
+<label class="opt-row"><input type="radio" name="q25" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q25" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q25" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q25" value="D"><span><b>D</b> </span></label>
+</div>
+<div class="q-block" data-q="26">
+<div><span class="q-num">26.</span>Earworms are more persistent when only a short section of the song is constantly replayed.</div>
+<label class="opt-row"><input type="radio" name="q26" value="A"><span><b>A</b> </span></label>
+<label class="opt-row"><input type="radio" name="q26" value="B"><span><b>B</b> </span></label>
+<label class="opt-row"><input type="radio" name="q26" value="C"><span><b>C</b> </span></label>
+<label class="opt-row"><input type="radio" name="q26" value="D"><span><b>D</b> </span></label>
+</div>
+      <div class="submit-bar">
+        <button class="btn btn-gold" onclick="submitQuiz()">Check answers</button>
+        <button class="btn" onclick="showKeyWords()">Key word table</button>
+      </div>
+      <div class="score-banner" id="scoreBanner"></div>
+    </div>
+
+    <div class="card" id="kwCard" style="margin-top:20px;display:none">
+      <h2 style="font-family:var(--serif);font-weight:400;margin-top:0">Key Word Table</h2>
+      <p style="color:var(--muted);font-size:.85rem">These are the words/phrases in the questions and their matching synonyms or forms in the passage — useful for spotting paraphrases.</p>
+<table class="kw-table"><tr><th>In the question</th><th>In the passage</th></tr>
+<tr><td class="qtext">Q14 &middot; features common to earworm songs</td><td class="ptext">a repeating pattern of ups and downs in pitch, and an <b>irregular musical interval</b></td></tr>
+<tr><td class="qtext">Q15 &middot; justification for research</td><td class="ptext">shining light on why they occur and what can be <b>learned</b> from them</td></tr>
+<tr><td class="qtext">Q16 &middot; reaction to known/unknown songs</td><td class="ptext">familiar music ... became activated ... imagine music ... activity in the <b>left frontal portions</b> instead</td></tr>
+<tr><td class="qtext">Q17 &middot; research on age groups</td><td class="ptext">a study looking at whether <b>people at different stages of life</b> experience earworms differently</td></tr>
+<tr><td class="qtext">Q18 &middot; monitor location</td><td class="ptext">a device attached to their <b>wrist</b> recorded their movements</td></tr>
+<tr><td class="qtext">Q19 &middot; brains deal with ... differently</td><td class="ptext">more gray matter in areas associated with processing <b>emotions</b></td></tr>
+<tr><td class="qtext">Q20 &middot; brain is ... by earworms</td><td class="ptext">likens earworms to 'sonic screen savers' that keep the mind <b>entertained</b></td></tr>
+<tr><td class="qtext">Q21 &middot; related to how ... the task</td><td class="ptext">the more <b>challenging</b> the activity, the less likely ... to hear the music</td></tr>
+<tr><td class="qtext">Q22 &middot; intentionally memorable music</td><td class="ptext">John Seabrook ... producers pump pop songs full of <b>'hooks'</b></td></tr>
+<tr><td class="qtext">Q23 &middot; unable to regulate thinking</td><td class="ptext">'the idea that we have full control over our thought processes is <b>an illusion</b>,' says ... Lauren Stewart</td></tr>
+<tr><td class="qtext">Q24 &middot; remember without knowing heard</td><td class="ptext">Ira Hyman ... participants who listened to music while doing other tasks were <b>more likely to report</b> earworms later</td></tr>
+<tr><td class="qtext">Q25 &middot; thinking has similar effect to hearing</td><td class="ptext">Andrea Halpern ... imagining music and actually listening to music activate <b>many of the same neurological networks</b></td></tr>
+<tr><td class="qtext">Q26 &middot; persistent with short fragments</td><td class="ptext">Dr Hyman says [looping back] could make an earworm even <b>more entrenched</b></td></tr>
+</table>
+    </div>
+  </div>
+
+  <!-- ============ VOCAB ============ -->
+  <div id="vocab" class="section">
+    <div class="section-head">
+      <button class="back-btn" onclick="arbGo('home')">&larr; Back</button>
+      <h2>Vocabulary Revision</h2>
+      <div class="sub">The 20 golden words from the article. Read the list, then drill them with flashcards.</div>
+    </div>
+    <div class="tabbtns">
+      <div class="tabbtn active" id="tabWL" onclick="switchVocabTab('list')">📚 Word list</div>
+      <div class="tabbtn" id="tabFC" onclick="switchVocabTab('cards')">🗃️ Flashcards</div>
+      <div class="tabbtn" id="tabSP" onclick="switchVocabTab('speak')">🎤 Speak with Vocab</div>
+    </div>
+
+    <div id="vlist" class="card"></div>
+
+    <div id="vcards" style="display:none">
+      <div class="fc-stage" id="fcStageWrap">
+        <div class="fc-status" id="fcStatus"></div>
+        <div class="flashcard" id="fcCard"></div>
+        <div class="fc-actions" id="fcStage">
+          <button class="fc-review" onclick="fcEngine.review()">&#8635; Review again</button>
+          <button class="fc-know" onclick="fcEngine.know()">&#10003; I know it</button>
+        </div>
+      </div>
+      <div class="fc-done" id="fcDone"></div>
+    </div>
+
+    <div id="vspeak" class="card sp-stage" style="display:none">
+      <div id="spWrap"></div>
+    </div>
+  </div>
+
+  <!-- Vocab popup -->
+  <div class="vocab-pop" id="vocabPop">
+    <button class="vp-close">&times;</button>
+    <span class="vp-word"></span><span class="vp-pos"></span>
+    <div class="vp-def"></div>
+    <div class="vp-ex"></div>
+    <button class="vp-say">&#128266; Pronounce</button>
+  </div>
+
+</div>
+
+<script src="../assets/catalog.js"></script>
+<script src="../assets/shared.js"></script>
+<script>
+const PASSAGE_ID = 'p08';
+
+const VOCAB = [{"word": "earworm", "pos": "noun", "def": "a song or tune that repeats in someone's mind involuntarily", "uz": "miyada aylanaverdigan qo'shiq", "example": "That chorus became a real earworm."}, {"word": "involuntary", "pos": "adjective", "def": "happening without conscious control", "uz": "beixtiyor, o'z-o'zidan", "example": "Earworms are involuntary musical images."}, {"word": "illusion", "pos": "noun", "def": "a false idea or belief; something that appears different from reality", "uz": "illyuziya, xato tasavvur", "example": "Full control over our thoughts is an illusion."}, {"word": "tempo", "pos": "noun", "def": "the speed at which a piece of music is played", "uz": "musiqa tezligi (temp)", "example": "Their tapping matched the song's original tempo."}, {"word": "intrusive", "pos": "adjective", "def": "intruding or interfering in an unwelcome way", "uz": "xalaqit beruvchi", "example": "Some people find their earworms especially intrusive."}, {"word": "cognitive", "pos": "adjective", "def": "relating to mental processes such as thinking and understanding", "uz": "kognitiv, aqliy", "example": "Earworms appear during periods of low cognitive load."}, {"word": "fixate", "pos": "verb", "def": "to focus attention on something persistently", "uz": "qattiq yopishib olmoq (diqqatni)", "example": "The brain often fixates on recently heard songs."}, {"word": "subconscious", "pos": "noun", "def": "the part of the mind that we are not fully aware of", "uz": "ong osti", "example": "Songs can enter your subconscious without your notice."}, {"word": "fragment", "pos": "noun", "def": "a small part broken off from something larger", "uz": "parcha, bo'lak", "example": "Some earworms are just fragments of a song."}, {"word": "entrenched", "pos": "adjective", "def": "firmly established and difficult to change", "uz": "chuqur o'rnashgan", "example": "Incomplete songs may become more entrenched in the mind."}, {"word": "pinpoint", "pos": "verb", "def": "to find or identify the exact location of something", "uz": "aniq joyini topmoq", "example": "Researchers can't pinpoint where earworms live in the brain."}, {"word": "neurological", "pos": "adjective", "def": "relating to the nervous system or brain", "uz": "nevrologik (asab tizimiga oid)", "example": "Listening and imagining activate similar neurological networks."}, {"word": "supplementary", "pos": "adjective", "def": "added to complete or enhance something", "uz": "qo'shimcha", "example": "The supplementary motor area helps with remembering sequences."}, {"word": "repetition", "pos": "noun", "def": "the act of doing or saying something again", "uz": "takrorlash", "example": "Repetition leads to familiarity with a song."}, {"word": "anticipation", "pos": "noun", "def": "the feeling of looking forward to something", "uz": "kutish, intiqlik", "example": "Familiarity leads to anticipation, satisfied by hearing the song."}, {"word": "melodic", "pos": "adjective", "def": "relating to a pleasant sequence of musical notes", "uz": "ohangdor, melodik", "example": "Researchers compared the melodic structure of many songs."}, {"word": "irregular", "pos": "adjective", "def": "not following a regular or expected pattern", "uz": "notekis, muntazam bo'lmagan", "example": "Earworm songs often use an irregular musical interval."}, {"word": "ringtone", "pos": "noun", "def": "the sound made by a mobile phone to signal an incoming call", "uz": "qo'ng'iroq ohangi", "example": "They tested ringtones from earworm and non-earworm songs."}, {"word": "recruit", "pos": "verb", "def": "to find and enrol people to take part in something, such as a study", "uz": "jalb qilmoq (ishtirokchi)", "example": "They plan to recruit survey participants."}, {"word": "variety", "pos": "noun", "def": "a range of different types of something", "uz": "xillik, turlar", "example": "Songs of both the earworm and non-earworm variety were tested."}];
+
+const QUIZ = [{"id": 14, "type": "radio", "answer": "G"}, {"id": 15, "type": "radio", "answer": "A"}, {"id": 16, "type": "radio", "answer": "F"}, {"id": 17, "type": "radio", "answer": "H"}, {"id": 18, "type": "text", "answer": "wrist"}, {"id": 19, "type": "text", "answer": "emotions"}, {"id": 20, "type": "text", "answer": "entertained"}, {"id": 21, "type": "text", "answer": "challenging"}, {"id": 22, "type": "radio", "answer": "D"}, {"id": 23, "type": "radio", "answer": "A"}, {"id": 24, "type": "radio", "answer": "B"}, {"id": 25, "type": "radio", "answer": "C"}, {"id": 26, "type": "radio", "answer": "B"}];
+
+ArbPlayer('#articleBody p', {});
+ArbVocabPopup(VOCAB);
+ArbHighlighter(['articleBody']);
+ArbRenderWordList(VOCAB, 'vlist');
+
+let fcEngine = null;
+let spEngine = null;
+function switchVocabTab(tab) {
+  document.getElementById('tabWL').classList.toggle('active', tab === 'list');
+  document.getElementById('tabFC').classList.toggle('active', tab === 'cards');
+  document.getElementById('tabSP').classList.toggle('active', tab === 'speak');
+  document.getElementById('vlist').style.display = tab === 'list' ? '' : 'none';
+  document.getElementById('vcards').style.display = tab === 'cards' ? '' : 'none';
+  document.getElementById('vspeak').style.display = tab === 'speak' ? '' : 'none';
+  if (tab === 'cards' && !fcEngine) {
+    fcEngine = ArbFlashcards(VOCAB, { onComplete: onVocabComplete, restartFnName: 'fcRestart' });
+  }
+  if (tab === 'speak' && !spEngine) {
+    spEngine = ArbSpeakPractice(VOCAB, {});
+  }
+}
+function fcRestart() { fcEngine.restart(); }
+function onVocabComplete() {
+  arbSetItem(PASSAGE_ID, { vocab: true });
+  checkAllDone();
+}
+
+function submitQuiz() {
+  const correct = ArbGradeQuiz(QUIZ, {});
+  const passMark = Math.ceil(QUIZ.length * 0.6);
+  if (correct >= passMark) {
+    arbSetItem(PASSAGE_ID, { quiz: true, score: correct, total: QUIZ.length });
+  } else {
+    arbSetItem(PASSAGE_ID, { score: correct, total: QUIZ.length });
+  }
+  checkAllDone();
+}
+
+function showKeyWords() {
+  document.getElementById('kwCard').style.display = 'block';
+  document.getElementById('kwCard').scrollIntoView({ behavior: 'smooth' });
+}
+
+function checkAllDone() {
+  if (arbIsComplete(PASSAGE_ID)) {
+    let banner = document.getElementById('unlockBanner');
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'unlockBanner';
+      banner.className = 'score-banner show';
+      banner.style.marginTop = '20px';
+      banner.innerHTML = '<div class="big">🔓 Unlocked!</div><div style="color:var(--muted);font-size:.85rem;margin-top:4px">Great work — the next passage is now open.</div><button class="btn btn-gold" style="margin-top:14px" onclick="location.href=\'../index.html\'">Back to map</button>';
+      document.querySelector('.wrap').appendChild(banner);
+    }
+  }
+}
+</script>
+</body>
+</html>
